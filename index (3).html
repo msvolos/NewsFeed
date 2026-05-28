@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signal Desk — Private Intelligence Briefing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f3ede1; --card: #fbf8f1; --ink: #191712; --ink-soft: #5e574a;
+        --line: #ddd3bf; --line-soft: #e8e0cf; --accent: #23459e;
+        --accent-deep: #1a3578; --signal: #b14528; --gold: #9a7b1f;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; }
+      body {
+        background: var(--paper); color: var(--ink);
+        font-family: "IBM Plex Sans", sans-serif;
+        background-image: radial-gradient(rgba(120,100,60,.05) 1px, transparent 1px);
+        background-size: 4px 4px;
+      }
+      .serif { font-family: "Fraunces", serif; }
+      .mono { font-family: "IBM Plex Mono", monospace; }
+      .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px 80px; }
+
+      .masthead { border-bottom: 3px double var(--ink); padding: 30px 0 18px; }
+      .kicker { font-family: "IBM Plex Mono", monospace; font-size: 11px;
+        letter-spacing: .22em; text-transform: uppercase; color: var(--signal); }
+      .title { font-family: "Fraunces", serif; font-weight: 800;
+        font-size: clamp(38px, 7vw, 68px); line-height: .92;
+        letter-spacing: -.02em; margin: 6px 0 4px; }
+      .sub { font-family: "IBM Plex Mono", monospace; font-size: 12px;
+        color: var(--ink-soft); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+      .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); display: inline-block; }
+
+      .beats { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+      .beat { padding: 14px 16px 12px; cursor: pointer; border-bottom: 3px solid transparent;
+        margin-bottom: -1px; transition: all .15s; }
+      .beat:hover { background: var(--line-soft); }
+      .beat.active { border-bottom-color: var(--signal); }
+      .beat-l { font-family: "Fraunces", serif; font-weight: 600; font-size: 16px; display: block; }
+      .beat.active .beat-l { color: var(--signal); }
+      .beat-b { font-family: "IBM Plex Mono", monospace; font-size: 10px;
+        color: var(--ink-soft); letter-spacing: .02em; }
+
+      .controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+        padding: 14px 0; border-bottom: 1px solid var(--line);
+        position: sticky; top: 0; background: var(--paper); z-index: 5; }
+      .search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 8px;
+        background: var(--card); border: 1px solid var(--line); border-radius: 2px; padding: 9px 12px; }
+      .search input { border: none; background: transparent; outline: none; flex: 1;
+        font-family: "IBM Plex Sans", sans-serif; font-size: 14px; color: var(--ink); }
+      .search input::placeholder { color: #a59c89; }
+      .btn { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .04em;
+        border: 1px solid var(--ink); background: var(--ink); color: var(--paper);
+        padding: 9px 14px; border-radius: 2px; cursor: pointer; display: flex;
+        align-items: center; gap: 7px; transition: all .15s; text-transform: uppercase; }
+      .btn:hover { background: var(--accent); border-color: var(--accent); }
+      .btn.ghost { background: transparent; color: var(--ink); }
+      .btn.ghost:hover { background: var(--ink); color: var(--paper); }
+      .btn.ghost.on { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+      .card { padding: 22px 4px; border-bottom: 1px solid var(--line);
+        display: grid; grid-template-columns: 1fr auto; gap: 14px; animation: rise .5s both; }
+      @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+      .meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 7px; }
+      .tag { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .08em;
+        text-transform: uppercase; background: var(--accent); color: #fff; padding: 3px 7px; border-radius: 2px; }
+      .src { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 500; }
+      .date { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-soft); }
+      .head { font-family: "Fraunces", serif; font-weight: 600;
+        font-size: clamp(19px, 2.4vw, 24px); line-height: 1.15; letter-spacing: -.01em; margin: 0 0 8px; }
+      .head a { color: var(--ink); text-decoration: none;
+        background-image: linear-gradient(var(--signal), var(--signal));
+        background-size: 0% 1.5px; background-repeat: no-repeat;
+        background-position: 0 100%; transition: background-size .25s; }
+      .head a:hover { background-size: 100% 1.5px; color: var(--accent-deep); }
+      .summary { font-size: 14.5px; line-height: 1.55; color: #34302a; margin: 0 0 10px; max-width: 62ch; }
+      .why { display: flex; gap: 9px; align-items: flex-start; border-left: 2px solid var(--gold);
+        padding-left: 11px; max-width: 62ch; }
+      .why-l { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; letter-spacing: .12em;
+        text-transform: uppercase; color: var(--gold); padding-top: 2px; white-space: nowrap; font-weight: 500; }
+      .why-t { font-size: 13px; line-height: 1.5; font-style: italic; color: #46402f; }
+      .actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+      .icon { background: none; border: 1px solid var(--line); border-radius: 2px; padding: 7px;
+        cursor: pointer; color: var(--ink-soft); transition: all .15s; line-height: 0;
+        text-decoration: none; display: inline-flex; }
+      .icon:hover { border-color: var(--ink); color: var(--ink); }
+      .icon.on { background: var(--gold); border-color: var(--gold); color: #fff; }
+      .icon svg { width: 15px; height: 15px; }
+
+      .skel { padding: 22px 4px; border-bottom: 1px solid var(--line); }
+      .sk { background: linear-gradient(90deg, var(--line-soft), #efe8d8, var(--line-soft));
+        background-size: 200% 100%; animation: sh 1.3s infinite; border-radius: 2px; }
+      @keyframes sh { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+      .empty, .err { text-align: center; padding: 60px 20px; color: var(--ink-soft); line-height: 1.6; }
+      .err { color: var(--signal); }
+      .foot { font-family: "IBM Plex Mono", monospace; font-size: 10.5px;
+        color: var(--ink-soft); text-align: center; padding-top: 26px; line-height: 1.7; }
+      .spin { animation: spin 1s linear infinite; } @keyframes spin { to { transform: rotate(360deg); } }
+      @media (max-width: 560px) { .card { grid-template-columns: 1fr; } .actions { flex-direction: row; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="masthead">
+        <span class="kicker">Private Intelligence Briefing</span>
+        <h1 class="title serif">Signal Desk</h1>
+        <div class="sub">
+          <span>Data &amp; Analytics</span><span class="dot"></span>
+          <span>AI Innovation</span><span class="dot"></span>
+          <span>Planning &amp; Consulting</span><span class="dot"></span>
+          <span id="updated">Loading…</span>
+        </div>
+      </header>
+
+      <nav class="beats" id="beats"></nav>
+
+      <div class="controls">
+        <div class="search">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a59c89" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="search" placeholder="Filter the current beat…" />
+        </div>
+        <button class="btn ghost" id="savedBtn">Saved (0)</button>
+        <button class="btn ghost" id="refreshBtn" title="Reload the latest feed">
+          <svg class="rfico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg>
+        </button>
+      </div>
+
+      <div class="feed" id="feed"></div>
+
+      <div class="foot">
+        Signal Desk — refreshed daily by GitHub Actions via Claude + web search.<br />
+        Links open at the source; use your own Washington Post / McKinsey access to read in full.
+      </div>
+    </div>
+
+    <script>
+      const BEATS = [
+        { id: "top", label: "The Desk", blurb: "Top signals across every beat" },
+        { id: "ai", label: "AI Innovation", blurb: "Frontier models, enterprise AI, agents" },
+        { id: "platforms", label: "Data Platforms", blurb: "Databricks · Snowflake · Azure" },
+        { id: "planning", label: "Planning & EPM", blurb: "SAP · Pigment · Anaplan" },
+        { id: "research", label: "Consulting & Research", blurb: "McKinsey · BCG · analyst research" },
+      ];
+
+      const BOOK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>';
+      const OPEN_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>';
+
+      let feed = { generatedAt: null, beats: {} };
+      let activeBeat = "top";
+      let showSaved = false;
+      let query = "";
+
+      const saved = JSON.parse(localStorage.getItem("sd_saved") || "{}");
+      const keyOf = (i) => i.url || i.title;
+      const persist = () => localStorage.setItem("sd_saved", JSON.stringify(saved));
+
+      const esc = (s) =>
+        String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+        );
+
+      function renderBeats() {
+        document.getElementById("beats").innerHTML = BEATS.map(
+          (b) =>
+            `<div class="beat ${b.id === activeBeat && !showSaved ? "active" : ""}" data-id="${b.id}">
+               <span class="beat-l serif">${b.label}</span>
+               <span class="beat-b">${b.blurb}</span>
+             </div>`
+        ).join("");
+        document.querySelectorAll(".beat").forEach((el) =>
+          el.addEventListener("click", () => {
+            activeBeat = el.dataset.id;
+            showSaved = false;
+            query = "";
+            document.getElementById("search").value = "";
+            render();
+          })
+        );
+      }
+
+      function card(item) {
+        const k = keyOf(item);
+        const on = !!saved[k];
+        return `<article class="card">
+          <div>
+            <div class="meta">
+              ${item.tag ? `<span class="tag">${esc(item.tag)}</span>` : ""}
+              ${item.source ? `<span class="src">${esc(item.source)}</span>` : ""}
+              ${item.date ? `<span class="date">${esc(item.date)}</span>` : ""}
+            </div>
+            <h2 class="head serif">
+              ${item.url
+                ? `<a href="${esc(item.url)}" target="_blank" rel="noreferrer">${esc(item.title)}</a>`
+                : esc(item.title)}
+            </h2>
+            ${item.summary ? `<p class="summary">${esc(item.summary)}</p>` : ""}
+            ${item.relevance
+              ? `<div class="why"><span class="why-l">Why it matters</span><span class="why-t">${esc(item.relevance)}</span></div>`
+              : ""}
+          </div>
+          <div class="actions">
+            <button class="icon ${on ? "on" : ""}" data-save="${esc(k)}" title="${on ? "Unsave" : "Save"}">${BOOK_SVG}</button>
+            ${item.url ? `<a class="icon" href="${esc(item.url)}" target="_blank" rel="noreferrer" title="Open">${OPEN_SVG}</a>` : ""}
+          </div>
+        </article>`;
+      }
+
+      function render() {
+        renderBeats();
+        document.getElementById("savedBtn").textContent =
+          (showSaved ? "Feed" : "Saved (" + Object.keys(saved).length + ")");
+        document.getElementById("savedBtn").classList.toggle("on", showSaved);
+
+        let items = showSaved
+          ? Object.values(saved)
+          : (feed.beats[activeBeat] || []);
+
+        if (query) {
+          const q = query.toLowerCase();
+          items = items.filter((i) =>
+            [i.title, i.summary, i.source, i.tag, i.relevance]
+              .some((f) => (f || "").toLowerCase().includes(q))
+          );
+        }
+
+        const feedEl = document.getElementById("feed");
+        if (!items.length) {
+          feedEl.innerHTML =
+            '<div class="empty">' +
+            (showSaved
+              ? "No saved stories yet — tap the bookmark on any item to keep it here."
+              : query
+              ? "Nothing in this beat matches your filter."
+              : "No stories yet for this beat. Run the refresh workflow to populate it.") +
+            "</div>";
+          return;
+        }
+        feedEl.innerHTML = items.map(card).join("");
+        feedEl.querySelectorAll("[data-save]").forEach((btn) =>
+          btn.addEventListener("click", () => {
+            const k = btn.getAttribute("data-save");
+            // find the item in current view
+            const pool = showSaved ? Object.values(saved) : (feed.beats[activeBeat] || []);
+            const item = pool.find((i) => keyOf(i) === k);
+            if (saved[k]) delete saved[k];
+            else if (item) saved[k] = item;
+            persist();
+            render();
+          })
+        );
+      }
+
+      function showLoading() {
+        document.getElementById("feed").innerHTML = Array.from({ length: 6 })
+          .map(
+            () =>
+              `<div class="skel">
+                 <div class="sk" style="height:12px;width:140px;margin-bottom:12px"></div>
+                 <div class="sk" style="height:22px;width:75%;margin-bottom:10px"></div>
+                 <div class="sk" style="height:12px;width:90%;margin-bottom:6px"></div>
+                 <div class="sk" style="height:12px;width:55%"></div>
+               </div>`
+          )
+          .join("");
+      }
+
+      async function loadFeed() {
+        showLoading();
+        try {
+          const res = await fetch("./data/feed.json?ts=" + Date.now(), { cache: "no-store" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          feed = await res.json();
+          const u = feed.generatedAt ? new Date(feed.generatedAt) : null;
+          document.getElementById("updated").textContent = u
+            ? "Updated " + u.toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })
+            : "Not yet generated";
+        } catch (e) {
+          document.getElementById("updated").textContent = "Feed unavailable";
+          document.getElementById("feed").innerHTML =
+            '<div class="err">Could not load data/feed.json.<br/>Run the refresh workflow in the Actions tab to generate it.</div>';
+          return;
+        }
+        render();
+      }
+
+      document.getElementById("search").addEventListener("input", (e) => {
+        query = e.target.value.trim();
+        render();
+      });
+      document.getElementById("savedBtn").addEventListener("click", () => {
+        showSaved = !showSaved;
+        render();
+      });
+      document.getElementById("refreshBtn").addEventListener("click", (e) => {
+        e.currentTarget.querySelector(".rfico").classList.add("spin");
+        loadFeed().finally(() =>
+          document.querySelector(".rfico").classList.remove("spin")
+        );
+      });
+
+      renderBeats();
+      loadFeed();
+    </script>
+  </body>
+</html>

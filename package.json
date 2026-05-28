@@ -1,0 +1,10 @@
+{
+  "name": "signal-desk",
+  "version": "1.0.0",
+  "description": "A private intelligence briefing for data, analytics & AI consulting — refreshed daily via Claude + web search.",
+  "type": "module",
+  "scripts": {
+    "refresh": "node scripts/refresh.mjs"
+  },
+  "license": "MIT"
+}

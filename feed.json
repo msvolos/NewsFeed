@@ -1,0 +1,20 @@
+{
+  "generatedAt": null,
+  "beats": {
+    "top": [
+      {
+        "title": "Welcome to Signal Desk",
+        "source": "Setup",
+        "url": "",
+        "date": "",
+        "tag": "Getting Started",
+        "summary": "This is placeholder content. Once you add your ANTHROPIC_API_KEY secret and run the \"Refresh briefing\" workflow, real curated stories will replace this.",
+        "relevance": "Go to the Actions tab, run the workflow once, and this feed fills with live stories across all five beats."
+      }
+    ],
+    "ai": [],
+    "platforms": [],
+    "planning": [],
+    "research": []
+  }
+}
