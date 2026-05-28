@@ -1,0 +1,45 @@
+name: Refresh briefing
+
+# Hybrid approach:
+#   - Beats 1-4: free RSS feeds (no API key needed)
+#   - Beat 5:    Google Custom Search (free tier, ~2 queries/day)
+# Claude curates the results — no Anthropic web_search tool = no $10/1k fee.
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 11:00 UTC daily ≈ 6-7am US Eastern
+  workflow_dispatch: {}     # run manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Assemble briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+        run: node scripts/refresh.mjs
+
+      - name: Commit updated feed
+        run: |
+          git config user.name "signal-desk-bot"
+          git config user.email "actions@github.com"
+          git add data/feed.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh briefing ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
