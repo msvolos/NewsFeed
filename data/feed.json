@@ -1,18 +1,190 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-05-28T20:32:24.139Z",
   "beats": {
     "top": [
       {
-        "title": "Welcome to Signal Desk",
-        "source": "Setup",
-        "url": "",
-        "date": "",
-        "tag": "Getting Started",
-        "summary": "This is placeholder content. Once you add your ANTHROPIC_API_KEY secret and run the \"Refresh briefing\" workflow, real curated stories will replace this.",
-        "relevance": "Go to the Actions tab, run the workflow once, and this feed fills with live stories across all five beats."
+        "title": "How enterprise leaders are scaling AI agents across their organization",
+        "source": "Databricks",
+        "url": "https://www.databricks.com/blog/how-enterprise-leaders-are-scaling-ai-agents-across-their-organization",
+        "date": "May 28, 2026",
+        "tag": "AI Agents",
+        "summary": "Senior executives from Danone and Capital One share how they are operationalizing and scaling AI agents across their enterprises, addressing organizational and technical challenges. The piece surfaces real-world patterns from leading CDOs and chief scientists on agent deployment at scale.",
+        "relevance": "Provides consulting leaders with executive-level case studies and frameworks for advising clients on scaling agentic AI programs beyond pilots into enterprise-wide deployment."
+      },
+      {
+        "title": "Snowflake to Acquire Natoma to Bring Governed Agentic Access to the Enterprise",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-acquire-natoma-governed-agentic-access",
+        "date": "May 27, 2026",
+        "tag": "AI Governance",
+        "summary": "Snowflake plans to acquire Natoma to enhance governed agentic access, connecting AI agents to enterprise applications with stronger identity management, policy enforcement, audit trails, and security controls. The acquisition signals Snowflake's strategic push to become the governance layer for agentic AI in the enterprise.",
+        "relevance": "A landmark M&A move that reshapes the competitive landscape for governed AI platforms, with direct implications for how consulting leaders advise clients on data governance and agentic AI architecture decisions."
+      },
+      {
+        "title": "SAP and Snowflake Unleash a New Era of Enterprise AI with Zero-Copy Integration",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/sap-snowflake-zero-copy-integration-enterprise-ai",
+        "date": "May 11, 2026",
+        "tag": "SAP Integration",
+        "summary": "Snowflake announced the general availability of its zero-copy integration with SAP, enabling enterprise AI use cases that leverage SAP data without duplication or migration overhead. This milestone deepens one of the most strategically significant partnerships in the enterprise data ecosystem.",
+        "relevance": "Directly relevant for leaders advising SAP-centric clients on modernizing their data architecture and unlocking AI on ERP data without costly data movement or replatforming."
+      },
+      {
+        "title": "Announcing Claude Opus 4.8 on Snowflake Cortex AI",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/claude-opus-4-8-snowflake-cortex-ai",
+        "date": "May 28, 2026",
+        "tag": "Foundation Models",
+        "summary": "Anthropic's Claude Opus 4.8, featuring advanced reasoning and agentic capabilities, is now available within Snowflake Cortex AI, giving enterprises access to a frontier model inside Snowflake's governed platform. This expands the model choice available to organizations building secure, governed AI applications.",
+        "relevance": "Expands the frontier model options available inside governed enterprise data platforms, a key consideration for consulting leaders helping clients select and deploy LLMs within their existing data stack."
+      },
+      {
+        "title": "How We Used Cortex Code to Turn Finance Variance Analysis into a Live, Intelligent Workflow",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/finance-variance-analysis-workflow",
+        "date": "May 28, 2026",
+        "tag": "FP&A Automation",
+        "summary": "Snowflake details how its Cortex Code capability transformed a fragile budget-vs-actual workbook into a governed, live application that updates during financial close, accelerates commentary generation, and reduces manual rebuilds. The case illustrates AI-driven modernization of a core FP&A workflow.",
+        "relevance": "Highly actionable for analytics and planning consulting leaders, demonstrating a concrete AI use case in finance that replaces spreadsheet-based processes with governed, real-time workflows clients can replicate."
+      },
+      {
+        "title": "Agentic AI in Financial Services: How Nasdaq eVestment Drives Faster Investment Insights",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-ai-financial-services-nasdaq-evestment",
+        "date": "May 21, 2026",
+        "tag": "Financial Services AI",
+        "summary": "Nasdaq eVestment deployed agentic AI on Snowflake Cortex using trusted institutional data to accelerate prospecting workflows, improve asset manager win rates, and generate faster investment insights. The case demonstrates a production agentic deployment in a regulated financial services environment.",
+        "relevance": "Offers a credible, sector-specific blueprint for consulting leaders advising financial services clients on converting institutional data assets into agentic AI-driven competitive advantages."
+      },
+      {
+        "title": "Reliable LLM Inference at Scale",
+        "source": "Databricks",
+        "url": "https://www.databricks.com/blog/reliable-llm-inference-scale",
+        "date": "May 27, 2026",
+        "tag": "LLM Infrastructure",
+        "summary": "Databricks outlines the architecture and engineering principles behind its inference platform, which serves every frontier model it offers at enterprise scale with a focus on reliability. The post addresses latency, throughput, and fault-tolerance challenges inherent in production LLM deployments.",
+        "relevance": "Informs consulting leaders on the infrastructure maturity required for enterprise-grade LLM deployments, a critical dimension when assessing client readiness and vendor capability for scaled AI programs."
+      },
+      {
+        "title": "Semantic Layer in Financial Services AI Risk",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/semantic-layer-ai-risk-finance",
+        "date": "May 14, 2026",
+        "tag": "Data Governance",
+        "summary": "The article argues that inconsistent data definitions in financial services create material AI risk, governance gaps, and model drift, making a reliable semantic layer foundational to trustworthy AI. It positions semantic consistency as a risk management imperative rather than a technical nicety.",
+        "relevance": "Directly relevant for consulting leaders who need to articulate the business risk of poor data semantics to financial services clients accelerating AI adoption without adequate governance foundations."
+      },
+      {
+        "title": "Multimodal Analytics: Decode Video, Audio and Images",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/multimodal-analytics-ai-video-audio-images",
+        "date": "May 19, 2026",
+        "tag": "Multimodal AI",
+        "summary": "Snowflake Cortex AI now enables organizations to convert unstructured video, audio, image, and document data into structured insights for analytics and decision-making. The capability expands the scope of enterprise analytics well beyond structured and semi-structured data.",
+        "relevance": "Signals a significant expansion of what counts as enterprise analytics data, relevant for consulting leaders helping clients identify new AI use cases from previously untapped unstructured data assets."
+      },
+      {
+        "title": "How the lakebase architecture stays resilient to cloud failures",
+        "source": "Databricks",
+        "url": "https://www.databricks.com/blog/how-lakebase-architecture-stays-resilient-cloud-failures",
+        "date": "May 27, 2026",
+        "tag": "Data Resilience",
+        "summary": "Databricks explains how its Lakebase architecture is designed to maintain resilience under the new strain that AI agents place on cloud infrastructure, detailing fault-tolerance and recovery mechanisms. The piece reflects the infrastructure consequences of moving from batch analytics to agent-driven, always-on data workloads.",
+        "relevance": "Important for consulting leaders advising on enterprise data platform architecture, as agentic AI introduces new availability and resilience requirements that traditional lakehouse designs were not built to handle."
       }
     ],
-    "ai": [],
+    "ai": [
+      {
+        "title": "Rethinking organizational design in the age of agentic AI",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+        "date": "May 26, 2026",
+        "tag": "AI Agents",
+        "summary": "Despite 85% of organizations aspiring to be agentic within three years, 76% report that their current operations and infrastructure cannot support that transition. The piece examines the disconnect between agentic AI ambition and execution readiness.",
+        "relevance": "Directly frames the organizational transformation challenge consultants must address when helping enterprise clients move from AI pilots to agentic production deployments."
+      },
+      {
+        "title": "How enterprise leaders are scaling AI agents across their organization",
+        "source": "Databricks",
+        "url": "https://www.databricks.com/blog/how-enterprise-leaders-are-scaling-ai-agents-across-their-organization",
+        "date": "May 28, 2026",
+        "tag": "AI Agents",
+        "summary": "Databricks shares perspectives from senior executives at Danone and Capital One on the practical challenges and strategies for scaling AI agents enterprise-wide. The post covers governance, infrastructure, and organizational change management.",
+        "relevance": "First-hand executive accounts from large enterprises on agent scaling provide credible benchmarks and talking points for advisory engagements."
+      },
+      {
+        "title": "How enterprises are scaling AI",
+        "source": "OpenAI",
+        "url": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+        "date": "May 11, 2026",
+        "tag": "Enterprise Adoption",
+        "summary": "OpenAI's guide details how enterprises move from early AI experiments to compounding impact by focusing on trust, governance, workflow design, and quality at scale. It outlines a maturity progression applicable across industries.",
+        "relevance": "Provides a structured framework for advising clients on the journey from AI experimentation to measurable enterprise-wide value creation."
+      },
+      {
+        "title": "OpenAI and PwC collaborate to reimagine the office of the CFO",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/openai-pwc-finance-collaboration",
+        "date": "May 04, 2026",
+        "tag": "Finance AI",
+        "summary": "OpenAI and PwC are partnering to help enterprises deploy AI agents that automate finance workflows, improve forecasting, strengthen controls, and modernize the CFO function. The collaboration targets core finance operations at scale.",
+        "relevance": "A flagship consulting-plus-vendor partnership that signals where AI-driven finance transformation is heading and sets a competitive benchmark for analytics advisory practices."
+      },
+      {
+        "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/databricks",
+        "date": "May 15, 2026",
+        "tag": "Frontier Models",
+        "summary": "Databricks has integrated GPT-5.5 into its enterprise agent workflows after the model achieved a new state of the art on the OfficeQA Pro benchmark. The partnership deepens the connection between Databricks' data platform and OpenAI's latest frontier model.",
+        "relevance": "Signals that the leading data lakehouse platform is now coupling frontier model capability with enterprise data infrastructure, a convergence point critical for data and analytics strategy."
+      },
+      {
+        "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/snowflake-partnership",
+        "date": "Feb 02, 2026",
+        "tag": "Data Platform",
+        "summary": "OpenAI and Snowflake have signed a $200M agreement to embed frontier AI intelligence directly into enterprise data environments, enabling AI agents and analytics insights within Snowflake. The deal integrates model capability at the data layer.",
+        "relevance": "A major platform-level integration that reshapes how analytics and AI capabilities are delivered to enterprise data teams, with direct implications for technology stack decisions."
+      },
+      {
+        "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+        "date": "May 22, 2026",
+        "tag": "Gartner",
+        "summary": "OpenAI has been named a Leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment. This is the first Magic Quadrant specifically for agentic coding tools.",
+        "relevance": "The existence of a dedicated Gartner MQ for agentic coding confirms the category has matured enough for formal enterprise evaluation, informing clients' vendor selection processes."
+      },
+      {
+        "title": "How frontier firms are pulling ahead",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/introducing-b2b-signals",
+        "date": "May 06, 2026",
+        "tag": "Enterprise Adoption",
+        "summary": "OpenAI's B2B Signals research examines how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage over peers. The report identifies behavioral and structural patterns that differentiate AI leaders.",
+        "relevance": "Provides data-backed evidence on what separates AI-mature enterprises from laggards, a key input for competitive benchmarking and transformation roadmap engagements."
+      },
+      {
+        "title": "A reality check on the AI jobs hysteria",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/05/26/1137855/a-reality-check-on-the-ai-jobs-hysteria/",
+        "date": "May 26, 2026",
+        "tag": "Workforce Impact",
+        "summary": "Despite high-profile layoffs at Coinbase, Meta, and Cisco being attributed to AI, aggregate employment in developed economies remains broadly stable with limited evidence of AI-driven displacement at the macro level. The article urges caution in interpreting headline numbers.",
+        "relevance": "Helps consulting leaders contextualize workforce impact narratives for clients and avoid overstating or understating AI's near-term labor disruption in change management engagements."
+      },
+      {
+        "title": "It's time to address the looming crisis in entry-level work",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/",
+        "date": "May 26, 2026",
+        "tag": "Workforce Impact",
+        "summary": "While aggregate employment figures look stable, the article argues that AI is disproportionately displacing entry-level and early-career knowledge work roles, creating a structural pipeline problem that aggregate statistics obscure. It calls for proactive policy and organizational responses.",
+        "relevance": "Entry-level talent pipelines are foundational to consulting and analytics firms; understanding this structural shift is essential for workforce planning and client talent strategy advice."
+      }
+    ],
     "platforms": [],
     "planning": [],
     "research": []
