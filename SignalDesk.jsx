@@ -149,6 +149,11 @@ async function fetchFeed({ focus, custom }) {
     .map((b) => b.text)
     .join("\n");
   const items = extractItems(text).filter((i) => i && i.title);
+  items.sort((a, b) => {
+    const da = a.date ? new Date(a.date) : new Date(0);
+    const db = b.date ? new Date(b.date) : new Date(0);
+    return db - da;
+  });
   if (items.length === 0) {
     throw new Error(
       "No stories parsed from the response" +
