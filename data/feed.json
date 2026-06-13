@@ -1,75 +1,15 @@
 {
-  "generatedAt": "2026-06-13T15:47:17.265Z",
+  "generatedAt": "2026-06-13T16:43:48.451Z",
   "beats": {
     "top": [
       {
-        "title": "Anthropic blocks all public access to Claude Fable 5, Mythos 5 following US government order — what enterprises should do",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/technology/anthropic-blocks-all-public-access-to-claude-fable-5-mythos-5-following-us-government-order-what-enterprises-should-do",
-        "date": "Jun 13, 2026",
-        "tag": "AI Governance",
-        "summary": "The US government issued an export control directive ordering Anthropic to immediately suspend all access to its top-tier Claude Fable 5 and Claude Mythos 5 models for foreign nationals, citing national security authorities. Anthropic has blocked all public access in response, while expressing disagreement with the decision.",
-        "relevance": "This unprecedented government intervention in frontier AI model access creates immediate strategic and operational risk for enterprise clients relying on these models, and signals that AI governance and model supply-chain resilience must now be top-of-mind for any consulting engagement.",
-        "isNew": false
-      },
-      {
-        "title": "Anthropic's safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
-        "date": "Jun 13, 2026",
-        "tag": "AI Policy",
-        "summary": "Anthropic's own safety disclosures appear to have contributed to the US government's decision to pull access to its most powerful models, with Anthropic publicly objecting that a narrow potential jailbreak should not justify recalling a commercially deployed model. The episode highlights the complex interplay between AI safety transparency and regulatory risk.",
-        "relevance": "For consulting leaders advising on enterprise AI strategy, this case illustrates that proactive safety disclosures can trigger regulatory action, reshaping how organizations should approach AI risk communication and vendor selection.",
-        "isNew": true
-      },
-      {
-        "title": "Snowflake Ventures Invests in Jedify to Advance Enterprise AI",
+        "title": "Financial Services AI: ROI, Agentic and Governance",
         "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/jedify-context-graphs-enterprise-ai-agents",
-        "date": "Jun 12, 2026",
-        "tag": "Enterprise AI",
-        "summary": "Snowflake Ventures has invested in Jedify, a startup building an autonomous context graph that automates semantic lifecycle management to give enterprise AI agents governed business context for accurate, trusted answers. The investment reflects growing demand for reliable AI agent grounding in enterprise environments.",
-        "relevance": "Semantic lifecycle management is an emerging but critical layer in enterprise AI stacks, and this investment signals where the industry is heading on agent reliability — directly relevant to clients building or evaluating AI agent architectures.",
-        "isNew": false
-      },
-      {
-        "title": "Google researchers introduce 'faithful uncertainty,' allowing LLMs to offer best guesses instead of hallucinations",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/orchestration/google-researchers-introduce-faithful-uncertainty-allowing-llms-to-offer-best-guesses-instead-of-hallucinations",
-        "date": "Jun 12, 2026",
-        "tag": "LLM Reliability",
-        "summary": "Google researchers have proposed a 'faithful uncertainty' technique that allows large language models to express calibrated uncertainty and offer best guesses rather than fabricating confident but incorrect answers. The approach aims to address the hallucination problem without suppressing valid responses.",
-        "relevance": "Hallucination remains the primary enterprise barrier to LLM adoption in high-stakes analytics and decision-support contexts, so this research direction has direct implications for how consultants frame AI reliability and trust in client deployments.",
-        "isNew": false
-      },
-      {
-        "title": "PixelRAG beats text parsers on accuracy and cuts AI agent token costs 10x",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/data/pixelrag-beats-text-parsers-on-accuracy-and-cuts-ai-agent-token-costs-10x",
-        "date": "Jun 12, 2026",
-        "tag": "RAG / Retrieval",
-        "summary": "New research on PixelRAG shows that bypassing traditional text-parsing steps in enterprise RAG pipelines improves retrieval accuracy and reduces AI agent token costs by 10x by preserving visual and structural document signals. The findings suggest that most enterprise RAG pipelines are systematically degrading retrieval quality at the parsing stage.",
-        "relevance": "RAG architecture is foundational to most enterprise AI deployments, and a 10x cost reduction alongside accuracy gains is a compelling optimization case that analytics and AI consultants should be ready to discuss with clients evaluating or scaling RAG systems.",
-        "isNew": true
-      },
-      {
-        "title": "Google DeepMind is worried about what happens when millions of agents start to interact",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/06/11/1138794/google-deepmind-is-worried-about-what-happens-when-millions-of-agents-start-to-interact/",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/financial-services-ai-roi-agentic",
         "date": "Jun 11, 2026",
-        "tag": "AI Safety",
-        "summary": "Google DeepMind is funding research into the systemic risks that emerge when millions of AI agents interact with each other online, according to Rohin Shah, who leads the company's AGI safety and alignment research. The concern centers on unpredictable emergent behaviors at scale.",
-        "relevance": "As enterprises scale multi-agent AI deployments, understanding systemic interaction risks is essential for risk advisory work and for designing robust AI governance frameworks that clients will increasingly require.",
-        "isNew": false
-      },
-      {
-        "title": "Microsoft's open-source SkillOpt automatically upgrades AI agent skills without touching model weights",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/orchestration/microsofts-open-source-skillopt-automatically-upgrades-ai-agent-skills-without-touching-model-weights",
-        "date": "Jun 11, 2026",
-        "tag": "Agent Optimization",
-        "summary": "Microsoft has open-sourced SkillOpt, a tool that automatically optimizes AI agent skill instructions stored as markdown files, improving agent performance for enterprise use cases without requiring changes to underlying model weights. The tool addresses the slow, manual process of skill tuning in production agent systems.",
-        "relevance": "Automating agent skill optimization reduces the operational burden of maintaining enterprise AI agents, a key concern for clients moving from pilot to production, and reinforces Microsoft's position in the enterprise agentic AI stack.",
+        "tag": "Financial Services AI",
+        "summary": "A Snowflake research report explores how financial services firms are proving AI ROI, adopting agentic AI, and leveraging proprietary data to scale trusted enterprise AI outcomes.",
+        "relevance": "Financial services is a leading AI-adopting sector, and this vertical-specific evidence on ROI and agentic deployment is directly useful for client conversations and practice development.",
         "isNew": false
       },
       {
@@ -77,9 +17,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-coco-ai-coding-agent-modern-data-stack",
         "date": "Jun 02, 2026",
-        "tag": "AI Coding Agents",
-        "summary": "Snowflake launched CoCo, an AI coding agent purpose-built for data teams, accessible via desktop, mobile, Slack, cloud agents, and async APIs, all grounded in governed enterprise data. It enables deployment of Snowpark Python pipelines to production with a single prompt.",
-        "relevance": "CoCo represents a significant productivity shift for data engineering teams and signals that agentic, prompt-driven data pipeline development is becoming a mainstream enterprise capability — a key talking point for modernization engagements.",
+        "tag": "AI Agents",
+        "summary": "Snowflake has launched CoCo, an AI coding agent built for data teams that operates across desktop, mobile, Slack, cloud agents, and async APIs, grounded in governed enterprise data. It enables developers to deploy Snowpark Python pipelines to production with a single prompt.",
+        "relevance": "Represents a tangible shift in how data engineering work is executed, with direct implications for how consulting delivery teams and client data organizations will be staffed and tooled.",
         "isNew": false
       },
       {
@@ -88,19 +28,79 @@
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-cowork-personal-work-agent",
         "date": "Jun 02, 2026",
         "tag": "AI Agents",
-        "summary": "Snowflake rebranded Snowflake Intelligence as CoWork, a personal work agent for knowledge workers that combines deep business context, automation, and governed actions across enterprise systems. The announcement was made at Snowflake Summit 2026.",
-        "relevance": "CoWork's positioning as a governed, enterprise-grade AI agent for business users directly competes in the space where many analytics and planning clients are evaluating AI copilot investments, making it a key competitive development to track.",
+        "summary": "Snowflake CoWork, formerly Snowflake Intelligence, is a personal work agent for knowledge workers that combines deep business context, automation, and governed actions across enterprise systems. It was a flagship announcement at Snowflake Summit 2026.",
+        "relevance": "Signals Snowflake's push to embed agentic AI directly into enterprise workflows, a development that reshapes the BI and analytics tooling landscape clients are evaluating.",
         "isNew": false
       },
       {
-        "title": "Snowflake Horizon Context: The Governed Context Layer for AI, BI and Apps",
+        "title": "Set the Foundation for Trusted AI",
         "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/horizon-context-governed-context",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/trusted-data-trusted-ai",
         "date": "Jun 02, 2026",
-        "tag": "Data Governance",
-        "summary": "Snowflake introduced Horizon Context, a new capability within Horizon Catalog that delivers a connected, governed semantic foundation with active context for AI and BI workloads. It is designed to ensure consistent, trusted data context across enterprise AI agents and applications.",
-        "relevance": "Governed semantic layers are a critical enabler of trustworthy enterprise AI, and Horizon Context positions Snowflake as a serious contender in the metadata and context management space that consultants should evaluate in data architecture recommendations.",
-        "isNew": false
+        "tag": "AI Governance",
+        "summary": "Snowflake outlines how its platform makes enterprise AI deployable with confidence through Horizon Context and Horizon Catalog for governed semantic context, AI security enhancements, and workload-aware Adaptive Compute.",
+        "relevance": "Addresses the governance and trust gap identified in industry surveys, positioning Snowflake's platform capabilities as a direct answer to enterprise AI deployment risk.",
+        "isNew": true
+      },
+      {
+        "title": "CEOs and Boards Are Aligned on AI in Theory, but Divided in Practice",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/ceos-and-boards-are-aligned-on-ai-in-theory-but-divided-in-practice",
+        "date": "May 06, 2026",
+        "tag": "AI Strategy",
+        "summary": "BCG's 2026 global survey of 625 CEOs and board members reveals significant misalignment on AI strategy, speed, and ROI expectations. These divisions could hinder effective AI transformation across organizations.",
+        "relevance": "Signals a critical advisory need around aligning C-suite and board stakeholders on AI strategy, speed, and value realization—a core consulting engagement opportunity.",
+        "isNew": true
+      },
+      {
+        "title": "Scaling agentic AI with data transformations",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale",
+        "date": "Apr 02, 2026",
+        "tag": "Agentic AI",
+        "summary": "McKinsey argues that strong data foundations are essential for scaling agentic AI, with eight in ten companies citing data limitations as a key roadblock. The report advises tech leaders to modernize data architectures and evolve operating models accordingly.",
+        "relevance": "Directly frames the data modernization conversation that analytics and AI consulting leaders must lead with clients pursuing agentic AI at scale.",
+        "isNew": true
+      },
+      {
+        "title": "Five Barriers CEOs Must Overcome for AI Impact",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/five-barriers-ceos-must-overcome-for-ai-impact",
+        "date": "Mar 26, 2026",
+        "tag": "AI ROI",
+        "summary": "BCG identifies five key barriers preventing CEOs from turning AI investments into financial value, arguing that transformation discipline—not just technological progress—is what separates leaders who succeed.",
+        "relevance": "Provides a direct consulting framework for diagnosing why AI investments stall and positioning transformation enablement as the core value-add.",
+        "isNew": true
+      },
+      {
+        "title": "State of AI trust in 2026: Shifting to the agentic era",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
+        "date": "Mar 25, 2026",
+        "tag": "AI Governance",
+        "summary": "McKinsey's 2026 AI Trust Maturity Survey finds that while AI adoption is accelerating into scaled agentic deployment, persistent gaps remain in governance, strategy, and risk management across organizations globally.",
+        "relevance": "Highlights the governance and risk management gaps that represent significant consulting opportunity as enterprises move from AI pilots to agentic deployments.",
+        "isNew": true
+      },
+      {
+        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
+        "date": "Jan 15, 2026",
+        "tag": "AI Investment",
+        "summary": "BCG's 2026 AI Radar report reveals that companies plan to double AI spending in 2026, with nearly three-quarters of CEOs now serving as their company's chief AI decision maker. Half of CEOs believe their jobs depend on getting AI right.",
+        "relevance": "The CEO-level ownership of AI strategy creates demand for credible, board-ready advisory services in AI planning and transformation.",
+        "isNew": true
+      },
+      {
+        "title": "Why CEOs Must Lead Data Conversations for AI Success",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2025/ceos-must-lead-data-conversations-for-ai-success",
+        "date": "Sep 22, 2025",
+        "tag": "Data Strategy",
+        "summary": "BCG's Vlad Lukic explains why massive data spending often fails to produce AI business impact and how C-suite leadership of data strategy is key to turning investments into competitive advantage.",
+        "relevance": "Reinforces the consulting narrative that data strategy must be CEO-led, not delegated to IT, making this a useful thought leadership anchor for client conversations.",
+        "isNew": true
       }
     ],
     "ai": [
