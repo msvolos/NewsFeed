@@ -1,9 +1,7 @@
 name: Refresh briefing
 
-# Hybrid approach:
-#   - Beats 1-4: free RSS feeds (no API key needed)
-#   - Beat 5:    Google Custom Search (free tier, ~2 queries/day)
-# Claude curates the results — no Anthropic web_search tool = no $10/1k fee.
+# RSS feeds for vendor/tech beats + Claude web_search for consulting sources
+# (McKinsey, BCG, Gartner etc. block RSS readers — web_search reaches them directly)
 
 on:
   schedule:
@@ -28,8 +26,6 @@ jobs:
       - name: Assemble briefing
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
         run: node scripts/refresh.mjs
 
       - name: Commit updated feed

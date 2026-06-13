@@ -1,13 +1,11 @@
 // scripts/refresh.mjs
-// Assembles the Signal Desk briefing using a hybrid approach:
-//   - Beats 1-4: RSS feeds (completely free, no API key needed)
-//   - Beat 5 (research/consulting): Google Custom Search (free tier: 3,000 queries/month)
-//     targets mckinsey.com, bcg.com, gartner.com, deloitte.com etc. directly
+// Assembles the Signal Desk briefing:
+//   - RSS feeds for vendor/tech beats
+//   - Claude web_search for consulting sources (McKinsey, BCG, Gartner etc.)
+//     which block RSS readers and require active web search to reach
 //
 // Required environment variables:
 //   ANTHROPIC_API_KEY  – from console.anthropic.com
-//   GOOGLE_API_KEY     – from console.cloud.google.com (Custom Search API)
-//   GOOGLE_CSE_ID      – your Programmable Search Engine ID
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
@@ -19,18 +17,15 @@ const OUT = join(ROOT, "data", "feed.json");
 
 const MODEL = "claude-sonnet-4-6";
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
-const GOOGLE_SEARCH_URL = "https://www.googleapis.com/customsearch/v1";
 
 const ITEMS_PER_BEAT = 10;
-
-// How many feed items to pass to Claude per beat. Capped to avoid rate limits.
 const MAX_ITEMS_PER_PROMPT = 40;
 
-// Delay between Claude calls (ms). 20s keeps us well under the 30k token/min limit.
+// Delay between Claude calls (ms) to stay under rate limits.
 const BEAT_DELAY_MS = 20_000;
 
 // ---------------------------------------------------------------------------
-// BEATS — edit focus/feeds/googleQueries to retune each tab
+// BEATS
 // ---------------------------------------------------------------------------
 
 const BEATS = [
@@ -45,10 +40,10 @@ const BEATS = [
       "https://venturebeat.com/feed/",
       "https://techcrunch.com/feed/",
     ],
-    googleQueries: [
-      { q: "AI OR analytics OR data",          site: "mckinsey.com" },
-      { q: "AI OR analytics OR data",          site: "bcg.com" },
-      { q: "AI OR analytics enterprise",       site: "hbr.org" },
+    // Web search queries supplement RSS with consulting perspective
+    webSearchQueries: [
+      "site:mckinsey.com AI OR analytics OR data 2025 OR 2026",
+      "site:bcg.com AI OR analytics OR data 2025 OR 2026",
     ],
   },
   {
@@ -62,9 +57,8 @@ const BEATS = [
       "https://venturebeat.com/category/ai/feed/",
       "https://techcrunch.com/category/artificial-intelligence/feed/",
     ],
-    googleQueries: [
-      { q: "AI agents OR generative AI OR LLM enterprise", site: "mckinsey.com" },
-      { q: "AI enterprise adoption",                       site: "gartner.com" },
+    webSearchQueries: [
+      "site:mckinsey.com generative AI OR agentic AI enterprise 2025 OR 2026",
     ],
   },
   {
@@ -78,45 +72,38 @@ const BEATS = [
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
     ],
-    googleQueries: [
-      { q: "Databricks OR Snowflake OR Microsoft Fabric", site: "gartner.com" },
-    ],
   },
   {
     id: "planning",
     focus:
       "enterprise planning, performance management (EPM / xP&A) and analytics platforms specifically SAP (SAP Analytics Cloud, SAP Datasphere, Business Data Cloud, BPC), Pigment, and Anaplan: product news, AI-in-planning features, funding, M&A, competitive moves, and broader strategy on enterprise planning and finance transformation",
     feeds: [
-      // SAP is capped to 5 items in Claude's selection to prevent it from dominating
       "https://news.sap.com/feed/",
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
     ],
-    googleQueries: [
-      { q: "Anaplan AI planning OR forecasting OR EPM",    site: "techcrunch.com" },
-      { q: "Pigment planning software OR FP&A",           site: "techcrunch.com" },
-      { q: "enterprise planning OR xP&A OR FP&A AI",      site: "gartner.com" },
-      { q: "enterprise planning OR finance transformation OR scenario planning", site: "mckinsey.com" },
-      { q: "enterprise planning OR FP&A OR EPM AI",       site: "bcg.com" },
+    webSearchQueries: [
+      "Pigment OR Anaplan EPM OR FP&A OR planning software 2025 OR 2026",
+      "site:mckinsey.com enterprise planning OR finance transformation OR scenario planning 2025 OR 2026",
+      "site:bcg.com enterprise planning OR FP&A OR finance transformation 2025 OR 2026",
     ],
   },
   {
     id: "research",
     focus:
       "business research and consulting-industry analysis: McKinsey, BCG, Bain, Deloitte and Gartner publications on data, analytics and AI, plus reporting on how AI is reshaping the management-consulting and analytics-services business itself",
-    // One query per major source so results aren't diluted by a single provider.
-    // ~7 queries/day = ~210/month, well within the 3,000/month free limit.
-    googleQueries: [
-      { q: "AI OR data OR analytics",          site: "mckinsey.com" },
-      { q: "AI OR data OR analytics",          site: "bcg.com" },
-      { q: "AI OR data OR analytics insights", site: "deloitte.com" },
-      { q: "AI OR data analytics enterprise",  site: "gartner.com" },
-      { q: "AI OR analytics enterprise",       site: "hbr.org" },
-      { q: "AI OR data OR analytics",          site: "bain.com" },
-    ],
     feeds: [
       "https://www.technologyreview.com/feed/",
       "https://venturebeat.com/category/ai/feed/",
+    ],
+    // One search per firm so results aren't diluted
+    webSearchQueries: [
+      "site:mckinsey.com AI OR data OR analytics 2025 OR 2026",
+      "site:bcg.com AI OR data OR analytics 2025 OR 2026",
+      "site:bain.com AI OR data OR analytics 2025 OR 2026",
+      "site:deloitte.com AI OR data OR analytics insights 2025 OR 2026",
+      "site:gartner.com AI OR data analytics enterprise 2025 OR 2026",
+      "site:hbr.org AI OR analytics enterprise 2025 OR 2026",
     ],
   },
 ];
@@ -190,64 +177,76 @@ async function collectRssItems(feeds = []) {
 }
 
 // ---------------------------------------------------------------------------
-// Google Custom Search
+// Claude web_search — used to reach consulting sources that block RSS
 // ---------------------------------------------------------------------------
 
-async function googleSearch({ q, site }, apiKey, cseId) {
-  const url = new URL(GOOGLE_SEARCH_URL);
-  url.searchParams.set("key", apiKey);
-  url.searchParams.set("cx",  cseId);
-  url.searchParams.set("q",   q);
-  url.searchParams.set("num", "10");
-  url.searchParams.set("dateRestrict", "w3"); // past 3 weeks
-  if (site) {
-    url.searchParams.set("siteSearch", site);
-    url.searchParams.set("siteSearchFilter", "i"); // include only this site
-  }
+async function webSearch(queries, apiKey) {
+  if (!queries || queries.length === 0) return [];
+
+  const queryList = queries.map((q, i) => `${i + 1}. ${q}`).join("\n");
+  const prompt = `Search the web using each of the following queries and return all relevant articles you find. For each article found, provide the title, URL, publication date, and a brief summary.
+
+Queries:
+${queryList}
+
+Return a JSON array. Each item must have:
+- "title": article headline
+- "url": direct link
+- "date": publication date as "Mon DD, YYYY" (or "" if unknown)
+- "summary": one sentence description
+
+Return ONLY the JSON array starting with [. Find as many real articles as possible — aim for at least 2-3 results per query.`;
 
   try {
-    const res = await fetch(url.toString(), { signal: AbortSignal.timeout(10_000) });
-    if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text().then(t => t.slice(0,300))}`);
+    const res = await fetch(ANTHROPIC_URL, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 4000,
+        tools: [{ type: "web_search_20250305", name: "web_search" }],
+        messages: [{ role: "user", content: prompt }],
+      }),
+    });
+
+    if (!res.ok) {
+      const body = await res.text();
+      throw new Error(`Anthropic HTTP ${res.status}: ${body.slice(0, 300)}`);
+    }
+
     const data = await res.json();
-    return (data.items || []).map((item) => ({
-      title:   item.title || "",
-      url:     item.link  || "",
-      date:    item.pagemap?.metatags?.[0]?.["article:published_time"] || "",
-      summary: item.snippet || "",
-    }));
+    const text = (data.content || [])
+      .filter((b) => b.type === "text")
+      .map((b) => b.text)
+      .join("\n");
+
+    const items = extractItems(text).filter((i) => i && i.title && i.url);
+    console.log(`    Web search returned ${items.length} items`);
+    return items;
   } catch (err) {
-    console.warn(`    Google search "${q}"${site ? ` [${site}]` : ""} failed: ${err.message}`);
+    console.warn(`    Web search failed: ${err.message}`);
     return [];
   }
 }
 
-async function collectGoogleItems(queries = [], apiKey, cseId) {
-  const seen = new Set();
-  const all  = [];
-  for (const q of queries) {
-    for (const item of await googleSearch(q, apiKey, cseId)) {
-      if (!seen.has(item.url)) { seen.add(item.url); all.push(item); }
-    }
-    await new Promise((r) => setTimeout(r, 500));
-  }
-  return all;
-}
-
 // ---------------------------------------------------------------------------
-// Claude prompt
+// Claude curation prompt
 // ---------------------------------------------------------------------------
 
 function buildPrompt(focus, items, beatId) {
-  // Cap items to avoid hitting token limits
   const capped = items.slice(0, MAX_ITEMS_PER_PROMPT);
   const context = capped
     .map((item, i) =>
-      `[${i + 1}] ${item.title}\nURL: ${item.url}\nDate: ${item.date || "unknown"}\n${item.summary}`
+      `[${i + 1}] ${item.title}\nURL: ${item.url}\nDate: ${item.date || "unknown"}\n${item.summary || ""}`
     )
     .join("\n\n");
 
   const planningNote = beatId === "planning"
-    ? "\nIMPORTANT: Include articles about Pigment, Anaplan, and broader enterprise planning / FP&A strategy (e.g. scenario planning, finance transformation) — do NOT let SAP articles fill more than 3 of the 10 slots even if there are many SAP items available."
+    ? "\nIMPORTANT: Include articles about Pigment, Anaplan, and broader enterprise planning / FP&A strategy (e.g. scenario planning, finance transformation). Do NOT let SAP fill more than 3 of the 10 slots."
     : "";
 
   return `You are the editor of a private intelligence briefing for a senior leader in data & analytics and AI consulting.
@@ -308,20 +307,20 @@ function extractItems(raw) {
 // Per-beat fetcher
 // ---------------------------------------------------------------------------
 
-async function fetchBeat(beat, apiKey, googleApiKey, googleCseId) {
-  const rssItems    = await collectRssItems(beat.feeds);
-  const googleItems = beat.googleQueries
-    ? await collectGoogleItems(beat.googleQueries, googleApiKey, googleCseId)
+async function fetchBeat(beat, apiKey) {
+  const rssItems = await collectRssItems(beat.feeds);
+  const webItems = beat.webSearchQueries
+    ? await webSearch(beat.webSearchQueries, apiKey)
     : [];
 
-  // Merge — Google results first so consulting sources lead the prompt
+  // Merge — web search results first so consulting sources lead the prompt
   const seen = new Set();
   const allItems = [];
-  for (const item of [...googleItems, ...rssItems]) {
+  for (const item of [...webItems, ...rssItems]) {
     if (item.url && !seen.has(item.url)) { seen.add(item.url); allItems.push(item); }
   }
 
-  console.log(`    ${rssItems.length} RSS + ${googleItems.length} Google = ${allItems.length} total items (sending ${Math.min(allItems.length, MAX_ITEMS_PER_PROMPT)} to Claude)`);
+  console.log(`    ${rssItems.length} RSS + ${webItems.length} web = ${allItems.length} total (sending ${Math.min(allItems.length, MAX_ITEMS_PER_PROMPT)} to Claude)`);
 
   if (allItems.length === 0) throw new Error("no items retrieved");
 
@@ -354,7 +353,7 @@ async function fetchBeat(beat, apiKey, googleApiKey, googleCseId) {
 }
 
 // ---------------------------------------------------------------------------
-// Existing feed loader
+// Feed loader
 // ---------------------------------------------------------------------------
 
 async function loadExisting() {
@@ -375,13 +374,8 @@ function buildPreviousUrls(feed) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  const apiKey       = process.env.ANTHROPIC_API_KEY;
-  const googleApiKey = process.env.GOOGLE_API_KEY;
-  const googleCseId  = process.env.GOOGLE_CSE_ID;
-
-  if (!apiKey)       { console.error("ANTHROPIC_API_KEY is not set."); process.exit(1); }
-  if (!googleApiKey) { console.error("GOOGLE_API_KEY is not set."); process.exit(1); }
-  if (!googleCseId)  { console.error("GOOGLE_CSE_ID is not set."); process.exit(1); }
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) { console.error("ANTHROPIC_API_KEY is not set."); process.exit(1); }
 
   const feed = await loadExisting();
   feed.beats = feed.beats || {};
@@ -390,7 +384,7 @@ async function main() {
   for (const beat of BEATS) {
     try {
       console.log(`\nBeat: ${beat.id}`);
-      const items = await fetchBeat(beat, apiKey, googleApiKey, googleCseId);
+      const items = await fetchBeat(beat, apiKey);
       if (items.length) {
         for (const item of items) {
           item.isNew = previousUrls.size > 0 && !!item.url && !previousUrls.has(item.url);
@@ -408,7 +402,7 @@ async function main() {
     } catch (err) {
       console.warn(`  ! ${beat.id} failed: ${err.message}; keeping previous`);
     }
-    console.log(`  (waiting ${BEAT_DELAY_MS/1000}s before next beat…)`);
+    console.log(`  (waiting ${BEAT_DELAY_MS / 1000}s before next beat…)`);
     await new Promise((r) => setTimeout(r, BEAT_DELAY_MS));
   }
 
