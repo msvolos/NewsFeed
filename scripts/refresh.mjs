@@ -333,6 +333,14 @@ async function loadExisting() {
   catch { return { generatedAt: null, beats: {} }; }
 }
 
+function buildPreviousUrls(feed) {
+  const urls = new Set();
+  for (const items of Object.values(feed.beats || {})) {
+    for (const item of items) { if (item.url) urls.add(item.url); }
+  }
+  return urls;
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
@@ -348,12 +356,16 @@ async function main() {
 
   const feed = await loadExisting();
   feed.beats = feed.beats || {};
+  const previousUrls = buildPreviousUrls(feed);
 
   for (const beat of BEATS) {
     try {
       console.log(`\nBeat: ${beat.id}`);
       const items = await fetchBeat(beat, apiKey, googleApiKey, googleCseId);
       if (items.length) {
+        for (const item of items) {
+          item.isNew = previousUrls.size > 0 && !!item.url && !previousUrls.has(item.url);
+        }
         feed.beats[beat.id] = items;
         console.log(`  ✓ ${items.length} stories`);
       } else {

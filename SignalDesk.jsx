@@ -226,6 +226,8 @@ const STYLES = `
 .sd-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:7px;}
 .sd-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;
   text-transform:uppercase;background:var(--accent);color:#fff;padding:3px 7px;border-radius:2px;}
+.sd-new{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;background:var(--signal);color:#fff;padding:3px 7px;border-radius:2px;}
 .sd-src{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink);font-weight:500;}
 .sd-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);}
 .sd-head{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(19px,2.4vw,24px);
@@ -438,6 +440,7 @@ export default function SignalDesk() {
                 >
                   <div>
                     <div className="sd-meta">
+                      {item.isNew && <span className="sd-new">New</span>}
                       {item.tag && <span className="sd-tag">{item.tag}</span>}
                       {item.source && (
                         <span className="sd-src">{item.source}</span>
