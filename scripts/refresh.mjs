@@ -45,6 +45,12 @@ const BEATS = [
       "https://venturebeat.com/feed/",
       "https://techcrunch.com/feed/",
     ],
+    // Pulls consulting/research perspective into the top-level digest
+    googleQueries: [
+      "site:mckinsey.com AI OR analytics OR data",
+      "site:bcg.com AI OR analytics OR data",
+      "site:hbr.org AI OR analytics enterprise",
+    ],
   },
   {
     id: "ai",
@@ -56,6 +62,10 @@ const BEATS = [
       "https://www.databricks.com/feed",
       "https://venturebeat.com/category/ai/feed/",
       "https://techcrunch.com/category/artificial-intelligence/feed/",
+    ],
+    googleQueries: [
+      "site:mckinsey.com AI agents OR generative AI OR LLM",
+      "site:gartner.com AI enterprise adoption",
     ],
   },
   {
@@ -69,6 +79,9 @@ const BEATS = [
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
     ],
+    googleQueries: [
+      "site:gartner.com Databricks OR Snowflake OR Microsoft Fabric",
+    ],
   },
   {
     id: "planning",
@@ -80,22 +93,29 @@ const BEATS = [
       "https://venturebeat.com/feed/",
       "https://www.technologyreview.com/feed/",
     ],
+    googleQueries: [
+      "site:gartner.com SAP OR Anaplan OR EPM OR xP&A planning",
+      "site:mckinsey.com enterprise planning OR finance transformation",
+    ],
   },
   {
     id: "research",
     focus:
       "business research and consulting-industry analysis: McKinsey, BCG, Bain, Deloitte and Gartner publications on data, analytics and AI, plus reporting on how AI is reshaping the management-consulting and analytics-services business itself",
-    // Google Custom Search hits mckinsey.com, bcg.com, gartner.com etc. directly.
-    // Uses 2 queries/day = ~60/month, well within the free 3,000/month limit.
+    // One query per major source — much more reliable than broad multi-firm queries.
+    // Uses ~7 queries/day = ~210/month, well within the free 3,000/month limit.
     googleQueries: [
-      "McKinsey BCG Bain Deloitte AI data analytics report",
-      "Gartner AI enterprise analytics consulting trends",
+      "site:mckinsey.com AI OR data OR analytics",
+      "site:bcg.com AI OR data OR analytics",
+      "site:bain.com AI OR data OR analytics",
+      "site:deloitte.com AI OR data OR analytics insights",
+      "site:gartner.com AI OR data analytics enterprise",
+      "site:hbr.org AI OR analytics enterprise",
+      "site:ft.com AI consulting OR data analytics enterprise",
     ],
-    // Supplemental RSS
     feeds: [
       "https://www.technologyreview.com/feed/",
       "https://venturebeat.com/category/ai/feed/",
-      "https://techcrunch.com/feed/",
     ],
   },
 ];
@@ -146,7 +166,7 @@ function parseXml(xml) {
 async function fetchFeed(url) {
   try {
     const res = await fetch(url, {
-      headers: { "User-Agent": "SignalDesk/1.0 (RSS reader)" },
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" },
       signal: AbortSignal.timeout(10_000),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -178,7 +198,7 @@ async function googleSearch(query, apiKey, cseId) {
   url.searchParams.set("cx",  cseId);
   url.searchParams.set("q",   query);
   url.searchParams.set("num", "10");
-  url.searchParams.set("dateRestrict", "m1"); // past month
+  url.searchParams.set("dateRestrict", "w3"); // past 3 weeks
 
   try {
     const res = await fetch(url.toString(), { signal: AbortSignal.timeout(10_000) });
