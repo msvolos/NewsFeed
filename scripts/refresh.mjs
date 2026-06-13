@@ -366,6 +366,11 @@ async function main() {
         for (const item of items) {
           item.isNew = previousUrls.size > 0 && !!item.url && !previousUrls.has(item.url);
         }
+        items.sort((a, b) => {
+          const da = a.date ? new Date(a.date) : new Date(0);
+          const db = b.date ? new Date(b.date) : new Date(0);
+          return db - da;
+        });
         feed.beats[beat.id] = items;
         console.log(`  ✓ ${items.length} stories`);
       } else {

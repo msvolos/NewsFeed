@@ -73,6 +73,8 @@
       .meta { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 7px; }
       .tag { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .08em;
         text-transform: uppercase; background: var(--accent); color: #fff; padding: 3px 7px; border-radius: 2px; }
+      .new-badge { font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: .08em;
+        text-transform: uppercase; background: var(--signal); color: #fff; padding: 3px 7px; border-radius: 2px; }
       .src { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 500; }
       .date { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-soft); }
       .head { font-family: "Fraunces", serif; font-weight: 600;
@@ -194,6 +196,7 @@
         return `<article class="card">
           <div>
             <div class="meta">
+              ${item.isNew ? `<span class="new-badge">New</span>` : ""}
               ${item.tag ? `<span class="tag">${esc(item.tag)}</span>` : ""}
               ${item.source ? `<span class="src">${esc(item.source)}</span>` : ""}
               ${item.date ? `<span class="date">${esc(item.date)}</span>` : ""}
@@ -221,9 +224,14 @@
           (showSaved ? "Feed" : "Saved (" + Object.keys(saved).length + ")");
         document.getElementById("savedBtn").classList.toggle("on", showSaved);
 
-        let items = showSaved
+        let items = (showSaved
           ? Object.values(saved)
-          : (feed.beats[activeBeat] || []);
+          : (feed.beats[activeBeat] || [])
+        ).slice().sort((a, b) => {
+          const da = a.date ? new Date(a.date) : new Date(0);
+          const db = b.date ? new Date(b.date) : new Date(0);
+          return db - da;
+        });
 
         if (query) {
           const q = query.toLowerCase();
