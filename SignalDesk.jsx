@@ -59,9 +59,12 @@ function buildPrompt(focus, custom) {
   const subject = custom
     ? `the user's specific query: "${custom}"`
     : focus;
+  const mckinseySupplement = !custom
+    ? `\nImportant: explicitly search mckinsey.com for recent articles and include at least 2 items from McKinsey in your results.`
+    : "";
   return `You are the editor of a private intelligence briefing for a senior leader working in data & analytics and AI consulting.
 
-Search the web for the most relevant items from roughly the last 3 weeks on ${subject}.
+Search the web for the most relevant items from roughly the last 3 weeks on ${subject}.${mckinseySupplement}
 
 ${PREFERRED_SOURCES}
 
@@ -149,6 +152,11 @@ async function fetchFeed({ focus, custom }) {
     .map((b) => b.text)
     .join("\n");
   const items = extractItems(text).filter((i) => i && i.title);
+  items.sort((a, b) => {
+    const da = a.date ? new Date(a.date) : new Date(0);
+    const db = b.date ? new Date(b.date) : new Date(0);
+    return db - da;
+  });
   if (items.length === 0) {
     throw new Error(
       "No stories parsed from the response" +
