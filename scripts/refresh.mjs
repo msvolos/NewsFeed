@@ -45,11 +45,10 @@ const BEATS = [
       "https://venturebeat.com/feed/",
       "https://techcrunch.com/feed/",
     ],
-    // Pulls consulting/research perspective into the top-level digest
     googleQueries: [
-      "site:mckinsey.com AI OR analytics OR data",
-      "site:bcg.com AI OR analytics OR data",
-      "site:hbr.org AI OR analytics enterprise",
+      { q: "AI OR analytics OR data",          site: "mckinsey.com" },
+      { q: "AI OR analytics OR data",          site: "bcg.com" },
+      { q: "AI OR analytics enterprise",       site: "hbr.org" },
     ],
   },
   {
@@ -64,8 +63,8 @@ const BEATS = [
       "https://techcrunch.com/category/artificial-intelligence/feed/",
     ],
     googleQueries: [
-      "site:mckinsey.com AI agents OR generative AI OR LLM",
-      "site:gartner.com AI enterprise adoption",
+      { q: "AI agents OR generative AI OR LLM enterprise", site: "mckinsey.com" },
+      { q: "AI enterprise adoption",                       site: "gartner.com" },
     ],
   },
   {
@@ -80,38 +79,40 @@ const BEATS = [
       "https://venturebeat.com/feed/",
     ],
     googleQueries: [
-      "site:gartner.com Databricks OR Snowflake OR Microsoft Fabric",
+      { q: "Databricks OR Snowflake OR Microsoft Fabric", site: "gartner.com" },
     ],
   },
   {
     id: "planning",
     focus:
-      "enterprise planning, performance management (EPM / xP&A) and analytics platforms specifically SAP (SAP Analytics Cloud, SAP Datasphere, Business Data Cloud, BPC), Pigment, and Anaplan: product news, AI-in-planning features, funding, M&A, and competitive moves",
+      "enterprise planning, performance management (EPM / xP&A) and analytics platforms specifically SAP (SAP Analytics Cloud, SAP Datasphere, Business Data Cloud, BPC), Pigment, and Anaplan: product news, AI-in-planning features, funding, M&A, competitive moves, and broader strategy on enterprise planning and finance transformation",
     feeds: [
+      // SAP is capped to 5 items in Claude's selection to prevent it from dominating
       "https://news.sap.com/feed/",
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
-      "https://www.technologyreview.com/feed/",
     ],
     googleQueries: [
-      "site:gartner.com SAP OR Anaplan OR EPM OR xP&A planning",
-      "site:mckinsey.com enterprise planning OR finance transformation",
+      { q: "Anaplan AI planning OR forecasting OR EPM",    site: "techcrunch.com" },
+      { q: "Pigment planning software OR FP&A",           site: "techcrunch.com" },
+      { q: "enterprise planning OR xP&A OR FP&A AI",      site: "gartner.com" },
+      { q: "enterprise planning OR finance transformation OR scenario planning", site: "mckinsey.com" },
+      { q: "enterprise planning OR FP&A OR EPM AI",       site: "bcg.com" },
     ],
   },
   {
     id: "research",
     focus:
       "business research and consulting-industry analysis: McKinsey, BCG, Bain, Deloitte and Gartner publications on data, analytics and AI, plus reporting on how AI is reshaping the management-consulting and analytics-services business itself",
-    // One query per major source — much more reliable than broad multi-firm queries.
-    // Uses ~7 queries/day = ~210/month, well within the free 3,000/month limit.
+    // One query per major source so results aren't diluted by a single provider.
+    // ~7 queries/day = ~210/month, well within the 3,000/month free limit.
     googleQueries: [
-      "site:mckinsey.com AI OR data OR analytics",
-      "site:bcg.com AI OR data OR analytics",
-      "site:bain.com AI OR data OR analytics",
-      "site:deloitte.com AI OR data OR analytics insights",
-      "site:gartner.com AI OR data analytics enterprise",
-      "site:hbr.org AI OR analytics enterprise",
-      "site:ft.com AI consulting OR data analytics enterprise",
+      { q: "AI OR data OR analytics",          site: "mckinsey.com" },
+      { q: "AI OR data OR analytics",          site: "bcg.com" },
+      { q: "AI OR data OR analytics insights", site: "deloitte.com" },
+      { q: "AI OR data analytics enterprise",  site: "gartner.com" },
+      { q: "AI OR analytics enterprise",       site: "hbr.org" },
+      { q: "AI OR data OR analytics",          site: "bain.com" },
     ],
     feeds: [
       "https://www.technologyreview.com/feed/",
@@ -192,13 +193,17 @@ async function collectRssItems(feeds = []) {
 // Google Custom Search
 // ---------------------------------------------------------------------------
 
-async function googleSearch(query, apiKey, cseId) {
+async function googleSearch({ q, site }, apiKey, cseId) {
   const url = new URL(GOOGLE_SEARCH_URL);
   url.searchParams.set("key", apiKey);
   url.searchParams.set("cx",  cseId);
-  url.searchParams.set("q",   query);
+  url.searchParams.set("q",   q);
   url.searchParams.set("num", "10");
   url.searchParams.set("dateRestrict", "w3"); // past 3 weeks
+  if (site) {
+    url.searchParams.set("siteSearch", site);
+    url.searchParams.set("siteSearchFilter", "i"); // include only this site
+  }
 
   try {
     const res = await fetch(url.toString(), { signal: AbortSignal.timeout(10_000) });
@@ -211,7 +216,7 @@ async function googleSearch(query, apiKey, cseId) {
       summary: item.snippet || "",
     }));
   } catch (err) {
-    console.warn(`    Google search "${query}" failed: ${err.message}`);
+    console.warn(`    Google search "${q}"${site ? ` [${site}]` : ""} failed: ${err.message}`);
     return [];
   }
 }
@@ -232,7 +237,7 @@ async function collectGoogleItems(queries = [], apiKey, cseId) {
 // Claude prompt
 // ---------------------------------------------------------------------------
 
-function buildPrompt(focus, items) {
+function buildPrompt(focus, items, beatId) {
   // Cap items to avoid hitting token limits
   const capped = items.slice(0, MAX_ITEMS_PER_PROMPT);
   const context = capped
@@ -241,11 +246,15 @@ function buildPrompt(focus, items) {
     )
     .join("\n\n");
 
+  const planningNote = beatId === "planning"
+    ? "\nIMPORTANT: Include articles about Pigment, Anaplan, and broader enterprise planning / FP&A strategy (e.g. scenario planning, finance transformation) — do NOT let SAP articles fill more than 3 of the 10 slots even if there are many SAP items available."
+    : "";
+
   return `You are the editor of a private intelligence briefing for a senior leader in data & analytics and AI consulting.
 
 Below are recent items on the topic: ${focus}.
 
-${PREFERRED_SOURCES}
+${PREFERRED_SOURCES}${planningNote}
 
 --- ITEMS ---
 ${context}
@@ -326,7 +335,7 @@ async function fetchBeat(beat, apiKey, googleApiKey, googleCseId) {
     body: JSON.stringify({
       model: MODEL,
       max_tokens: 3000,
-      messages: [{ role: "user", content: buildPrompt(beat.focus, allItems) }],
+      messages: [{ role: "user", content: buildPrompt(beat.focus, allItems, beat.id) }],
     }),
   });
 
