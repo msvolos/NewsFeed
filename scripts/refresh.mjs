@@ -82,11 +82,15 @@ const BEATS = [
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
     ],
-    // One query each for Pigment and Anaplan so neither gets crowded out,
-    // plus a general EPM / planning query and the consulting sources.
+    // Pigment and Anaplan get both an open-web query (third-party coverage)
+    // and a site:-scoped query against their own newsrooms (first-party posts),
+    // since neither publishes a usable public RSS feed. Plus a general EPM/
+    // planning query and the consulting sources.
     webSearchQueries: [
       "Pigment planning software product OR funding OR AI news 2025 OR 2026",
+      "site:pigment.com newsroom OR blog OR announcement 2025 OR 2026",
       "Anaplan EPM OR connected planning product OR AI OR customer news 2025 OR 2026",
+      "site:anaplan.com blog OR news OR press release 2025 OR 2026",
       "enterprise planning OR EPM OR xP&A OR FP&A software news 2025 OR 2026",
       "site:mckinsey.com enterprise planning OR finance transformation OR scenario planning 2025 OR 2026",
       "site:bcg.com enterprise planning OR FP&A OR finance transformation 2025 OR 2026",
