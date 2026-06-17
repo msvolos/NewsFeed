@@ -82,8 +82,12 @@ const BEATS = [
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
     ],
+    // One query each for Pigment and Anaplan so neither gets crowded out,
+    // plus a general EPM / planning query and the consulting sources.
     webSearchQueries: [
-      "Pigment OR Anaplan EPM OR FP&A OR planning software 2025 OR 2026",
+      "Pigment planning software product OR funding OR AI news 2025 OR 2026",
+      "Anaplan EPM OR connected planning product OR AI OR customer news 2025 OR 2026",
+      "enterprise planning OR EPM OR xP&A OR FP&A software news 2025 OR 2026",
       "site:mckinsey.com enterprise planning OR finance transformation OR scenario planning 2025 OR 2026",
       "site:bcg.com enterprise planning OR FP&A OR finance transformation 2025 OR 2026",
     ],
@@ -207,8 +211,10 @@ Return ONLY the JSON array starting with [. Find as many real articles as possib
       },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 4000,
-        tools: [{ type: "web_search_20250305", name: "web_search" }],
+        max_tokens: 8000,
+        // Default max_uses is 5; give Claude one search per query plus headroom
+        // so beats with many queries (e.g. research, planning) don't get truncated.
+        tools: [{ type: "web_search_20250305", name: "web_search", max_uses: queries.length + 3 }],
         messages: [{ role: "user", content: prompt }],
       }),
     });
