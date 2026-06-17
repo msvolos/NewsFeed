@@ -52,12 +52,15 @@ const BEATS = [
       "AI innovation relevant to enterprise: new frontier and enterprise models, agentic AI, AI applied to analytics and forecasting, notable research and product launches, and adoption patterns in large organizations",
     feeds: [
       "https://www.technologyreview.com/feed/",
-      "https://openai.com/blog/rss.xml",
+      "https://openai.com/news/rss.xml",
       "https://www.databricks.com/feed",
       "https://venturebeat.com/category/ai/feed/",
       "https://techcrunch.com/category/artificial-intelligence/feed/",
     ],
     webSearchQueries: [
+      // Frontier labs publish via JS pages, not RSS — reach them via search.
+      "Anthropic Claude OR OpenAI OR Google Gemini frontier model OR agentic AI launch 2025 OR 2026",
+      "enterprise AI adoption OR agentic AI deployment large organizations 2025 OR 2026",
       "site:mckinsey.com generative AI OR agentic AI enterprise 2025 OR 2026",
     ],
   },
@@ -71,6 +74,13 @@ const BEATS = [
       "https://azure.microsoft.com/en-us/blog/feed/",
       "https://techcrunch.com/feed/",
       "https://venturebeat.com/feed/",
+    ],
+    // Vendor RSS only carries self-promotion; web search adds the earnings,
+    // M&A, partnership and analyst coverage this beat's focus calls for.
+    webSearchQueries: [
+      "Databricks product OR funding OR acquisition OR earnings OR analyst news 2025 OR 2026",
+      "Snowflake product OR earnings OR Cortex AI OR partnership news 2025 OR 2026",
+      "Microsoft Fabric OR Azure data platform launch OR analyst commentary 2025 OR 2026",
     ],
   },
   {
@@ -112,6 +122,8 @@ const BEATS = [
       "site:deloitte.com AI OR data OR analytics insights 2025 OR 2026",
       "site:gartner.com AI OR data analytics enterprise 2025 OR 2026",
       "site:hbr.org AI OR analytics enterprise 2025 OR 2026",
+      // The second half of this beat's focus: AI disrupting consulting itself.
+      "management consulting AI disruption OR layoffs OR pricing model OR Accenture OR McKinsey AI services 2025 OR 2026",
     ],
   },
 ];
