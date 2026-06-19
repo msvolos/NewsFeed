@@ -267,15 +267,19 @@ function buildPrompt(focus, items, beatId) {
     )
     .join("\n\n");
 
+  const platformsNote = beatId === "platforms"
+    ? "\nMANDATORY SLOT RULES FOR THIS BEAT:\n- Snowflake: maximum 4 of the 10 slots. Hard cap.\n- Databricks: at least 2 slots.\n- Microsoft Fabric / Azure: at least 2 slots.\n- Remaining 2 slots: third-party analyst or press coverage (not vendor self-published)."
+    : "";
+
   const planningNote = beatId === "planning"
-    ? "\nIMPORTANT: Include articles about Pigment, Anaplan, and broader enterprise planning / FP&A strategy (e.g. scenario planning, finance transformation). Do NOT let SAP fill more than 3 of the 10 slots."
+    ? "\nMANDATORY SLOT RULES FOR THIS BEAT:\n- SAP: maximum 3 of the 10 slots. Hard cap — even if SAP stories score highest, stop at 3.\n- Pigment OR Anaplan: reserve at least 2 slots total for these two vendors combined. If web search returned any Pigment or Anaplan articles, they MUST appear.\n- Remaining 5 slots: broader EPM / xP&A / FP&A / finance transformation coverage."
     : "";
 
   return `You are the editor of a private intelligence briefing for a senior leader in data & analytics and AI consulting.
 
 Below are recent items on the topic: ${focus}.
 
-${PREFERRED_SOURCES}${planningNote}
+${PREFERRED_SOURCES}${platformsNote}${planningNote}
 
 --- ITEMS ---
 ${context}
