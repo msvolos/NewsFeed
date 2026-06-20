@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T16:14:55.550Z",
+  "generatedAt": "2026-06-20T15:14:13.366Z",
   "beats": {
     "top": [
       {
@@ -207,23 +207,83 @@
     ],
     "platforms": [
       {
+        "title": "Agentic AI Security: Snowflake's Data-Model-Agent Framework",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/securing-the-agentic-enterprise",
+        "date": "Jun 18, 2026",
+        "tag": "AI Agents",
+        "summary": "Snowflake introduces its Data-Model-Agent framework to secure agentic enterprise deployments, featuring prompt injection defense, zero-copy governance, and auditable agent identity. The framework addresses key security concerns as organizations scale AI agent usage across enterprise data.",
+        "relevance": "Governance and security for agentic AI is a top client concern; this framework gives consulting leaders a concrete Snowflake-native architecture to reference when advising on responsible AI agent deployment.",
+        "isNew": true
+      },
+      {
+        "title": "Powering the Agentic Enterprise: Turning Enterprise Context into Governed Agentic Action",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-enterprise-snowflake-accenture",
+        "date": "Jun 17, 2026",
+        "tag": "AI Agents",
+        "summary": "Snowflake CEO Sridhar Ramaswamy and Accenture's Rajendra Prasad co-authored a piece outlining how governed data and Snowflake's Context Graph power enterprise-scale agentic decision-making. The piece signals a deepened Snowflake-Accenture partnership around agentic AI at scale.",
+        "relevance": "A CEO-level joint statement with a major SI like Accenture signals the maturity of the agentic AI narrative and is directly relevant for leaders shaping go-to-market and partnership strategies in data and AI consulting.",
+        "isNew": true
+      },
+      {
+        "title": "Snowflake and the Agentic Resource Discovery Specification",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-resource-discovery-specification",
+        "date": "Jun 17, 2026",
+        "tag": "Open Standards",
+        "summary": "Snowflake announced support for the Agentic Resource Discovery (ARD) specification, an open protocol co-developed with Microsoft to standardize how AI agents are cataloged, searched, and discovered across the enterprise. This positions Snowflake within an emerging cross-vendor interoperability standard.",
+        "relevance": "A joint Snowflake-Microsoft open protocol for agent discovery is a significant interoperability development that consultants should monitor when advising clients on multi-platform agentic AI architectures.",
+        "isNew": true
+      },
+      {
+        "title": "Real-Time Data Pipelines via Snowpipe Streaming",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/real-time-pipelines-snowpipe-streaming",
+        "date": "Jun 17, 2026",
+        "tag": "Streaming Data",
+        "summary": "Snowflake highlights how data engineers can build real-time data pipelines affordably using Snowpipe Streaming in combination with Snowflake CoCo, enabling fast deployment of streaming ingestion. The post positions Snowflake as a cost-effective alternative to standalone streaming infrastructure.",
+        "relevance": "Real-time pipeline capability is a recurring client requirement for AI and analytics use cases; understanding Snowflake's native streaming story is essential for consultants evaluating build-vs-buy decisions on data infrastructure.",
+        "isNew": true
+      },
+      {
+        "title": "Snowflake Adaptive Compute Is Now Generally Available",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/adaptive-compute-generally-available",
+        "date": "Jun 16, 2026",
+        "tag": "Platform GA",
+        "summary": "Snowflake Adaptive Compute is now generally available on AWS, automating warehouse management to boost throughput and improve price-performance for AI and data workloads. The GA release removes a key barrier for enterprises seeking cost-optimized scaling without manual intervention.",
+        "relevance": "GA of Adaptive Compute directly affects total cost of ownership calculations for enterprise Snowflake deployments, a critical input for consulting leaders advising clients on platform economics and migration business cases.",
+        "isNew": true
+      },
+      {
+        "title": "Snowflake Postgres Unifies Your Apps, Analytics and AI",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/postgres-data-mirroring",
+        "date": "Jun 16, 2026",
+        "tag": "Data Integration",
+        "summary": "Snowflake Postgres now offers data mirroring and pg_lake integration, enabling near-real-time sync between OLTP and analytical data without pipelines. This reduces architectural complexity for organizations running transactional and analytical workloads simultaneously.",
+        "relevance": "Pipeline-free OLTP-to-analytics sync expands Snowflake's footprint into transactional workloads, a move consultants should factor into data architecture recommendations and competitive assessments against Azure and Databricks.",
+        "isNew": true
+      },
+      {
+        "title": "Snowflake AIM for Enterprise Migration and Modernization",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-aim-enterprise-migration-modernization",
+        "date": "Jun 15, 2026",
+        "tag": "Migration",
+        "summary": "Snowflake launched AIM, an AI-powered platform designed to accelerate enterprise migration, modernization, testing, and validation onto Snowflake. The tool targets a perennial consulting pain point by automating complex migration workflows.",
+        "relevance": "An AI-assisted migration platform from Snowflake itself has direct implications for consulting-led migration engagements, potentially compressing timelines and shifting value-add toward higher-level architecture and change management.",
+        "isNew": true
+      },
+      {
         "title": "Snowflake Ventures Invests in Jedify to Advance Enterprise AI",
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/jedify-context-graphs-enterprise-ai-agents",
         "date": "Jun 12, 2026",
-        "tag": "Venture Investment",
-        "summary": "Snowflake Ventures has invested in Jedify, a startup building an autonomous context graph that automates semantic lifecycle management to provide enterprise AI agents with governed business context. The investment is aimed at improving accuracy and trustworthiness of AI agent outputs.",
-        "relevance": "This investment underscores the growing recognition that semantic context management is a core bottleneck for enterprise AI agent deployment, a challenge consultants increasingly encounter with clients in production AI programs.",
-        "isNew": false
-      },
-      {
-        "title": "Financial Services AI: ROI, Agentic and Governance",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/financial-services-ai-roi-agentic",
-        "date": "Jun 11, 2026",
-        "tag": "Financial Services",
-        "summary": "A Snowflake research report examines how financial services firms are demonstrating AI ROI, adopting agentic AI, and leveraging proprietary data to scale trusted AI outcomes at the enterprise level. The report highlights governance as a critical enabler for production AI in the sector.",
-        "relevance": "Financial services is a priority vertical for AI advisory work, and this research provides current benchmarking data on adoption maturity, ROI patterns, and governance practices useful for client conversations and proposal development.",
+        "tag": "Investment",
+        "summary": "Snowflake Ventures has invested in Jedify, a startup building an autonomous context graph that automates semantic lifecycle management to provide enterprise AI agents with governed business context. The investment deepens Snowflake's ecosystem around accurate, trusted agentic AI outputs.",
+        "relevance": "Context graph technology is emerging as a foundational layer for reliable agentic AI; this investment signals where Snowflake is placing strategic bets, informing consulting leaders on ecosystem direction and potential client tooling recommendations.",
         "isNew": false
       },
       {
@@ -232,78 +292,18 @@
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/hybrid-tables-performance-improvements",
         "date": "Jun 10, 2026",
         "tag": "Performance",
-        "summary": "Snowflake Hybrid Tables now deliver up to 8x higher throughput, 10x faster batch performance, and up to 40% cost savings based on internal benchmarks, with no code changes required. The improvement enables teams to run transactional and analytical workloads together on a single platform.",
-        "relevance": "Significant performance and cost improvements to hybrid transactional-analytical processing strengthen Snowflake's case against purpose-built OLTP databases, a relevant data point for clients rationalizing their platform portfolio.",
+        "summary": "Snowflake Hybrid Tables now deliver up to 8x higher throughput, 10x faster batch performance, and up to 40% cost savings with no code changes required, based on internal benchmarks. The improvements strengthen Snowflake's case for unified transactional and analytical processing on a single platform.",
+        "relevance": "Significant performance and cost improvements in Hybrid Tables reinforce Snowflake's unified platform narrative and are relevant evidence for consultants building client business cases for platform consolidation.",
         "isNew": false
-      },
-      {
-        "title": "AI Data Engineering: New Smart Pipelines in Snowflake",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ai-smart-pipelines-whats-new",
-        "date": "Jun 10, 2026",
-        "tag": "Data Pipelines",
-        "summary": "Snowflake Summit 2026 unveiled new AI-powered data engineering tools including Snowflake CoCo and smart pipelines designed to accelerate data team workflows through declarative, self-managing pipeline capabilities. These tools aim to reduce the manual effort involved in building and maintaining data pipelines.",
-        "relevance": "AI-assisted pipeline development could meaningfully reduce data engineering labor costs and time-to-value for clients, reshaping how consulting teams scope and staff data platform projects.",
-        "isNew": true
       },
       {
         "title": "Announcing Claude Fable 5 on Snowflake Cortex AI",
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/claude-fable-5-snowflake-cortex-ai",
         "date": "Jun 09, 2026",
-        "tag": "Foundation Models",
-        "summary": "Anthropic's Claude Fable 5 model is now available on Snowflake Cortex AI, bringing advanced reasoning and agentic capabilities within Snowflake's governed AI platform. The announcement expands the model choices available to enterprise developers building AI applications on Snowflake.",
-        "relevance": "Expanding frontier model access within the governed Snowflake environment reduces friction for enterprises that want to leverage state-of-the-art reasoning without moving data outside their platform, a key client concern in regulated industries.",
-        "isNew": false
-      },
-      {
-        "title": "OpenAI and Snowflake: The Future of Business-Native AI",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/openai-snowflake-business-native-ai",
-        "date": "Jun 04, 2026",
-        "tag": "Partnership",
-        "summary": "Snowflake and OpenAI announced a partnership to bring frontier AI models directly to enterprise data within Snowflake's secure, governed platform. The collaboration is framed around enabling business-native AI without compromising data security or governance.",
-        "relevance": "A Snowflake-OpenAI integration tightens the competitive landscape against Microsoft Fabric and Azure OpenAI Service, with significant implications for clients choosing where to anchor their enterprise AI stack.",
-        "isNew": false
-      },
-      {
-        "title": "Snowflake CoCo: AI Coding Agent for the Modern Data Stack",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-coco-ai-coding-agent-modern-data-stack",
-        "date": "Jun 02, 2026",
-        "tag": "AI Agents",
-        "summary": "Snowflake CoCo is a new AI coding agent built for data teams, accessible via desktop, mobile, Slack, cloud agents, and async APIs, grounded in governed enterprise data. It enables developers to deploy Snowpark Python pipelines to production with a single prompt.",
-        "relevance": "CoCo represents a meaningful shift in how data engineering work is performed, with implications for team productivity, skill requirements, and delivery models in data & analytics engagements.",
-        "isNew": false
-      },
-      {
-        "title": "Snowflake CoWork: The Personal Work Agent for Every Knowledge Worker",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-cowork-personal-work-agent",
-        "date": "Jun 02, 2026",
-        "tag": "AI Agents",
-        "summary": "Snowflake CoWork, formerly Snowflake Intelligence, is a personal work agent for knowledge workers combining deep business context, automation, and governed actions across enterprise systems. It was announced at Snowflake Summit 2026 as part of the broader Snowflake for AI platform.",
-        "relevance": "CoWork signals Snowflake's push beyond data infrastructure into end-user AI productivity, directly competing with Microsoft Copilot and intensifying the platform consolidation debate for enterprise clients.",
-        "isNew": false
-      },
-      {
-        "title": "Snowflake Horizon Context: The Governed Context Layer for AI, BI and Apps",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/horizon-context-governed-context",
-        "date": "Jun 02, 2026",
-        "tag": "Data Governance",
-        "summary": "Horizon Context is a new capability within Snowflake's Horizon Catalog that delivers a connected, governed semantic foundation with active context for AI and BI workloads. It addresses the challenge of ensuring consistent, trusted context across AI agents and applications.",
-        "relevance": "Governed semantic layers are a critical enabler for enterprise AI trust and accuracy, making this directly relevant to clients designing AI governance frameworks and data product strategies.",
-        "isNew": false
-      },
-      {
-        "title": "The Interoperable Lakehouse: Agency Over Your Data",
-        "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/interoperable-lakehouse-architecture",
-        "date": "Jun 02, 2026",
-        "tag": "Lakehouse Architecture",
-        "summary": "Snowflake announced an Interoperable Lakehouse architecture at Summit 2026, unifying storage, governance, and semantics through managed Apache Iceberg. The approach aims to give enterprises greater agency over their data regardless of where workloads run.",
-        "relevance": "Open lakehouse interoperability is a top architectural concern for enterprise clients evaluating Snowflake versus Databricks, making this announcement a key input for platform strategy advisory work.",
+        "tag": "LLM Integration",
+        "summary": "Anthropic's Claude Fable 5 is now available on Snowflake Cortex AI, bringing advanced reasoning and agentic capabilities within Snowflake's secure, governed AI platform. The integration expands model choice for enterprises building AI applications on Snowflake.",
+        "relevance": "Expanding Cortex AI's model roster with a frontier reasoning model strengthens Snowflake's position as an enterprise AI platform, a factor consulting leaders should weigh when advising clients on governed LLM deployment strategies.",
         "isNew": false
       }
     ],
