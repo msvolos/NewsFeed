@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-06-22T17:53:18.437Z",
+  "generatedAt": "2026-06-23T16:13:13.232Z",
   "beats": {
     "top": [
       {
-        "title": "Agentic AI Security: Snowflake's Data-Model-Agent Framework",
+        "title": "Powering the Agentic Enterprise: Turning Enterprise Context into Governed Agentic Action",
         "source": "Snowflake",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/securing-the-agentic-enterprise",
-        "date": "Jun 18, 2026",
-        "tag": "AI Governance",
-        "summary": "Snowflake's Data-Model-Agent framework addresses agentic enterprise security through prompt injection defense, zero-copy governance, and auditable agent identity.",
-        "relevance": "Governance and security for agentic AI is an emerging client concern; understanding the vendor-level frameworks being built helps consulting leaders advise on architecture and risk management decisions.",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-enterprise-snowflake-accenture",
+        "date": "Jun 17, 2026",
+        "tag": "Agentic Governance",
+        "summary": "Snowflake CEO Sridhar Ramaswamy and Accenture's Rajendra Prasad outline how governed data and a Context Graph architecture can power enterprise-scale agentic AI decisions reliably and at scale.",
+        "relevance": "The Snowflake-Accenture collaboration on governed agentic AI illustrates the emerging technology-consulting partnership model that analytics leaders must understand and potentially replicate with platform vendors.",
         "isNew": false
       },
       {
         "title": "AI at Work: Why Strategy Matters More Than Tools",
         "source": "BCG",
         "url": "https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools",
-        "date": "Jun 15, 2026",
-        "tag": "AI Strategy",
-        "summary": "A BCG survey of nearly 12,000 workers globally finds that 74% of frontline employees now use AI regularly—up 23 points from 2025—and that strategic clarity, not tool access, is the primary driver of successfully translating AI adoption into measurable business value.",
-        "relevance": "Reinforces that the consulting opportunity lies in strategy and change management rather than tool implementation, a critical framing for positioning data and AI advisory services.",
+        "date": "Jun 16, 2026",
+        "tag": "AI Adoption",
+        "summary": "BCG's 2026 global survey of nearly 12,000 employees finds that 74% of frontline workers now use AI daily or weekly, up 23 points from 2025, and that strategic clarity—not tool access—is the primary driver of measurable business improvement.",
+        "relevance": "Shifts the consulting conversation from AI tooling to AI strategy and change management, reinforcing that clients need advisory support on governance and organizational alignment as much as technical implementation.",
         "isNew": false
       },
       {
@@ -27,9 +27,19 @@
         "source": "BCG",
         "url": "https://www.bcg.com/publications/2026/four-ways-to-accelerate-growth-with-ai-and-analytics",
         "date": "May 20, 2026",
-        "tag": "AI & Analytics Growth",
-        "summary": "BCG identifies four ways companies can use AI and analytics as a strategic advantage for growth, including mapping patent networks, mining customer data, and deploying agentic AI for real-time anomaly detection to stay ahead of competitors.",
-        "relevance": "Offers a concrete, client-ready framework for positioning AI and analytics as revenue growth levers rather than purely cost-reduction tools in consulting engagements.",
+        "tag": "Analytics Strategy",
+        "summary": "BCG outlines how companies can use AI and analytics for strategic growth by mapping patent networks, mining customer data, tracking competitor bets, and leveraging agentic AI for real-time strategic alerts.",
+        "relevance": "Offers a concrete, client-ready framework for translating AI and analytics capabilities into strategic growth levers, directly applicable to advisory engagements across industries.",
+        "isNew": false
+      },
+      {
+        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
+        "date": "May 14, 2026",
+        "tag": "AI Investment",
+        "summary": "BCG's survey of nearly 2,400 executives reveals corporations expect to double AI spending in 2026 to approximately 1.7% of revenues, with nearly three-quarters of CEOs now serving as their company's chief AI decision maker and almost all expecting AI agents to produce measurable returns this year.",
+        "relevance": "The doubling of AI budgets and CEO-level ownership signals a major shift in where consulting engagement on AI strategy is being directed, with significant implications for how advisory services are structured and sold.",
         "isNew": false
       },
       {
@@ -37,19 +47,19 @@
         "source": "BCG",
         "url": "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
         "date": "Apr 15, 2026",
-        "tag": "Workforce AI Impact",
-        "summary": "Using a structured microeconomic framework applied across roughly 1,500 distinct US job roles, BCG concludes that AI will substantially change most roles rather than eliminate them, with task automation potential, substitution vs. augmentation dynamics, and demand expandability as key factors.",
-        "relevance": "Equips consulting leaders with a rigorous, role-level analytical framework for advising clients on workforce transformation strategy alongside AI and analytics deployments.",
-        "isNew": true
+        "tag": "Workforce Impact",
+        "summary": "Using a microeconomic framework across approximately 1,500 job roles and 165 million US jobs, BCG concludes that AI will substantially reshape most roles rather than eliminate them, with task automation potential, augmentation dynamics, and demand expandability determining employment outcomes.",
+        "relevance": "Provides data-backed framing for client conversations about AI's workforce impact, helping analytics and consulting leaders guide organizations through talent strategy and reskilling decisions with credible evidence.",
+        "isNew": false
       },
       {
-        "title": "Building the Foundations for Agentic AI at Scale",
+        "title": "Scaling Agentic AI with Data Transformations",
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale",
         "date": "Apr 02, 2026",
         "tag": "Agentic AI",
-        "summary": "McKinsey argues that strong data foundations are the critical enabler for scaling agentic AI, noting that eight in ten companies cite data limitations as a key roadblock and fewer than 10% of enterprises have successfully scaled AI agents to deliver tangible value.",
-        "relevance": "Directly validates the data-foundation-first consulting thesis and gives leaders hard statistics to anchor client assessments on data readiness before agentic AI investments.",
+        "summary": "McKinsey finds that while nearly two-thirds of enterprises have experimented with AI agents, fewer than 10% have delivered tangible value, with data quality limitations identified as the primary barrier to scaling agentic AI.",
+        "relevance": "Directly frames the core consulting opportunity: closing the gap between agentic AI experimentation and value delivery through strong data foundations is a high-priority engagement area for data and analytics leaders.",
         "isNew": false
       },
       {
@@ -57,49 +67,39 @@
         "source": "BCG",
         "url": "https://www.bcg.com/publications/2026/the-200-billion-dollar-ai-opportunity-in-tech-services",
         "date": "Mar 25, 2026",
-        "tag": "AI Services Market",
-        "summary": "BCG examines how agentic AI is reshaping delivery economics for technology service providers, disrupting traditional business models while unlocking up to $200 billion in new value creation opportunities.",
-        "relevance": "Quantifies the market opportunity and disruption risk for analytics and AI consulting firms as agentic AI fundamentally changes how technology services are priced, delivered, and differentiated.",
+        "tag": "Consulting Disruption",
+        "summary": "BCG identifies up to $200 billion in new value that agentic AI could unlock for tech service providers, while simultaneously disrupting traditional delivery economics and business models in the sector.",
+        "relevance": "Directly quantifies the market opportunity and existential disruption facing analytics and AI consulting firms, making this essential reading for leaders rethinking service delivery models and go-to-market strategy.",
         "isNew": false
       },
       {
-        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
-        "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
-        "date": "Jan 01, 2026",
-        "tag": "AI Investment",
-        "summary": "BCG's third annual AI Radar survey of nearly 2,400 executives finds that corporations expect to double their AI spending in 2026 to roughly 1.7% of revenues, with 65% of CEOs naming AI acceleration a top-three priority and nearly all believing AI agents will deliver measurable returns this year.",
-        "relevance": "The doubling of AI budgets and CEO-level prioritization signal a significant demand surge for strategic AI consulting engagements and implementation support in 2026.",
-        "isNew": false
-      },
-      {
-        "title": "Unlocking value from data with AI4Data",
+        "title": "Unlocking Value from Data with AI4Data",
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/about-us/new-at-mckinsey-blog/unlocking-value-from-data-with-ai4data",
         "date": "Dec 16, 2025",
         "tag": "Data Products",
-        "summary": "McKinsey's QuantumBlack introduces its AI4Data ecosystem—a suite of tools for improving data quality, lineage, and discoverability—designed to help organizations build AI-ready data pipelines and accelerate the creation of reusable data products at scale.",
-        "relevance": "Signals that top-tier consultancies are productizing data infrastructure tooling, raising the competitive bar and indicating where proprietary accelerators are becoming table stakes in AI consulting.",
-        "isNew": true
-      },
-      {
-        "title": "The state of AI in 2025: Agents, innovation, and transformation",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-        "date": "Nov 05, 2025",
-        "tag": "AI Transformation",
-        "summary": "McKinsey's annual AI survey of nearly 2,000 participants across 105 countries examines how high-performing organizations are using AI as a catalyst for transformation by redesigning workflows, scaling agentic tools, and embedding AI across the enterprise.",
-        "relevance": "Provides authoritative benchmark data on enterprise AI adoption and agentic scaling that consulting leaders can use to frame client conversations and identify gaps in their own AI strategies.",
+        "summary": "QuantumBlack, AI by McKinsey, introduces its AI4Data ecosystem—a suite of tools designed to improve data quality, unlock value from unstructured content, and accelerate the creation of reusable data products to help organizations scale AI reliably.",
+        "relevance": "McKinsey's productization of AI-for-data tooling signals intensifying competition in the data engineering and data product space, with direct implications for how consulting firms differentiate their offerings.",
         "isNew": false
       },
       {
-        "title": "Charting a path to the data- and AI-driven enterprise of 2030",
+        "title": "The State of AI in 2025: Agents, Innovation, and Transformation",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+        "date": "Nov 05, 2025",
+        "tag": "AI Strategy",
+        "summary": "McKinsey's annual global AI survey of nearly 2,000 participants across 105 countries finds that high-performing organizations are treating AI as a transformation catalyst, redesigning workflows, scaling agentic capabilities, and investing over 20% of digital budgets in AI technologies.",
+        "relevance": "Provides the most comprehensive current benchmark for how enterprises are deploying and budgeting for AI, essential context for advising clients on competitive positioning and investment prioritization.",
+        "isNew": false
+      },
+      {
+        "title": "Charting a Path to the Data- and AI-Driven Enterprise of 2030",
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/charting-a-path-to-the-data-and-ai-driven-enterprise-of-2030",
         "date": "Sep 05, 2024",
-        "tag": "Data Strategy",
-        "summary": "McKinsey outlines seven essential priorities for executives aiming to achieve data ubiquity by 2030, covering talent transformation, governance, and how gen AI will automate increasingly sophisticated analytical and data engineering tasks.",
-        "relevance": "Provides a multi-year roadmap framework that consulting leaders can adapt for enterprise data strategy engagements targeting the 2030 horizon.",
+        "tag": "Enterprise Data",
+        "summary": "McKinsey outlines seven essential priorities for executives building a data- and AI-driven enterprise by 2030, covering data ubiquity, governance, talent transformation, and integration of generative AI into analytical and process tasks.",
+        "relevance": "Provides a durable strategic roadmap that consulting leaders can use as a structured framework for multi-year client transformation engagements across data, analytics, and AI.",
         "isNew": false
       }
     ],
