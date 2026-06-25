@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T15:43:38.453Z",
+  "generatedAt": "2026-06-25T15:49:53.374Z",
   "beats": {
     "top": [
       {
@@ -8,8 +8,8 @@
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-enterprise-snowflake-accenture",
         "date": "Jun 17, 2026",
         "tag": "AI Governance",
-        "summary": "Snowflake CEO Sridhar Ramaswamy and Accenture's Rajendra Prasad outline how governed data and Context Graph capabilities power enterprise-scale agentic decisions at scale.",
-        "relevance": "The Snowflake-Accenture framing of governed enterprise context as the foundation for agentic AI is directly actionable for consulting leaders advising clients on AI architecture and governance design.",
+        "summary": "Snowflake CEO Sridhar Ramaswamy and Accenture's Rajendra Prasad lay out how governed data and Context Graph technology power enterprise-scale agentic decisions.",
+        "relevance": "A high-profile vendor-SI alignment on governed agentic AI architecture offers a reference model for how consulting practices should structure data governance alongside agentic deployments.",
         "isNew": false
       },
       {
@@ -18,8 +18,8 @@
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/financial-services-ai-roi-agentic",
         "date": "Jun 11, 2026",
         "tag": "Financial Services AI",
-        "summary": "A Snowflake research report explores how financial services firms are proving AI ROI, adopting agentic AI, and leveraging proprietary data to scale trusted AI enterprise outcomes.",
-        "relevance": "Financial services remains a leading sector for AI investment, and this report's focus on ROI proof points and governance provides consulting leaders with sector-specific evidence to anchor client business cases.",
+        "summary": "A Snowflake research report examines how financial services firms are proving AI ROI, adopting agentic AI, and using proprietary data to scale trusted AI enterprise outcomes.",
+        "relevance": "Financial services is a high-value consulting vertical, and this report provides data-backed evidence on where agentic AI is generating measurable returns in that sector.",
         "isNew": false
       },
       {
@@ -28,18 +28,18 @@
         "url": "https://www.bcg.com/publications/2026/four-ways-to-accelerate-growth-with-ai-and-analytics",
         "date": "May 20, 2026",
         "tag": "AI & Analytics",
-        "summary": "BCG outlines how companies can use AI and analytics as a strategic growth advantage—from mapping patent networks and mining scientific literature to deploying agentic AI for real-time anomaly detection and competitive intelligence.",
-        "relevance": "Offers a practical framework for consulting leaders to position AI and analytics capabilities as offensive growth tools rather than cost-reduction levers in client conversations.",
+        "summary": "BCG outlines how companies can use AI and analytics—from mapping patent networks to real-time agentic AI alerts—to gain a strategic insight advantage and drive sustained growth despite market turbulence.",
+        "relevance": "Provides concrete, client-ready frameworks for linking AI and analytics investments to measurable growth outcomes across multiple industries.",
         "isNew": false
       },
       {
-        "title": "AI Will Reshape More Jobs Than It Replaces",
+        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
         "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
-        "date": "Apr 15, 2026",
-        "tag": "Workforce Impact",
-        "summary": "BCG's microeconomic analysis of approximately 165 million US jobs across 1,500 roles finds that AI will substantially transform most positions rather than eliminate them, with automation potential varying widely by task type, demand expandability, and structural scalability.",
-        "relevance": "Provides a rigorous, data-driven counter-narrative to AI displacement fears that consulting leaders can use to guide clients on workforce redesign and talent strategy amid AI adoption.",
+        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
+        "date": "May 14, 2026",
+        "tag": "BCG",
+        "summary": "BCG's third annual AI Radar survey of nearly 2,400 executives finds that corporations expect to double their AI spending in 2026 to approximately 1.7% of revenues, with nearly all CEOs believing AI agents will produce measurable returns this year.",
+        "relevance": "Signals a major budget cycle shift toward AI that consulting leaders can leverage to accelerate pipeline development and reframe service offerings around agent-driven value.",
         "isNew": false
       },
       {
@@ -48,8 +48,8 @@
         "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale",
         "date": "Apr 02, 2026",
         "tag": "Agentic AI",
-        "summary": "McKinsey argues that strong data foundations are essential to scaling agentic AI, noting that while two-thirds of enterprises have experimented with agents, fewer than 10% have delivered tangible value—largely due to data quality limitations.",
-        "relevance": "The stark gap between experimentation and realized value underscores a critical advisory opportunity: helping clients build the data foundations necessary to translate agentic AI pilots into enterprise-scale outcomes.",
+        "summary": "McKinsey explores why strong data foundations are critical to scaling agentic AI, noting that eight in ten companies cite data limitations as a key roadblock to deploying AI agents at scale.",
+        "relevance": "Directly validates the consulting thesis that data modernization investments are a prerequisite for agentic AI ROI, strengthening the business case for data platform engagements.",
         "isNew": false
       },
       {
@@ -57,29 +57,29 @@
         "source": "BCG",
         "url": "https://www.bcg.com/publications/2026/the-200-billion-dollar-ai-opportunity-in-tech-services",
         "date": "Mar 25, 2026",
-        "tag": "Agentic AI",
-        "summary": "BCG explores how agentic AI is disrupting traditional delivery economics for technology service providers while unlocking up to $200 billion in new value creation opportunities.",
-        "relevance": "Directly relevant to consulting leaders as it quantifies both the threat to legacy delivery models and the scale of new revenue pools emerging from agentic AI services.",
+        "tag": "AI Consulting",
+        "summary": "BCG examines how agentic AI is reshaping delivery economics for technology service providers, disrupting traditional models while potentially unlocking up to $200 billion in new value.",
+        "relevance": "Directly addresses how agentic AI disrupts and creates opportunity within the consulting and tech services industry, making it essential reading for practice and business model strategy.",
         "isNew": false
       },
       {
-        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
-        "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
-        "date": "Jan 01, 2026",
-        "tag": "AI Investment",
-        "summary": "BCG's third annual AI Radar survey of nearly 2,400 executives finds that corporations expect to double AI spending in 2026 to approximately 1.7% of revenues, with nearly three-quarters of CEOs personally leading AI decisions and almost all expecting AI agents to deliver measurable returns.",
-        "relevance": "CEO-level ownership of AI investment decisions signals that consulting engagements must now be framed around board-level ROI and competitive differentiation, not just technical delivery.",
-        "isNew": false
+        "title": "Tech Resolutions to Turn AI's Potential into Performance",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/about-us/new-at-mckinsey-blog/tech-resolutions-to-turn-ais-potential-into-performance",
+        "date": "Jan 08, 2026",
+        "tag": "AI Scaling",
+        "summary": "Three McKinsey partners outline how technology leaders can scale AI beyond pilots in 2026 by building enterprise-wide platforms, leading by example, and redesigning product development lifecycles around AI.",
+        "relevance": "The emphasis on moving from pilot to enterprise scale directly mirrors the core challenge clients face, providing actionable framing for advisory conversations and proposal narratives.",
+        "isNew": true
       },
       {
-        "title": "AI4Data Ecosystem from QuantumBlack, AI by McKinsey",
+        "title": "Unlocking Value from Data with AI4Data",
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/about-us/new-at-mckinsey-blog/unlocking-value-from-data-with-ai4data",
         "date": "Dec 16, 2025",
-        "tag": "Data Quality",
-        "summary": "McKinsey's QuantumBlack introduces its AI4Data ecosystem, a suite of tools designed to improve data quality, manage data lineage, and unlock value from unstructured content to help organizations build AI-ready data at scale.",
-        "relevance": "McKinsey productizing data readiness tooling signals an intensifying competitive dynamic in the data advisory space that analytics and AI consulting leaders must factor into their own service differentiation strategies.",
+        "tag": "Data Products",
+        "summary": "QuantumBlack, AI by McKinsey, introduces its AI4Data ecosystem—a suite of tools that improves data quality, unlocks value from unstructured content, and accelerates the creation of reusable data products to support AI scaling.",
+        "relevance": "McKinsey's productization of data quality and data product tooling signals a competitive move in the data consulting market that peers and clients will need to benchmark against.",
         "isNew": false
       },
       {
@@ -87,9 +87,9 @@
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
         "date": "Nov 05, 2025",
-        "tag": "AI Strategy",
-        "summary": "McKinsey's annual AI survey of nearly 2,000 participants across 105 countries examines how high-performing organizations are moving beyond efficiency gains to treat AI as a catalyst for enterprise-wide transformation and competitive advantage.",
-        "relevance": "Provides essential benchmarking data on AI adoption maturity that consulting leaders can use to position client advisory and differentiate high-performers from laggards.",
+        "tag": "McKinsey",
+        "summary": "McKinsey's annual global AI survey of nearly 2,000 participants across 105 countries examines how organizations are using AI agents to transform workflows, scale AI enterprise-wide, and build competitive advantage.",
+        "relevance": "The definitive annual benchmark for enterprise AI adoption provides essential context for advising clients on agent-led transformation strategies.",
         "isNew": false
       },
       {
@@ -97,10 +97,10 @@
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/the%20state%20of%20organizations/2026/the-state-of-organizations-2026.pdf",
         "date": "",
-        "tag": "Org Transformation",
-        "summary": "Based on a survey of over 10,000 leaders, this McKinsey report examines how AI—particularly agentic AI—is reshaping organizational structures, roles, and workflows, with 23% of surveyed organizations identified as 'AI Pioneers' actively deploying AI across most departments.",
-        "relevance": "Identifying the characteristics of AI Pioneer organizations gives consulting leaders a framework to assess client readiness and design targeted transformation roadmaps.",
-        "isNew": true
+        "tag": "AI Transformation",
+        "summary": "Based on a survey of over 10,000 leaders, this McKinsey report examines how organizations are navigating AI transformation, finding that only 23% qualify as 'AI Pioneers' actively rolling out AI across most departments.",
+        "relevance": "The stark gap between AI pioneers and the remaining 77% of organizations represents a significant consulting opportunity to accelerate enterprise-wide AI deployment.",
+        "isNew": false
       }
     ],
     "ai": [
@@ -211,20 +211,20 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-nvidia-bionemo-agentic-ai-life-sciences",
         "date": "Jun 23, 2026",
-        "tag": "Partnership",
-        "summary": "Snowflake and NVIDIA have partnered to bring agentic AI to life sciences, integrating the NVIDIA BioNeMo Agent Toolkit with Snowflake's governed data workflows for faster R&D.",
-        "relevance": "The Snowflake-NVIDIA partnership in life sciences illustrates how vertical-specific agentic AI use cases are maturing, offering a replicable model for consulting engagements in regulated industries.",
-        "isNew": true
+        "tag": "Agentic AI",
+        "summary": "Snowflake and NVIDIA have integrated the BioNeMo Agent Toolkit with Snowflake's governed data platform to enable agentic AI workflows in life sciences R&D.",
+        "relevance": "The Snowflake-NVIDIA partnership in a high-value vertical signals where agentic AI is maturing fastest, informing sector-specific go-to-market strategies for data and AI consulting engagements.",
+        "isNew": false
       },
       {
         "title": "Snowflake Postgres Powers Low-Latency ML Feature Serving",
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-postgres-ml-online-feature-store",
         "date": "Jun 22, 2026",
-        "tag": "Platform Benchmark",
-        "summary": "Snowflake's ML team deployed Snowflake Postgres as the backbone of their Online Feature Store, reporting 2.5x lower latency and 7x higher query throughput compared to Databricks Lakebase in production benchmarks.",
-        "relevance": "Direct vendor benchmark comparison between Snowflake and Databricks on ML serving performance is critical intelligence for advising clients on platform selection and architecture decisions.",
-        "isNew": true
+        "tag": "ML Infrastructure",
+        "summary": "Snowflake's ML team built its Online Feature Store on Snowflake Postgres, claiming 2.5x lower latency and 7x higher query throughput compared to Databricks Lakebase in production benchmarks.",
+        "relevance": "Direct competitive benchmarking against Databricks on a core ML infrastructure capability gives consulting leaders concrete data points for platform selection conversations with clients.",
+        "isNew": false
       },
       {
         "title": "Agentic AI Security: Snowflake's Data-Model-Agent Framework",
@@ -232,8 +232,8 @@
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/securing-the-agentic-enterprise",
         "date": "Jun 18, 2026",
         "tag": "AI Governance",
-        "summary": "Snowflake has published a Data-Model-Agent security framework for agentic AI systems, covering prompt injection defense, zero-copy governance, and auditable agent identity.",
-        "relevance": "Enterprise AI governance and security architecture for agentic systems is a top client concern; this framework provides a reference model consultants can use when advising on safe AI deployment.",
+        "summary": "Snowflake has published its Data-Model-Agent framework addressing agentic AI security, covering prompt injection defense, zero-copy governance, and auditable agent identity.",
+        "relevance": "As enterprises scale AI agents, governance and security architectures are a top client concern; Snowflake's framework offers a reference model consultants can assess and adapt.",
         "isNew": false
       },
       {
@@ -242,8 +242,8 @@
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-resource-discovery-specification",
         "date": "Jun 17, 2026",
         "tag": "Open Standards",
-        "summary": "Snowflake, in collaboration with Microsoft, is backing the Agentic Resource Discovery (ARD) open protocol, which standardizes how AI agents are cataloged, searched, and discovered across the enterprise.",
-        "relevance": "A joint Snowflake-Microsoft open protocol for agent discovery signals a meaningful interoperability move that will shape how enterprises build and govern multi-agent architectures across platforms.",
+        "summary": "Snowflake announced support for the Agentic Resource Discovery (ARD) specification, an open protocol co-developed with Microsoft to standardize how AI agents are cataloged and discovered across enterprises.",
+        "relevance": "A joint Snowflake-Microsoft open standard for agent discovery is a potential interoperability inflection point that will shape enterprise AI architecture decisions and vendor stack evaluations.",
         "isNew": false
       },
       {
@@ -251,9 +251,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-enterprise-snowflake-accenture",
         "date": "Jun 17, 2026",
-        "tag": "AI Agents",
-        "summary": "Snowflake CEO Sridhar Ramaswamy and Accenture's Rajendra Prasad outline how governed data and a Context Graph capability can power enterprise-scale agentic AI decisions.",
-        "relevance": "A joint perspective from two major ecosystem players on the architecture of agentic enterprise AI is directly relevant for shaping consulting narratives and client roadmaps around AI maturity.",
+        "tag": "Agentic Enterprise",
+        "summary": "Snowflake CEO Sridhar Ramaswamy and Accenture's Rajendra Prasad outline how governed data and a Context Graph enable enterprise-scale agentic AI decision-making.",
+        "relevance": "A joint thought leadership piece from Snowflake and Accenture articulates an emerging architecture pattern for agentic enterprises, directly relevant to consulting leaders shaping client transformation roadmaps.",
         "isNew": false
       },
       {
@@ -261,9 +261,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/adaptive-compute-generally-available",
         "date": "Jun 16, 2026",
-        "tag": "Product Launch",
-        "summary": "Snowflake Adaptive Compute has reached general availability on AWS, offering automated warehouse management and improved price-performance for AI and data workloads.",
-        "relevance": "GA of automated compute management directly affects cost optimization strategies for enterprise clients running demanding AI and analytics workloads on Snowflake.",
+        "tag": "Platform GA",
+        "summary": "Snowflake Adaptive Compute has reached general availability on AWS, automating warehouse management to improve throughput and price-performance for AI and data workloads.",
+        "relevance": "GA of automated compute management directly affects total cost of ownership models that consulting leaders use when benchmarking Snowflake against competing platforms for client migrations.",
         "isNew": false
       },
       {
@@ -271,9 +271,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/postgres-data-mirroring",
         "date": "Jun 16, 2026",
-        "tag": "Product Feature",
-        "summary": "Snowflake Postgres now includes data mirroring and pg_lake integration, enabling near real-time sync between OLTP and analytical data without manual pipelines.",
-        "relevance": "Eliminating the OLTP-to-analytics pipeline gap is a persistent client pain point; this capability directly competes with Microsoft Fabric's unified data approach and warrants inclusion in platform assessments.",
+        "tag": "Data Integration",
+        "summary": "Snowflake Postgres now supports data mirroring and pg_lake integration, enabling near-real-time synchronization between OLTP and analytical data without custom pipelines.",
+        "relevance": "Eliminating the OLTP-to-analytics pipeline gap is a persistent client pain point; this capability strengthens Snowflake's case as a unified data platform and simplifies architecture recommendations.",
         "isNew": false
       },
       {
@@ -281,9 +281,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-aim-enterprise-migration-modernization",
         "date": "Jun 15, 2026",
-        "tag": "Migration",
+        "tag": "Migration Tooling",
         "summary": "Snowflake has launched AIM, an AI-powered platform designed to accelerate enterprise data migration, modernization, testing, and validation onto Snowflake.",
-        "relevance": "An AI-assisted migration toolset lowers a key barrier to platform adoption and is directly relevant for consultants managing client transitions from legacy data warehouses to modern cloud platforms.",
+        "relevance": "An AI-assisted migration platform lowers the barrier and cost of legacy modernization projects, a core service line for data and analytics consulting practices advising on cloud data platform transitions.",
         "isNew": false
       },
       {
@@ -291,9 +291,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/jedify-context-graphs-enterprise-ai-agents",
         "date": "Jun 12, 2026",
-        "tag": "Investment",
-        "summary": "Snowflake Ventures has invested in Jedify, a startup building autonomous context graphs that automate semantic lifecycle management to provide AI agents with governed business context.",
-        "relevance": "Snowflake's strategic investment signals the growing importance of semantic and context graph layers in enterprise AI stacks, a trend consultants should track when advising on data and AI architecture.",
+        "tag": "Venture Investment",
+        "summary": "Snowflake Ventures has invested in Jedify, a startup building autonomous context graphs that automate semantic lifecycle management to provide enterprise AI agents with governed business context.",
+        "relevance": "The investment signals Snowflake's strategic bet on semantic and context graph layers as critical infrastructure for enterprise AI accuracy, a capability gap many clients are actively trying to close.",
         "isNew": false
       },
       {
@@ -301,9 +301,9 @@
         "source": "Snowflake",
         "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/financial-services-ai-roi-agentic",
         "date": "Jun 11, 2026",
-        "tag": "Industry Research",
-        "summary": "A Snowflake research report examines how financial services firms are demonstrating AI ROI, scaling agentic AI, and leveraging proprietary data to build trusted AI outcomes.",
-        "relevance": "Research-backed insight on AI ROI and agentic adoption patterns in financial services provides concrete evidence and benchmarks consultants can use in client conversations and business cases.",
+        "tag": "Financial Services AI",
+        "summary": "Snowflake has published a research report examining how financial services firms are demonstrating AI ROI, adopting agentic AI, and leveraging proprietary data to scale trusted AI outcomes.",
+        "relevance": "Vertical-specific AI ROI evidence from a heavily regulated sector provides consulting leaders with benchmarks and frameworks directly applicable to financial services client engagements.",
         "isNew": false
       }
     ],
