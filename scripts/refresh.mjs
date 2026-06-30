@@ -15,7 +15,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const OUT = join(ROOT, "data", "feed.json");
 
-const MODEL = "claude-sonnet-4-6";
+// Haiku 4.5 ($1/$5 per MTok vs Sonnet's $3/$15) — each beat is now a single
+// search-and-curate call, so the cheaper model carries the whole beat.
+const MODEL = "claude-haiku-4-5";
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
 
 const ITEMS_PER_BEAT = 10;
@@ -196,76 +198,24 @@ async function collectRssItems(feeds = []) {
   return all;
 }
 
-// ---------------------------------------------------------------------------
-// Claude web_search — used to reach consulting sources that block RSS
-// ---------------------------------------------------------------------------
-
-async function webSearch(queries, apiKey) {
-  if (!queries || queries.length === 0) return [];
-
-  const queryList = queries.map((q, i) => `${i + 1}. ${q}`).join("\n");
-  const prompt = `Search the web using each of the following queries and return all relevant articles you find. For each article found, provide the title, URL, publication date, and a brief summary.
-
-Queries:
-${queryList}
-
-Return a JSON array. Each item must have:
-- "title": article headline
-- "url": direct link
-- "date": publication date as "Mon DD, YYYY" (or "" if unknown)
-- "summary": one sentence description
-
-Return ONLY the JSON array starting with [. Find as many real articles as possible — aim for at least 2-3 results per query.`;
-
-  try {
-    const res = await fetch(ANTHROPIC_URL, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify({
-        model: MODEL,
-        max_tokens: 8000,
-        // Default max_uses is 5; give Claude one search per query plus headroom
-        // so beats with many queries (e.g. research, planning) don't get truncated.
-        tools: [{ type: "web_search_20250305", name: "web_search", max_uses: queries.length + 3 }],
-        messages: [{ role: "user", content: prompt }],
-      }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text();
-      throw new Error(`Anthropic HTTP ${res.status}: ${body.slice(0, 300)}`);
-    }
-
-    const data = await res.json();
-    const text = (data.content || [])
-      .filter((b) => b.type === "text")
-      .map((b) => b.text)
-      .join("\n");
-
-    const items = extractItems(text).filter((i) => i && i.title && i.url);
-    console.log(`    Web search returned ${items.length} items`);
-    return items;
-  } catch (err) {
-    console.warn(`    Web search failed: ${err.message}`);
-    return [];
-  }
-}
 
 // ---------------------------------------------------------------------------
-// Claude curation prompt
+// Claude merged search-and-curate prompt (one call per beat)
 // ---------------------------------------------------------------------------
 
-function buildPrompt(focus, items, beatId) {
-  const capped = items.slice(0, MAX_ITEMS_PER_PROMPT);
-  const context = capped
-    .map((item, i) =>
-      `[${i + 1}] ${item.title}\nURL: ${item.url}\nDate: ${item.date || "unknown"}\n${item.summary || ""}`
-    )
-    .join("\n\n");
+function buildPrompt(focus, rssItems, beatId, queries = []) {
+  const capped = rssItems.slice(0, MAX_ITEMS_PER_PROMPT);
+  const context = capped.length
+    ? capped
+        .map((item, i) =>
+          `[${i + 1}] ${item.title}\nURL: ${item.url}\nDate: ${item.date || "unknown"}\n${item.summary || ""}`
+        )
+        .join("\n\n")
+    : "(none)";
+
+  const queryList = queries.length
+    ? queries.map((q, i) => `${i + 1}. ${q}`).join("\n")
+    : "(no web searches for this beat)";
 
   const platformsNote = beatId === "platforms"
     ? "\nMANDATORY SLOT RULES FOR THIS BEAT:\n- Snowflake: maximum 4 of the 10 slots. Hard cap.\n- Databricks: at least 2 slots.\n- Microsoft Fabric / Azure: at least 2 slots.\n- Remaining 2 slots: third-party analyst or press coverage (not vendor self-published)."
@@ -277,20 +227,27 @@ function buildPrompt(focus, items, beatId) {
 
   return `You are the editor of a private intelligence briefing for a senior leader in data & analytics and AI consulting.
 
-Below are recent items on the topic: ${focus}.
+Topic: ${focus}.
+
+STEP 1 — Use the web_search tool to run each of these queries and gather all relevant recent articles:
+${queryList}
+
+STEP 2 — Combine your web search results with the candidate RSS items below, then select the ${ITEMS_PER_BEAT} most relevant and recent stories.
 
 ${PREFERRED_SOURCES}${platformsNote}${planningNote}
 
---- ITEMS ---
+--- CANDIDATE RSS ITEMS ---
 ${context}
---- END ITEMS ---
+--- END CANDIDATE ITEMS ---
 
-Using ONLY the items above (do not invent sources or URLs), select the ${ITEMS_PER_BEAT} most relevant stories. Skip off-topic items. If fewer than ${ITEMS_PER_BEAT} good items exist, return however many there are.
+Rules:
+- Use ONLY URLs that appear in your web search results or in the candidate items above. Do not invent sources or URLs.
+- Skip off-topic items. If fewer than ${ITEMS_PER_BEAT} good items exist, return however many there are.
 
 Return a JSON array and NOTHING else — no preamble, no markdown, no code fences. Start your reply with "[". Each item must have these string fields:
 - "title": the headline
 - "source": publication or organization (infer from URL domain if needed)
-- "url": copied exactly from the item above
+- "url": copied exactly from the source
 - "date": publication date as "Mon DD, YYYY" (or "" if unknown)
 - "tag": ONE short topic tag, 1-3 words (e.g. "McKinsey", "AI Agents", "SAP")
 - "summary": one or two sentences, factual and neutral
@@ -335,20 +292,19 @@ function extractItems(raw) {
 
 async function fetchBeat(beat, apiKey) {
   const rssItems = await collectRssItems(beat.feeds);
-  const webItems = beat.webSearchQueries
-    ? await webSearch(beat.webSearchQueries, apiKey)
-    : [];
+  const queries = beat.webSearchQueries || [];
 
-  // Merge — web search results first so consulting sources lead the prompt
-  const seen = new Set();
-  const allItems = [];
-  for (const item of [...webItems, ...rssItems]) {
-    if (item.url && !seen.has(item.url)) { seen.add(item.url); allItems.push(item); }
+  // One call per beat: the model runs the web searches, weighs them against the
+  // RSS candidates, and returns the curated top-10 directly. max_uses is one per
+  // query plus a single spare (was +3 — the headroom was billable dead weight).
+  const body = {
+    model: MODEL,
+    max_tokens: 8000,
+    messages: [{ role: "user", content: buildPrompt(beat.focus, rssItems, beat.id, queries) }],
+  };
+  if (queries.length) {
+    body.tools = [{ type: "web_search_20250305", name: "web_search", max_uses: queries.length + 1 }];
   }
-
-  console.log(`    ${rssItems.length} RSS + ${webItems.length} web = ${allItems.length} total (sending ${Math.min(allItems.length, MAX_ITEMS_PER_PROMPT)} to Claude)`);
-
-  if (allItems.length === 0) throw new Error("no items retrieved");
 
   const res = await fetch(ANTHROPIC_URL, {
     method: "POST",
@@ -357,16 +313,12 @@ async function fetchBeat(beat, apiKey) {
       "x-api-key": apiKey,
       "anthropic-version": "2023-06-01",
     },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 3000,
-      messages: [{ role: "user", content: buildPrompt(beat.focus, allItems, beat.id) }],
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Anthropic HTTP ${res.status}: ${body.slice(0, 300)}`);
+    const errBody = await res.text();
+    throw new Error(`Anthropic HTTP ${res.status}: ${errBody.slice(0, 300)}`);
   }
 
   const data = await res.json();
@@ -375,7 +327,10 @@ async function fetchBeat(beat, apiKey) {
     .map((b) => b.text)
     .join("\n");
 
-  return extractItems(text).filter((i) => i && i.title);
+  const items = extractItems(text).filter((i) => i && i.title && i.url);
+  console.log(`    ${rssItems.length} RSS candidates + web search → ${items.length} curated`);
+  if (items.length === 0) throw new Error("no items returned");
+  return items;
 }
 
 // ---------------------------------------------------------------------------
