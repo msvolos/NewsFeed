@@ -68,6 +68,9 @@ const BEATS = [
   },
   {
     id: "platforms",
+    // Sonnet override: this beat's 4-way vendor cap (Snowflake ≤4, Databricks ≥2,
+    // Microsoft ≥2) is too complex for Haiku, which fills all 10 slots with Snowflake.
+    model: "claude-sonnet-4-6",
     focus:
       "enterprise data platforms specifically Databricks, Snowflake, and Microsoft Azure / Microsoft Fabric: product launches, AI features, partnerships, acquisitions, earnings, and analyst commentary",
     feeds: [
@@ -298,7 +301,7 @@ async function fetchBeat(beat, apiKey) {
   // RSS candidates, and returns the curated top-10 directly. max_uses is one per
   // query plus a single spare (was +3 — the headroom was billable dead weight).
   const body = {
-    model: MODEL,
+    model: beat.model || MODEL,
     max_tokens: 8000,
     messages: [{ role: "user", content: buildPrompt(beat.focus, rssItems, beat.id, queries) }],
   };
