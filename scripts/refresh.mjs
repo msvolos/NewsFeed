@@ -1,8 +1,9 @@
 // scripts/refresh.mjs
-// Assembles the Signal Desk briefing:
-//   - RSS feeds for vendor/tech beats
-//   - Claude web_search for consulting sources (McKinsey, BCG, Gartner etc.)
-//     which block RSS readers and require active web search to reach
+// Assembles the Signal Desk briefing. For each beat it makes ONE Claude call
+// that runs the beat's web_search queries, weighs the results against the
+// beat's RSS candidates, and returns the curated top-N as JSON. Beats run on
+// Haiku 4.5 by default; a beat can pin a more capable model via `model`, and
+// can constrain the selection with `slotRules`.
 //
 // Required environment variables:
 //   ANTHROPIC_API_KEY  – from console.anthropic.com
@@ -87,6 +88,11 @@ const BEATS = [
       "Snowflake product OR earnings OR Cortex AI OR partnership news 2025 OR 2026",
       "Microsoft Fabric OR Azure data platform launch OR analyst commentary 2025 OR 2026",
     ],
+    slotRules:
+      "- Snowflake: maximum 4 of the 10 slots. Hard cap.\n" +
+      "- Databricks: at least 2 slots.\n" +
+      "- Microsoft Fabric / Azure: at least 2 slots.\n" +
+      "- Remaining 2 slots: third-party analyst or press coverage (not vendor self-published).",
   },
   {
     id: "planning",
@@ -110,6 +116,10 @@ const BEATS = [
       "site:mckinsey.com enterprise planning OR finance transformation OR scenario planning 2025 OR 2026",
       "site:bcg.com enterprise planning OR FP&A OR finance transformation 2025 OR 2026",
     ],
+    slotRules:
+      "- SAP: maximum 3 of the 10 slots. Hard cap — even if SAP stories score highest, stop at 3.\n" +
+      "- Pigment OR Anaplan: reserve at least 2 slots total for these two vendors combined. If web search returned any Pigment or Anaplan articles, they MUST appear.\n" +
+      "- Remaining 5 slots: broader EPM / xP&A / FP&A / finance transformation coverage.",
   },
   {
     id: "research",
@@ -206,7 +216,9 @@ async function collectRssItems(feeds = []) {
 // Claude merged search-and-curate prompt (one call per beat)
 // ---------------------------------------------------------------------------
 
-function buildPrompt(focus, rssItems, beatId, queries = []) {
+function buildPrompt(beat, rssItems) {
+  const queries = beat.webSearchQueries || [];
+
   const capped = rssItems.slice(0, MAX_ITEMS_PER_PROMPT);
   const context = capped.length
     ? capped
@@ -220,24 +232,20 @@ function buildPrompt(focus, rssItems, beatId, queries = []) {
     ? queries.map((q, i) => `${i + 1}. ${q}`).join("\n")
     : "(no web searches for this beat)";
 
-  const platformsNote = beatId === "platforms"
-    ? "\nMANDATORY SLOT RULES FOR THIS BEAT:\n- Snowflake: maximum 4 of the 10 slots. Hard cap.\n- Databricks: at least 2 slots.\n- Microsoft Fabric / Azure: at least 2 slots.\n- Remaining 2 slots: third-party analyst or press coverage (not vendor self-published)."
-    : "";
-
-  const planningNote = beatId === "planning"
-    ? "\nMANDATORY SLOT RULES FOR THIS BEAT:\n- SAP: maximum 3 of the 10 slots. Hard cap — even if SAP stories score highest, stop at 3.\n- Pigment OR Anaplan: reserve at least 2 slots total for these two vendors combined. If web search returned any Pigment or Anaplan articles, they MUST appear.\n- Remaining 5 slots: broader EPM / xP&A / FP&A / finance transformation coverage."
+  const slotNote = beat.slotRules
+    ? `\nMANDATORY SLOT RULES FOR THIS BEAT:\n${beat.slotRules}`
     : "";
 
   return `You are the editor of a private intelligence briefing for a senior leader in data & analytics and AI consulting.
 
-Topic: ${focus}.
+Topic: ${beat.focus}.
 
 STEP 1 — Use the web_search tool to run each of these queries and gather all relevant recent articles:
 ${queryList}
 
 STEP 2 — Combine your web search results with the candidate RSS items below, then select the ${ITEMS_PER_BEAT} most relevant and recent stories.
 
-${PREFERRED_SOURCES}${platformsNote}${planningNote}
+${PREFERRED_SOURCES}${slotNote}
 
 --- CANDIDATE RSS ITEMS ---
 ${context}
@@ -303,7 +311,7 @@ async function fetchBeat(beat, apiKey) {
   const body = {
     model: beat.model || MODEL,
     max_tokens: 8000,
-    messages: [{ role: "user", content: buildPrompt(beat.focus, rssItems, beat.id, queries) }],
+    messages: [{ role: "user", content: buildPrompt(beat, rssItems) }],
   };
   if (queries.length) {
     body.tools = [{ type: "web_search_20250305", name: "web_search", max_uses: queries.length + 1 }];
