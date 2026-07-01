@@ -254,6 +254,7 @@ ${context}
 Rules:
 - Use ONLY URLs that appear in your web search results or in the candidate items above. Do not invent sources or URLs.
 - Skip off-topic items. If fewer than ${ITEMS_PER_BEAT} good items exist, return however many there are.
+- Write every field as PLAIN TEXT. Do not include citation markers, footnotes, or HTML/markup tags (e.g. <cite>, <sup>) in any field.
 
 Return a JSON array and NOTHING else — no preamble, no markdown, no code fences. Start your reply with "[". Each item must have these string fields:
 - "title": the headline
@@ -270,6 +271,15 @@ Output ONLY the JSON array, starting with [ and ending with ].`;
 // ---------------------------------------------------------------------------
 // JSON extraction
 // ---------------------------------------------------------------------------
+
+// web_search can leave citation markup (e.g. <cite index="21-1">…</cite>) in
+// the model's field text. Strip any real HTML/markup tag, leaving plain text.
+// The `[a-z/]` guard means a stray "value < 5" is left untouched.
+function stripTags(value) {
+  return typeof value === "string"
+    ? value.replace(/<\/?[a-z][^>]*>/gi, "").replace(/\s+/g, " ").trim()
+    : value;
+}
 
 function extractItems(raw) {
   if (!raw) return [];
@@ -338,7 +348,12 @@ async function fetchBeat(beat, apiKey) {
     .map((b) => b.text)
     .join("\n");
 
-  const items = extractItems(text).filter((i) => i && i.title && i.url);
+  const items = extractItems(text)
+    .filter((i) => i && i.title && i.url)
+    .map((i) => {
+      for (const k of Object.keys(i)) i[k] = stripTags(i[k]);
+      return i;
+    });
   console.log(`    ${rssItems.length} RSS candidates + web search → ${items.length} curated`);
   if (items.length === 0) throw new Error("no items returned");
   return items;
