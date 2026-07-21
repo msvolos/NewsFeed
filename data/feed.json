@@ -1,56 +1,46 @@
 {
-  "generatedAt": "2026-07-19T14:38:06.599Z",
+  "generatedAt": "2026-07-21T15:17:40.656Z",
   "beats": {
     "top": [
       {
-        "title": "Scaling agentic AI with data transformations",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale",
-        "date": "Apr 02, 2026",
-        "tag": "Agentic AI",
-        "summary": "McKinsey research shows that fewer than 10% of enterprises have scaled AI agents to deliver tangible value, with 80% citing data limitations as the primary roadblock. The article outlines foundational requirements: unified data definitions, consolidated data platforms, embedded governance, stable APIs, and continuous performance measurement.",
-        "relevance": "Critical for consulting leaders advising on enterprise AI scaling; data quality and architecture are the decisive competitive factors, not model sophistication.",
-        "isNew": false
+        "title": "Document Intelligence with Snowflake: Activate Business Documents",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/document-intelligence-snowflake-cortex-ai-functions",
+        "date": "Jul 20, 2026",
+        "tag": "Document AI",
+        "summary": "Snowflake Cortex AI Functions enable enterprises to turn business documents into AI-ready data by automating document processing, enabling enterprise search, and analyzing documents at scale.",
+        "relevance": "Highly relevant to analytics leaders modernizing data platforms: demonstrates emerging capabilities for unstructured data processing that expand the analytics opportunity set.",
+        "isNew": true
       },
       {
-        "title": "AI at Work: Why Strategy Matters More Than Tools",
+        "title": "ML Jobs in Snowflake Data Clean Rooms Now GA",
+        "source": "Snowflake",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ml-jobs-snowflake-data-clean-rooms",
+        "date": "Jul 08, 2026",
+        "tag": "Data Collaboration",
+        "summary": "ML Jobs feature in Snowflake Data Clean Rooms is now generally available, enabling collaborative model training and scoring across multiparty data without moving raw records.",
+        "relevance": "Key technology advancement for analytics leaders: enables federated ML workflows addressing privacy, governance, and collaborative analytics at scale.",
+        "isNew": true
+      },
+      {
+        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
         "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools",
-        "date": "1 month ago",
-        "tag": "AI Transformation",
-        "summary": "BCG survey of 12,000 employees finds 74% of frontline workers now use AI daily or several times weekly, yet only 42% of organizations have graduated to reshaping workflows end-to-end. Strategic clarity and explicit transformation plans correlate strongly with measurable business impact.",
-        "relevance": "Demonstrates the gap between AI adoption and actual value capture; organizations must redesign operations and workforce strategies, not just deploy tools.",
-        "isNew": true
-      },
-      {
-        "title": "Agents think in milliseconds, legacy infrastructure doesn't",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/data/agents-think-in-milliseconds-legacy-infrastructure-doesnt-linkedin-walmart-and-zendesk-shared-how-they-closed-the-gap-at-vb-transform-2026",
-        "date": "Fri, 17 Jul 2026",
-        "tag": "AI Infrastructure",
-        "summary": "VentureBeat panel with LinkedIn, Walmart, and Zendesk infrastructure leaders reveals that legacy systems and data pipelines, not AI models, are the bottleneck slowing agent deployment. Organizations must modernize data architecture and APIs to unlock agent velocity.",
-        "relevance": "Shifts focus from model selection to infrastructure modernization as the real competitive battleground; consulting leaders should prioritize systems architecture and data platform upgrades.",
-        "isNew": true
-      },
-      {
-        "title": "The agent security gap: 54% of enterprises have already had an AI agent incident",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
-        "date": "Thu, 16 Jul 2026",
-        "tag": "AI Security",
-        "summary": "VentureBeat survey of 107 enterprises reveals 54% have experienced an AI agent security incident or near-miss; only about one-third assign scoped identity to each agent, and most allow credential sharing. The gap between agent deployment speed and security controls is widening.",
-        "relevance": "Critical risk area for enterprise deployments; consulting practices must integrate security governance frameworks into AI agent strategies before large-scale rollouts.",
+        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
+        "date": "Jun 19, 2026",
+        "tag": "AI Investment",
+        "summary": "Nearly three-quarters of CEOs are their company's chief AI decision maker and remain bullish on AI investment and returns. The report surveys C-suite executives on AI investment strategy.",
+        "relevance": "Essential for understanding executive-level AI investment trends and decision-making dynamics that shape organizational analytics and AI strategies.",
         "isNew": false
       },
       {
-        "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
-        "source": "VentureBeat",
-        "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs",
-        "date": "Thu, 16 Jul 2026",
-        "tag": "AI FinOps",
-        "summary": "VentureBeat survey of 107 enterprises finds AI infrastructure spending is accelerating while visibility and steering of AI economics remains poor. Organizations lack mechanisms to track compute costs across hyperscalers, specialized hardware, and API providers, creating financial governance gaps.",
-        "relevance": "Reveals a major unmet need in AI cost management and FinOps; consulting leaders can capitalize by building AI spend governance and optimization practices for clients deploying at scale.",
-        "isNew": false
+        "title": "AI Is Turning M&A into a High-Impact Learning Machine",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/ai-is-turning-m-and-a-into-a-high-impact-learning-machine",
+        "date": "Jun 10, 2026",
+        "tag": "AI in Finance",
+        "summary": "AI transforms M&A by accelerating due diligence, surfacing hidden patterns in financial data, and broadening analysis scope. The biggest challenge is data quality and governance, not technology adoption.",
+        "relevance": "Demonstrates real-world AI impact in finance function: shows how data governance and quality directly enable business value from analytics and AI investments.",
+        "isNew": true
       },
       {
         "title": "Four Ways to Accelerate Growth with AI and Analytics",
@@ -58,396 +48,8 @@
         "url": "https://www.bcg.com/publications/2026/four-ways-to-accelerate-growth-with-ai-and-analytics",
         "date": "May 20, 2026",
         "tag": "Analytics Strategy",
-        "summary": "BCG article outlines four growth levers: using agentic AI for real-time strategy alerts, mining customer data for emerging needs, applying analytics to competitive intelligence, and using AI for dynamic pricing and personalization. Companies leveraging these capabilities gain competitive advantage.",
-        "relevance": "Positions analytics and AI as strategic weapons for growth, not just cost reduction; aligns with evolving consulting narratives around value creation and business model transformation.",
-        "isNew": false
-      },
-      {
-        "title": "Private Equity's Future: Digital First and AI Powered",
-        "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/private-equitys-future-digital-first-and-ai-powered",
-        "date": "Jan 15, 2026",
-        "tag": "Digital Transformation",
-        "summary": "BCG outlines the PE playbook for integrating digital and AI into portfolio companies: establish ERP/CRM as foundational data layers from day one, launch 100-day digital sprints post-acquisition, sequence initiatives to build data governance and integration capabilities before advanced AI. Winners treat digital as integral to value creation, not a separate stream.",
-        "relevance": "Provides consulting leaders with a replicable playbook for embedding analytics and AI into operating model transformations; emphasizes sequencing and data governance as critical success factors.",
-        "isNew": true
-      },
-      {
-        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
-        "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
-        "date": "Jan 2026",
-        "tag": "CEO AI Strategy",
-        "summary": "Nearly 75% of CEOs are their company's chief AI decision maker and remain bullish on investments, yet over 50% believe their job stability depends on AI strategy success. Agentic AI represents a growing share of AI budgets as organizations move from experimentation to deployment.",
-        "relevance": "Highlights the strategic urgency and C-suite stakes around AI; consulting leaders should position AI governance and ROI measurement as business-critical, not IT-only concerns.",
-        "isNew": false
-      },
-      {
-        "title": "The state of AI in 2025: Agents, innovation, and transformation",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-        "date": "Nov 05, 2025",
-        "tag": "AI Maturity",
-        "summary": "Survey of nearly 2,000 respondents across 105 countries shows that while almost all organizations use AI, high performers allocate >20% of digital budgets to AI, maintain robust data governance, embed AI into business processes, and track KPIs systematically. Leadership commitment and agile delivery models are key differentiators.",
-        "relevance": "Establishes benchmarks for high-performing organizations; provides data-driven framework for consulting engagements on AI maturity and value realization.",
-        "isNew": false
-      },
-      {
-        "title": "Intelligence at scale: Data monetization in the age of gen AI",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/business-building/our-insights/intelligence-at-scale-data-monetization-in-the-age-of-gen-ai",
-        "date": "Jul 31, 2025",
-        "tag": "Data Strategy",
-        "summary": "McKinsey research shows one-third of executives believe their data assets remain undermonetized. As synthetic data erodes raw data pricing and regulatory scrutiny tightens, successful data monetization requires moving beyond data brokerage to analytics-as-a-service and AI-powered customer insights. Proprietary advantage and domain expertise become differentiators.",
-        "relevance": "Reframes data strategy for the AI era; consulting leaders should help clients transition from commodity data plays to contextualized intelligence products leveraging proprietary domain knowledge.",
-        "isNew": true
-      }
-    ],
-    "ai": [
-      {
-        "title": "Enterprise AI agents crossed from pilot to production in 2026",
-        "source": "Paul Okhrem Research",
-        "url": "https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/",
-        "date": "Jul 19, 2026",
-        "tag": "Industry Research",
-        "summary": "Comprehensive statistics from Gartner, McKinsey, and IDC show agentic AI market reaching $10.9-12.1 billion (2026), 40% of enterprise applications embedding agents by year-end (up from under 5% in 2025), with 3.7x average ROI but 40% project cancellation rates cited by Gartner due to governance gaps.",
-        "relevance": "Current market sizing, adoption velocity, and project failure rates provide essential context for portfolio prioritization, governance investment decisions, and competitive positioning in analytics modernization.",
-        "isNew": true
-      },
-      {
-        "title": "A scorecard for the AI age",
-        "source": "OpenAI",
-        "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
-        "date": "Jul 17, 2026",
-        "tag": "OpenAI, AI ROI",
-        "summary": "OpenAI CFO introduces practical AI scorecard measuring ROI through useful work, cost per successful task, dependability, and return on compute—a metrics framework designed to move beyond hype and focus on measurable business outcomes.",
-        "relevance": "Essential measurement framework for analytics teams designing AI performance dashboards, cost attribution models, and business case validation for enterprise AI agent projects.",
-        "isNew": true
-      },
-      {
-        "title": "How to manage AI investments in the agentic era",
-        "source": "OpenAI",
-        "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
-        "date": "Jul 14, 2026",
-        "tag": "OpenAI, AI Investment",
-        "summary": "OpenAI guidance on measuring useful work per dollar, improving efficiency, and scaling high-value workflows as the financial discipline framework for managing AI investments during the agentic transition.",
-        "relevance": "Practical framework for analytics and finance leaders to establish ROI metrics, cost controls, and workflow prioritization aligned with enterprise value realization from AI agent deployments.",
-        "isNew": false
-      },
-      {
-        "title": "Deutsche Telekom is rewiring telecommunications with AI",
-        "source": "OpenAI",
-        "url": "https://openai.com/index/deutsche-telekom",
-        "date": "Jul 10, 2026",
-        "tag": "Case Study, Agentic AI",
-        "summary": "Deutsche Telekom case study demonstrates large-scale agentic AI deployment transforming customer service, employee workflows, network operations, and voice interaction at a Fortune 500 telco with integrated governance and change management.",
-        "relevance": "Real-world example of enterprise-wide agentic AI adoption in operations and analytics-heavy environment, illustrating governance, integration, and workflow redesign patterns applicable to complex organizations.",
-        "isNew": true
-      },
-      {
-        "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-        "source": "OpenAI",
-        "url": "https://openai.com/index/gpt-5-6",
-        "date": "Jul 09, 2026",
-        "tag": "OpenAI, Frontier Model",
-        "summary": "OpenAI releases GPT-5.6 frontier model with stronger performance per dollar and increased capability on demand, integrated into ChatGPT Work and Microsoft 365 Copilot, addressing cost-performance tradeoffs critical for enterprise deployment.",
-        "relevance": "Latest frontier model capabilities and pricing structure inform strategic decisions on model selection, cost management, and analytics workflow automation in enterprise AI stacks.",
-        "isNew": false
-      },
-      {
-        "title": "State of AI in the Enterprise - 2026 AI report",
-        "source": "Deloitte",
-        "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
-        "date": "Jun 30, 2026",
-        "tag": "Deloitte, Enterprise AI",
-        "summary": "Deloitte's 2026 survey of 3,235 leaders documents worker AI access rising 50% in 2025 and companies with 40% of AI projects in production doubling within six months, though only one in five has mature agentic AI governance and the skills gap remains the primary adoption barrier.",
-        "relevance": "Addresses talent, governance, and production deployment readiness—critical for analytics teams planning organizational capability building and risk management frameworks as AI moves from pilot to scale.",
-        "isNew": false
-      },
-      {
-        "title": "How agents are transforming work",
-        "source": "OpenAI",
-        "url": "https://openai.com/index/how-agents-are-transforming-work",
-        "date": "Jun 25, 2026",
-        "tag": "OpenAI, AI Agents",
-        "summary": "OpenAI research paper demonstrates how AI agents enable longer, more complex tasks and expand productivity across roles by orchestrating multi-step workflows autonomously, with practical applications across knowledge work and operational domains.",
-        "relevance": "Provides evidence-based perspective on agentic workflow transformation applicable to analytics and decision support roles, directly relevant to planning analytics platform modernization and agent-ready data architectures.",
-        "isNew": false
-      },
-      {
-        "title": "Reimagining tech infrastructure for agentic AI",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/reimagining-tech-infrastructure-for-and-with-agentic-ai",
-        "date": "Apr 23, 2026",
-        "tag": "McKinsey, Infrastructure",
-        "summary": "McKinsey outlines how IT infrastructure must evolve to support agentic AI workloads, with domain-specific agents orchestrated through multi-layer architectures and projected infrastructure costs increasing two to three times by 2030 despite flat budgets.",
-        "relevance": "Critical for data leaders planning infrastructure modernization and cost management strategies needed to support autonomous analytics and agent-powered decision workflows at enterprise scale.",
-        "isNew": false
-      },
-      {
-        "title": "State of AI trust in 2026: Shifting to the agentic era",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
-        "date": "Mar 25, 2026",
-        "tag": "McKinsey, AI Governance",
-        "summary": "McKinsey's 2026 AI Trust Maturity Survey reveals that while RAI maturity improved to 2.3 (up from 2.0 in 2025), only one-third of organizations reach maturity level three or higher in strategy and agentic AI governance, indicating critical gaps between adoption acceleration and risk management capability.",
-        "relevance": "Directly addresses enterprise governance, risk, and organizational alignment challenges that constrain agentic AI scaling—essential intelligence for planning analytics governance and AI risk frameworks.",
-        "isNew": false
-      },
-      {
-        "title": "The state of AI in 2025: Agents, innovation, and transformation",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-        "date": "Nov 05, 2025",
-        "tag": "McKinsey, State of AI",
-        "summary": "McKinsey's survey of 1,993 respondents shows 88% of organizations use AI in at least one function, but only 23% are scaling agentic AI and just 39% report enterprise-level EBIT impact, revealing a significant gap between experimentation and value capture.",
-        "relevance": "Provides benchmark data on agentic AI adoption maturity, ROI realization, and high-performer patterns—essential context for setting realistic expectations and identifying best practices in AI investment management.",
-        "isNew": false
-      }
-    ],
-    "platforms": [
-      {
-        "title": "Databricks Hits $188B Valuation, Extending Its Run as AI's Favorite Second Act",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/",
-        "date": "Jul 17, 2026",
-        "tag": "Analyst Commentary",
-        "summary": "TechCrunch analysis of the Databricks $188B funding round frames the company's transformation from a data engineering vendor into a full AI platform, noting its open-weight model research and cost-savings narrative. Sacra estimates Databricks reached approximately $6.9B in annualized revenue in June 2026, growing roughly 80% year-over-year in Q2 2026.",
-        "relevance": "Third-party analysis of Databricks' AI repositioning and accelerating revenue growth is essential context for advisory teams helping clients assess build-versus-buy decisions on agentic AI data infrastructure.",
-        "isNew": true
-      },
-      {
-        "title": "Databricks is Raising a Strategic Round of Funding at a $188 Billion Valuation",
-        "source": "Databricks Newsroom",
-        "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation",
-        "date": "Jul 16, 2026",
-        "tag": "Databricks Funding",
-        "summary": "Databricks announced a new strategic funding round at a $188 billion valuation, led by existing investor Coatue and expected to close later in summer 2026. New capital will accelerate Unity AI Gateway for multi-AI governance, Genie AI coworker, and Lakebase serverless Postgres database.",
-        "relevance": "The rapid valuation step-up from $134B to $188B in under a year signals that enterprise AI data platform infrastructure remains a top investment priority; clients evaluating Databricks for long-term platform bets should factor in its deepening AI product roadmap and likely 2027 IPO trajectory.",
-        "isNew": false
-      },
-      {
-        "title": "The Open Interoperability Standard: Why Bidirectional Iceberg REST Matters",
-        "source": "Snowflake Blog",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/bidirectional-interoperability-snowflake-horizon-databricks",
-        "date": "Jul 15, 2026",
-        "tag": "Interoperability",
-        "summary": "Snowflake published a detailed technical and strategic argument for bidirectional Apache Iceberg REST Catalog interoperability, contrasting its Snowflake Horizon implementation against Databricks Unity Catalog's inbound-only approach. The post frames true data portability as requiring full bidirectional federation, not just read access.",
-        "relevance": "The Snowflake-Databricks interoperability debate directly affects multiplatform data architecture recommendations; consulting leaders need to understand the competing governance and portability claims as clients increasingly run workloads across both platforms.",
-        "isNew": false
-      },
-      {
-        "title": "OpenAI GPT-5.6 Now in Private Preview on Snowflake Cortex AI",
-        "source": "Snowflake Blog",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/openai-gpt-5-6-snowflake-cortex-ai",
-        "date": "Jul 09, 2026",
-        "tag": "Snowflake Cortex AI",
-        "summary": "Snowflake announced that OpenAI's GPT-5.6, described as OpenAI's most capable model, is now available in private preview on Snowflake Cortex AI, enabling access to the latest frontier model within Snowflake's secure, governed platform. This follows the broader $200 million OpenAI partnership announced in February 2026.",
-        "relevance": "Access to the latest frontier model inside a governed data perimeter accelerates enterprise AI agent development timelines and is a concrete differentiator to highlight when advising clients on Cortex AI versus self-managed LLM integration approaches.",
-        "isNew": false
-      },
-      {
-        "title": "Snowflake Marketplace Partners Earn $100M in the First Half of 2026",
-        "source": "Snowflake Blog",
-        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-marketplace-agentic-ai-growth",
-        "date": "Jun 30, 2026",
-        "tag": "Snowflake Ecosystem",
-        "summary": "Snowflake reported that Marketplace partners earned over $100 million in revenue in H1 2026, representing 277% year-over-year growth, driven by expansion of AI agents, Snowflake Native Apps, and AI-ready data offerings. The milestone signals the platform's growing role as a commercial distribution channel for enterprise AI products.",
-        "relevance": "The 277% partner revenue growth rate reveals that Snowflake's ecosystem flywheel is accelerating alongside its AI platform investments, a key data point for clients assessing the long-term commercial and partner landscape on Snowflake versus competing platforms.",
-        "isNew": false
-      },
-      {
-        "title": "Build 2026: From Data to Intelligence — Faster with Fabric Data Factory",
-        "source": "Microsoft Fabric Community",
-        "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-2026-From-data-to-intelligence-Faster-with-Fabric-Data/ba-p/5191636",
-        "date": "Jun 02, 2026",
-        "tag": "Microsoft Fabric",
-        "summary": "Microsoft Build 2026 featured a broad wave of Fabric Data Factory enhancements including private-link mirroring for Azure SQL, SAP Datasphere, and SharePoint; native dbt integration inside Dataflow Gen2; and expanded AI-assisted Airflow authoring. These updates position Fabric Data Factory as the enterprise integration backbone for AI application pipelines.",
-        "relevance": "The depth of Build 2026 Fabric Data Factory releases — particularly native dbt support and private-network mirroring for SAP — lowers the migration friction for complex enterprise estates and strengthens the case for Fabric as a credible alternative to multi-tool data integration stacks.",
-        "isNew": true
-      },
-      {
-        "title": "FabCon and SQLCon 2026: Unifying Databases and Fabric on a Single Data Platform",
-        "source": "Microsoft Azure Blog",
-        "url": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/",
-        "date": "Mar 16, 2026",
-        "tag": "Microsoft Fabric",
-        "summary": "At FabCon and SQLCon 2026 in Atlanta, Microsoft announced the convergence of SQL Server and Microsoft Fabric into a single unified data platform, introduced Fabric data agents now generally available, and highlighted that Fabric now serves over 31,000 customers as the fastest-growing data platform in Microsoft history. Fabric IQ and Power BI's semantic model technology were featured as the layer connecting data to AI understanding.",
-        "relevance": "Fabric's GA of data agents and its convergence with SQL Server represent a significant architectural consolidation that consulting leaders must factor into client roadmaps, particularly for Microsoft-centric enterprises evaluating migration away from Synapse or standalone Azure services.",
-        "isNew": false
-      },
-      {
-        "title": "Snowflake Q4 FY 2026 Results Highlight AI-Led Consumption and Platform Expansion",
-        "source": "Futurum Group",
-        "url": "https://futurumgroup.com/insights/snowflake-q4-fy-2026-results-highlight-ai-led-consumption-and-platform-expansion/",
-        "date": "Mar 02, 2026",
-        "tag": "Analyst Commentary",
-        "summary": "Futurum analyst review of Snowflake's Q4 FY2026 results finds that Q4 product revenue grew 30% year-over-year to $1.23 billion, with over 9,100 customer accounts using AI capabilities and Snowflake Intelligence scaling to 2,500 accounts in under three months. The company posted a 61% adjusted free cash flow margin and launched over 430 new product capabilities in the fiscal year.",
-        "relevance": "Independent analyst validation of Snowflake's AI consumption inflection and margin discipline is critical intelligence for clients deciding whether Snowflake's platform-expansion play into agentic workflows justifies renewed or expanded contract commitments.",
-        "isNew": false
-      },
-      {
-        "title": "Databricks Grows Over 65% YoY, Surpasses $5.4 Billion Revenue Run-Rate, Doubles Down on Lakebase and Genie",
-        "source": "Databricks Newsroom",
-        "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-grows-65-yoy-surpasses-5-4-billion-revenue-run-rate",
-        "date": "Feb 09, 2026",
-        "tag": "Databricks Earnings",
-        "summary": "Databricks crossed a $5.4 billion revenue run-rate in Q4 FY2025, delivering over 65% year-over-year growth, and completed investments exceeding $7 billion including roughly $5B equity and $2B debt. The company is accelerating Lakebase, a serverless Postgres database for AI agents, and Genie, its conversational AI assistant for data querying.",
-        "relevance": "Databricks' sustained hyper-growth and cash-flow positivity validate the lakehouse architecture as a durable enterprise standard, directly informing platform selection and vendor-risk assessments for consulting clients.",
-        "isNew": false
-      },
-      {
-        "title": "Snowflake Launches Cortex Code and $200M OpenAI Partnership: New AI Tools Unveiled",
-        "source": "TechTarget",
-        "url": "https://www.techtarget.com/searchdatamanagement/news/366638535/Snowflake-launches-new-AI-tools-unveils-OpenAI-partnership",
-        "date": "Feb 03, 2026",
-        "tag": "Snowflake AI",
-        "summary": "Snowflake unveiled a $200 million multi-year partnership with OpenAI, making OpenAI models natively available within its Cortex AI environment across AWS, Azure, and Google Cloud. Alongside this, Snowflake launched Cortex Code, an AI coding agent that applies enterprise governance and security controls to accelerate pipeline and application development.",
-        "relevance": "Natively embedding frontier LLMs inside a governed data platform removes a key adoption barrier for enterprise AI; consulting leaders should evaluate how this changes the competitive dynamics for clients currently routing OpenAI API calls outside their data perimeter.",
-        "isNew": true
-      }
-    ],
-    "planning": [
-      {
-        "title": "SAP Completes Acquisition of Prior Labs",
-        "source": "SAP",
-        "url": "https://news.sap.com/2026/07/sap-completes-prior-labs-acquisition/",
-        "date": "Fri 17 Jul 2026",
-        "tag": "SAP",
-        "summary": "SAP completed the acquisition of Prior Labs, a pioneer in Tabular Foundation Models, adding specialized AI capabilities for enterprise planning and decision-making.",
-        "relevance": "Demonstrates SAP's aggressive AI acquisition strategy to embed foundation models into planning and analytics; critical for competitive positioning against AI-native planning vendors.",
-        "isNew": true
-      },
-      {
-        "title": "Anaplan Named Leader in 2026 Gartner Magic Quadrant for Sales Performance Management",
-        "source": "Anaplan",
-        "url": "https://www.anaplan.com/news/anaplan-named-leader-in-2026-gartner-mq-for-sales-performance-management/",
-        "date": "Jul 09, 2026",
-        "tag": "Anaplan",
-        "summary": "Anaplan scored the highest Ability to Execute among evaluated vendors in Gartner's 2026 Magic Quadrant for Sales Performance Management, linking revenue performance management to financial, workforce, and supply chain planning on a single platform.",
-        "relevance": "Validates Anaplan's connected xP&A strategy and AI roadmap acceleration; reinforces enterprise platform positioning for connected planning across finance, operations, and revenue functions.",
-        "isNew": true
-      },
-      {
-        "title": "SAP Completes Acquisition of Dremio",
-        "source": "SAP",
-        "url": "https://news.sap.com/2026/07/sap-completes-dremio-acquisition/",
-        "date": "Mon 06 Jul 2026",
-        "tag": "SAP",
-        "summary": "SAP completed its acquisition of Dremio, an open high-performance data lakehouse platform, expanding SAP's data infrastructure capabilities for enterprise analytics and planning workloads.",
-        "relevance": "Represents SAP's strategic consolidation of data platform assets to support Analytics Cloud and integrated planning, signaling competitive moves against data-native planning alternatives.",
-        "isNew": true
-      },
-      {
-        "title": "EPM Software Trends 2026: What Gartner's Financial Planning Research Means for FP&A Leaders",
-        "source": "B EYE",
-        "url": "https://b-eye.com/blog/gartner-epm-software-trends/",
-        "date": "Jun 18, 2026",
-        "tag": "EPM Trends",
-        "summary": "Analysis of Gartner's December 2025 Magic Quadrant for Financial Planning Software shows industry pivot toward AI-assisted planning, xP&A, integrated business planning, and continuous planning capabilities, with xP&A extending FP&A discipline across operations, supply chain, and workforce.",
-        "relevance": "Synthesizes Gartner's authoritative view of 2026 EPM landscape: AI, xP&A, and cross-functional planning are now table-stakes; foundational data and process governance remain critical differentiators.",
-        "isNew": false
-      },
-      {
-        "title": "Vibe Coding Is Coming to Finance. CFOs Need Guardrails (BCG)",
-        "source": "Boston Consulting Group",
-        "url": "https://www.bcg.com/publications/2026/vibe-coding-is-coming-to-finance-cfos-need-guardrails",
-        "date": "Jun 04, 2026",
-        "tag": "AI Coding",
-        "summary": "BCG explores how AI coding agents enable finance teams to build custom FP&A forecasting and controllership applications without deep software engineering skills, while maintaining auditability and governance through rule-based code execution.",
-        "relevance": "Signals emerging pattern of AI-augmented low-code custom finance applications running alongside core EPM platforms; implications for architecture strategy and make-versus-buy decisions in enterprise planning stacks.",
-        "isNew": true
-      },
-      {
-        "title": "The CFO's AI Agenda: From Automation to Advantage (BCG)",
-        "source": "Boston Consulting Group",
-        "url": "https://www.bcg.com/publications/2026/the-cfos-ai-agenda-from-automation-to-advantage",
-        "date": "May 12, 2026",
-        "tag": "Finance Transformation",
-        "summary": "BCG research reveals the gap between CFO AI investment expectations and actual impact, with only 10% of AI success attributable to models themselves and 70% dependent on organizational readiness, governance, and people. Emphasizes domain-level transformation and workflow redesign as prerequisites for scaling AI.",
-        "relevance": "Exposes the implementation realities behind AI in planning: success depends on data quality, process standardization, and change management—not just platform capability—critical context for EPM platform selection and deployment.",
-        "isNew": false
-      },
-      {
-        "title": "Finance Transformation Is Necessary. Here's How CFOs Can Make It Happen (BCG)",
-        "source": "Boston Consulting Group",
-        "url": "https://www.bcg.com/publications/2026/heres-how-cfos-can-make-finance-transformation-happen",
-        "date": "Apr 27, 2026",
-        "tag": "Finance Transformation",
-        "summary": "BCG framework for CFO-led transformations emphasizes defining clear objectives, pinpointing three priority changes, securing high-influence partners, delivering early wins, and embedding AI and analytics incrementally within live workflows rather than pursuing full platform overhauls.",
-        "relevance": "Practical roadmap for finance transformation that challenges monolithic platform migration approaches; validates incremental, outcome-driven deployment of planning and analytics capabilities aligned to business decision priorities.",
-        "isNew": false
-      },
-      {
-        "title": "Pigment on the Path to $100M ARR: Launches AI Intent Modeling with Modeler Agent",
-        "source": "PR Newswire",
-        "url": "https://www.prnewswire.com/news-releases/on-the-path-to-100m-pigment-launches-ai-intent-modeling-302703473.html",
-        "date": "Mar 04, 2026",
-        "tag": "Pigment",
-        "summary": "Pigment announced it is approaching $100M in annual recurring revenue after doubling ARR for the third consecutive year, with 56% of new customers migrating from legacy vendors. The company launched its Modeler Agent, turning weeks-long planning model builds into hours or minutes through natural language intent modeling.",
-        "relevance": "Demonstrates how AI-native planning platforms are capturing market share from legacy EPM vendors, signaling the market's shift to agentic planning as a core competitive feature.",
-        "isNew": false
-      },
-      {
-        "title": "ERP Modernization for AI: Transform Your Enterprise (McKinsey)",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/bridging-the-great-ai-agent-and-erp-divide-to-unlock-value-at-scale",
-        "date": "Jan 09, 2026",
-        "tag": "AI-ERP Integration",
-        "summary": "McKinsey research highlights the critical gap between AI agent development and ERP modernization, with high performers focusing on domain-level workflows rather than isolated use cases, working backward from specific business decisions to identify supporting ERP data, transactions, and rules.",
-        "relevance": "Essential strategic insight for data/analytics leaders: AI-driven planning requires aligned ERP infrastructure, data quality, and workflow redesign—planning platforms alone cannot deliver value without upstream systems transformation.",
-        "isNew": true
-      },
-      {
-        "title": "AI in Finance: Driving Automation and Business Value (McKinsey)",
-        "source": "McKinsey",
-        "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-finance-teams-are-putting-ai-to-work-today",
-        "date": "Nov 03, 2025",
-        "tag": "AI in Finance",
-        "summary": "McKinsey research found 44% of CFOs now use generative AI for over five use cases in 2025, up from 7% in the prior year, with decision support agents and agentic AI enabling real-time scenario planning and anomaly detection across finance workflows.",
-        "relevance": "Critical market validation of agentic AI adoption in finance; establishes the business case for AI-first planning platforms and finance transformation investments.",
-        "isNew": true
-      }
-    ],
-    "research": [
-      {
-        "title": "McKinsey Layoffs 2026: 10% Job Cuts Due to AI-Driven Productivity",
-        "source": "Final Round AI / Industry Analysis",
-        "url": "https://www.finalroundai.com/blog/mckinsey-layoffs-few-thousand-jobs",
-        "date": "Jul 19, 2026",
-        "tag": "Consulting Industry Disruption",
-        "summary": "McKinsey is cutting 3,000-4,000 positions (~10% of workforce) in 2025-2026 as AI tools compress delivery timelines and reduce hours required for research and analysis. Cuts concentrate in back-office, junior research, and support roles where generative AI has achieved 40% productivity gains. Bain, BCG, Deloitte, and Accenture are implementing similar AI-driven staffing reductions.",
-        "relevance": "Demonstrates how AI is reshaping consulting economics itself—signaling structural contraction in junior headcount, shift from time-based to outcome-based pricing, and pressure on traditional MBB business models.",
-        "isNew": true
-      },
-      {
-        "title": "The State of AI in the Enterprise 2026",
-        "source": "Deloitte",
-        "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
-        "date": "Jun 17, 2026",
-        "tag": "Deloitte Enterprise AI",
-        "summary": "Deloitte's 2026 survey of 3,235 leaders finds worker AI access rose 50% in 2025, with companies expecting production project counts to double in six months. However, only 34% are reimagining the business; the AI skills gap is cited as the biggest integration barrier, with education (not role redesign) as companies' primary talent response.",
-        "relevance": "Reveals the operational reality: enterprises have deployed AI broadly but struggle with transformation governance, talent readiness, and organizational change—core consulting demand.",
-        "isNew": false
-      },
-      {
-        "title": "Databricks Data + AI Summit 2026: Lakehouse Becomes the Agentic Enterprise Control Plane",
-        "source": "Bain & Company",
-        "url": "https://www.bain.com/insights/databricks-data-ai-summit-the-lakehouse-becomes-the-agentic-enterprise-control-plane/",
-        "date": "Jun 15, 2026",
-        "tag": "Enterprise Data Platforms",
-        "summary": "Bain analysis of Databricks 2026 summit shows enterprise AI is moving beyond agent demos into agent operations, with Lakehouse platforms evolving from data storage to agentic control planes. Key shifts include context-as-production-infrastructure, runtime governance enforcement, and live-truth-as-AI-infrastructure.",
-        "relevance": "Identifies infrastructure and architectural inflection point where enterprise data platforms are becoming operational AI execution engines, creating new consulting demand around governance, orchestration, and real-time data.",
-        "isNew": false
-      },
-      {
-        "title": "Four Ways to Accelerate Growth with AI and Analytics",
-        "source": "BCG",
-        "url": "https://www.bcg.com/publications/2026/four-ways-to-accelerate-growth-with-ai-and-analytics",
-        "date": "May 20, 2026",
-        "tag": "BCG Analytics",
-        "summary": "BCG outlines how companies can use analytics and AI to shape growth strategy, mining customer data, patent networks, and emerging signals using agentic AI. The firm argues that companies not already using analytics to drive growth face significant competitive risk.",
-        "relevance": "Demonstrates how top-tier consulting firms are reframing analytics from efficiency to growth, reshaping the strategic value proposition and client engagement models in 2026.",
+        "summary": "Companies can accelerate growth by using AI and analytics to understand customer needs, uncover emerging opportunities, and drive strategic decision-making. AI and data provide competitive insight advantages.",
+        "relevance": "Directly relevant to analytics leaders implementing growth strategies: demonstrates practical applications of AI-powered analytics for customer intelligence and strategic discovery.",
         "isNew": false
       },
       {
@@ -455,19 +57,39 @@
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale",
         "date": "Apr 02, 2026",
-        "tag": "Data Architecture & AI",
-        "summary": "McKinsey reports that data limitations are cited by 80% of companies as a roadblock to scaling agentic AI, requiring modernized data architectures, quality enforcement, and evolved operating models. The article recommends unified data foundations, security-by-default governance, and continuous performance visibility.",
-        "relevance": "Critical for data & analytics leaders planning infrastructure investments; identifies why most agentic AI deployments stall and the foundational data strategy required for consulting client success.",
+        "tag": "Agentic AI",
+        "summary": "Nearly two-thirds of enterprises have experimented with agentic AI agents, but fewer than 10 percent have scaled them. Eight in ten companies cite data limitations as a roadblock to scaling agentic AI.",
+        "relevance": "Critical for leaders planning AI deployment: reveals the data architecture challenges preventing most companies from moving beyond pilot stages.",
         "isNew": false
       },
       {
-        "title": "Gartner Top Predictions for Data and Analytics 2026",
-        "source": "Gartner",
-        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-03-11-gartner-announces-top-predictions-for-data-and-analytics-in-2026",
-        "date": "Mar 11, 2026",
-        "tag": "Gartner D&A Predictions",
-        "summary": "Gartner warns that 50% of AI agent deployment failures by 2030 will stem from insufficient governance platform runtime enforcement. The firm recommends D&A leaders experiment with data governance agents in low-risk pipelines and redesign analytic workflows to include mandatory evaluation stages.",
-        "relevance": "Identifies the emerging governance gap in agent-centric enterprises and signals where data & analytics consulting practices must evolve to capture value.",
+        "title": "AI Will Reshape More Jobs Than It Replaces",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
+        "date": "Mar 31, 2026",
+        "tag": "AI Impact on Work",
+        "summary": "BCG analysis finds that task automation does not equal job loss; most roles will remain but change substantially. The study applies microeconomic frameworks to assess how AI reshapes employment outcomes.",
+        "relevance": "Essential context for leaders managing organizational transformation: provides evidence-based perspective on workforce impacts beyond simple automation narratives.",
+        "isNew": true
+      },
+      {
+        "title": "The $200 Billion Agentic AI Opportunity for Tech Service Providers",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/the-200-billion-dollar-ai-opportunity-in-tech-services",
+        "date": "Mar 25, 2026",
+        "tag": "Agentic AI Market",
+        "summary": "Over 40 percent of large enterprises are already scaling agentic AI implementation beyond pilots, with 75 percent wanting to work with service providers on priority use cases. Banking and financial services lead adoption.",
+        "relevance": "Reveals market momentum and enterprise readiness for agentic AI, critical context for consulting firms and analytics leaders planning service offerings.",
+        "isNew": true
+      },
+      {
+        "title": "The future of AI workloads",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/featured-insights/week-in-charts/the-future-of-ai-workloads",
+        "date": "Feb 24, 2026",
+        "tag": "AI Infrastructure",
+        "summary": "AI inference will surpass training to become the dominant workload in AI data centers by 2030, representing more than 50 percent of AI compute and 30-40 percent of total data center demand.",
+        "relevance": "Critical for infrastructure and platform planning: signals infrastructure investment priorities and workload distribution patterns that affect analytics platform architecture decisions.",
         "isNew": true
       },
       {
@@ -475,40 +97,418 @@
         "source": "BCG",
         "url": "https://www.bcg.com/publications/2026/private-equitys-future-digital-first-and-ai-powered",
         "date": "Jan 15, 2026",
-        "tag": "PE & Digital",
-        "summary": "BCG research shows PE teams are channeling digital efforts toward decision support, process automation, and commercial excellence, treating digital as core to AI. ERP and CRM systems are now prioritized as AI-ready data foundations, with firms evaluating vendors on API architectures and embedded AI readiness.",
-        "relevance": "Signals massive enterprise demand for data strategy and AI-ready systems architecture consulting, with PE sponsors treating these as value-creation levers.",
+        "tag": "Digital Strategy",
+        "summary": "PE firms are prioritizing ERP and CRM systems as data foundations essential for AI. Digital transformation efforts focus on decision support, process automation, and commercial excellence.",
+        "relevance": "Relevant for consultants advising on AI-ready infrastructure: demonstrates how leading investors sequence digital capabilities toward AI enablement and business value.",
+        "isNew": false
+      }
+    ],
+    "ai": [
+      {
+        "title": "Safety and alignment in an era of long-horizon models",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+        "date": "Jul 20, 2026",
+        "tag": "AI Safety & Alignment",
+        "summary": "OpenAI's technical report on lessons from deploying long-running models, highlighting safety risks specific to agentic systems taking sustained action and improved safeguards.",
+        "relevance": "Critical risk framework for enterprise risk and compliance functions—agentic systems require distinct safety approaches beyond prompt injection and content moderation.",
         "isNew": true
       },
       {
-        "title": "Why the McKinsey Layoffs Signal a Reckoning for Consulting in the AI Age",
-        "source": "Fast Company & Industry Analysis",
-        "url": "https://www.fastcompany.com/91463039/why-the-mckinsey-layoffs-are-a-warning-signal-for-consulting-in-the-ai-age-ai-layoffs-management-consulting",
-        "date": "Dec 22, 2025",
-        "tag": "Consulting Model Disruption",
-        "summary": "Analysis argues McKinsey's 10% workforce reduction signals an irreversible shift in consulting value creation. As AI democratizes access to information and analytical capability, the traditional information-asymmetry advantage of strategy firms is eroding. The premium for future consulting talent will shift from analytical horsepower to judgment, client relationships, and execution capability.",
-        "relevance": "Critical for understanding how the consulting and analytics business itself is being reshaped by AI—consulting leaders must adapt pricing models, team structures, and value propositions or risk obsolescence.",
+        "title": "A scorecard for the AI age",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
+        "date": "Jul 17, 2026",
+        "tag": "AI Performance Measurement",
+        "summary": "OpenAI CFO introduces practical AI scorecard framework measuring ROI through useful work, cost per successful task, dependability, and return on compute.",
+        "relevance": "Provides executive-ready metrics for quantifying AI value creation—directly applicable to finance and analytics leaders building AI business intelligence dashboards.",
         "isNew": false
       },
       {
-        "title": "Why AI Stumbles Without a Solid Data Strategy",
-        "source": "Bain & Company",
-        "url": "https://www.bain.com/insights/why-ai-stumbles-without-a-solid-data-strategy/",
-        "date": "Nov 10, 2025",
-        "tag": "Data Strategy & AI",
-        "summary": "Bain's cross-industry research shows that AI at scale requires broader, more robust governance jointly managed by business and data technology teams. Case study of a North American utility demonstrates how data maturity mapping and governance operationalization delivered 20-25% efficiency gains and $10 million in recovered value.",
-        "relevance": "Shows why data and analytics consulting remains mission-critical; enterprises cannot move from AI pilots to production scale without fundamental data governance transformation.",
+        "title": "The risk of weather data sabotage is rising",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
+        "date": "Jul 17, 2026",
+        "tag": "Data Integrity & Forecasting Risk",
+        "summary": "Analysis of emerging threats to critical data infrastructure used in forecasting and strategic decision-making across industries including aviation, energy, and agriculture.",
+        "relevance": "Highlights data integrity risks for analytics and forecasting systems used in high-stakes decision-making—essential risk context for enterprise analytics strategy and governance.",
+        "isNew": true
+      },
+      {
+        "title": "How to manage AI investments in the agentic era",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
+        "date": "Jul 14, 2026",
+        "tag": "AI ROI & Metrics",
+        "summary": "OpenAI guidance on measuring useful work per dollar, improving efficiency, and scaling high-value workflows in the transition from general AI tools to agentic systems.",
+        "relevance": "Directly addresses enterprise finance leader concerns about AI ROI measurement and capital allocation—critical for data leaders building business cases for agentic transformation.",
         "isNew": false
       },
       {
-        "title": "The state of AI in 2025: Agents, innovation, and transformation",
+        "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/deutsche-telekom",
+        "date": "Jul 10, 2026",
+        "tag": "Enterprise Deployment Case Study",
+        "summary": "Deutsche Telekom case study demonstrating AI-native transformation across customer service, employee workflows, and network operations at scale.",
+        "relevance": "Large-scale enterprise case study of agentic workflows in operations and customer service—illustrates practical implementation patterns and ROI for analytics and data-driven operations.",
+        "isNew": false
+      },
+      {
+        "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/gpt-5-6",
+        "date": "Jul 09, 2026",
+        "tag": "Frontier Models",
+        "summary": "OpenAI introduces GPT-5.6 with stronger performance per token, improved cost efficiency, and increased capability on demand for complex enterprise work.",
+        "relevance": "Latest frontier capability release with enterprise specifications—relevant for evaluating model selection and cost-performance tradeoffs for analytics and forecasting applications.",
+        "isNew": false
+      },
+      {
+        "title": "How agents are transforming work",
+        "source": "OpenAI",
+        "url": "https://openai.com/index/how-agents-are-transforming-work",
+        "date": "Jun 25, 2026",
+        "tag": "Agentic AI Research",
+        "summary": "OpenAI research paper demonstrating how AI agents enable longer, more complex tasks and expand productivity across roles with sustained autonomous operation over multiple steps.",
+        "relevance": "Primary research on agent capabilities and productivity impact—substantiates the business case for agentic workflows and illustrates use-case scope for analytics-intensive work.",
+        "isNew": false
+      },
+      {
+        "title": "Reimagining tech infrastructure for agentic AI",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/reimagining-tech-infrastructure-for-and-with-agentic-ai",
+        "date": "Apr 23, 2026",
+        "tag": "AI Infrastructure",
+        "summary": "McKinsey analysis of CTO challenges scaling agentic AI infrastructure while managing cost, covering the evolution from cloud to agentic systems and orchestrator agent patterns.",
+        "relevance": "Essential for analytics leaders planning data architecture and compute requirements for agent-scale operations—addresses infrastructure investment and multiagent orchestration needs.",
+        "isNew": false
+      },
+      {
+        "title": "State of AI trust in 2026: Shifting to the agentic era",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
+        "date": "Mar 25, 2026",
+        "tag": "AI Trust & Governance",
+        "summary": "McKinsey's 2026 AI Trust Maturity Survey reveals that while AI adoption is accelerating rapidly, only about one-third of organizations reach maturity level three or higher in agentic AI governance. Security, risk, and cybersecurity remain top barriers to scaling.",
+        "relevance": "Critical for understanding enterprise readiness gaps in agentic AI deployment and governance requirements—directly applicable to advisory on risk management and scaled adoption patterns.",
+        "isNew": false
+      },
+      {
+        "title": "State of AI in 2025: Agents, innovation, and transformation",
         "source": "McKinsey",
         "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
         "date": "Nov 05, 2025",
-        "tag": "McKinsey AI Research",
-        "summary": "McKinsey's latest survey of 1,993 executives across 105 countries reveals that AI high performers are treating agents as critical transformational tools, with 38% of respondents from companies earning over $1 billion annually. Nearly two-thirds of enterprises have experimented with agents, but fewer than 10% have successfully scaled them to deliver tangible value.",
-        "relevance": "Essential baseline for understanding how global enterprise leaders assess AI maturity, agent deployment, and the gap between experimentation and productive scale—directly shaping consulting demand.",
+        "tag": "Enterprise AI Adoption",
+        "summary": "McKinsey's Global Survey finds 88% of organizations use AI in at least one function, but only 23% are scaling agentic systems, with most still in experimentation or piloting phases. High performers treat AI as a transformational catalyst, not just efficiency.",
+        "relevance": "Essential baseline data on the adoption-execution gap and characteristics of high-performing organizations—informs strategic recommendations for enterprise clients moving beyond pilots.",
         "isNew": false
+      }
+    ],
+    "platforms": [
+      {
+        "title": "Databricks Revenue and Growth: $6.9B Annualized Run Rate, 80% YoY Growth in Q2 2026",
+        "source": "Sacra",
+        "url": "https://sacra.com/c/databricks/",
+        "date": "Jul 17, 2026",
+        "tag": "Databricks Earnings",
+        "summary": "Sacra estimates Databricks hit $6.9B in annualized revenue in June 2026, up from $5.4B in January 2026, growing approximately 80% year-over-year in Q2 2026. AI products reached a $1.4B revenue run-rate in Q4 2025, representing roughly 26% of total revenue, while net dollar retention remained above 140%.",
+        "relevance": "The accelerating revenue trajectory and AI product monetization milestones are critical benchmarks for consulting leaders assessing Databricks' platform maturity and competitive positioning against Snowflake.",
+        "isNew": true
+      },
+      {
+        "title": "Databricks Raising Strategic Round of Funding at a $188 Billion Valuation",
+        "source": "Databricks Newsroom",
+        "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation",
+        "date": "Jul 16, 2026",
+        "tag": "Databricks Funding",
+        "summary": "Databricks announced a new strategic funding round at a $188 billion valuation, led by existing investor Coatue, with the round expected to close later in summer 2026. New capital will be directed toward accelerating AI innovation across Unity AI Gateway, Genie, and Lakebase.",
+        "relevance": "At $188B, Databricks is now the highest-valued private data and AI company globally, signaling sustained enterprise appetite for unified data-AI platforms and intensifying competitive pressure on Snowflake and Microsoft Fabric.",
+        "isNew": false
+      },
+      {
+        "title": "The Open Interoperability Standard: Snowflake Horizon vs. Databricks Unity Catalog on Iceberg REST",
+        "source": "Snowflake Blog",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/bidirectional-interoperability-snowflake-horizon-databricks",
+        "date": "Jul 15, 2026",
+        "tag": "Interoperability",
+        "summary": "Snowflake published an analysis arguing that its Horizon Catalog implements bidirectional Iceberg REST Catalog protocol end-to-end, while characterizing Databricks Unity Catalog's approach as inbound-only and therefore falling short of true data agency. The post frames open interoperability as a strategic differentiator for avoiding vendor lock-in.",
+        "relevance": "The Snowflake-Databricks interoperability debate directly affects multi-platform enterprise data architecture decisions; consulting leaders advising on lakehouse strategy must understand both vendors' claims and limitations.",
+        "isNew": false
+      },
+      {
+        "title": "OpenAI GPT 5.6 Now in Private Preview on Snowflake Cortex AI",
+        "source": "Snowflake Blog",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/openai-gpt-5-6-snowflake-cortex-ai",
+        "date": "Jul 09, 2026",
+        "tag": "Cortex AI",
+        "summary": "Snowflake announced that OpenAI GPT 5.6 is now available in private preview on Snowflake Cortex AI, giving enterprises access to OpenAI's most capable model within Snowflake's governed, secure platform. This follows the broader multi-year partnership expansion with OpenAI.",
+        "relevance": "Access to frontier models natively within a governed enterprise data platform is a key differentiator in the enterprise AI stack; consulting leaders need to factor this into model-selection and data-governance frameworks for clients.",
+        "isNew": false
+      },
+      {
+        "title": "Snowflake Marketplace Partners Earn $100M in the First Half of 2026, 277% YoY Growth",
+        "source": "Snowflake Blog",
+        "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-marketplace-agentic-ai-growth",
+        "date": "Jun 30, 2026",
+        "tag": "Snowflake Ecosystem",
+        "summary": "Snowflake announced that Marketplace partners collectively earned over $100M in revenue in the first half of 2026, representing 277% year-over-year growth, driven by expansion across AI agents, Snowflake Native Apps, and AI-ready data products. The milestone reflects strong ISV and partner ecosystem momentum around agentic AI on the platform.",
+        "relevance": "Partner ecosystem revenue velocity is a leading indicator of platform stickiness and enterprise adoption momentum, directly informing consulting leaders' platform recommendations and go-to-market alliance strategies for clients.",
+        "isNew": false
+      },
+      {
+        "title": "Snowflake Summit 2026: Cortex Sense, Iceberg V3, CoWork and CoCo Rebranding",
+        "source": "Constellation Research",
+        "url": "https://www.constellationr.com/insights/news/snowflake-summit-2026-context-custom-model-training-iceberg-v3",
+        "date": "Jun 18, 2026",
+        "tag": "Snowflake Product",
+        "summary": "At Snowflake Summit 2026, Snowflake rebranded Snowflake Intelligence as CoWork and Cortex Code as CoCo, and introduced Cortex Sense, a new feature that grounds AI agents in metadata, business definitions, and query history. The company also doubled down on Iceberg V3 for data interoperability and added data streaming to its agentic development environment.",
+        "relevance": "Cortex Sense and the Iceberg V3 commitment are key signals for clients evaluating Snowflake's agentic AI roadmap and open interoperability strategy versus Databricks' Unity Catalog approach.",
+        "isNew": true
+      },
+      {
+        "title": "Microsoft Build 2026: GPU-Accelerated Fabric Data Warehouse, Azure HorizonDB, and Agentic App Platform",
+        "source": "Microsoft Azure Blog",
+        "url": "https://azure.microsoft.com/en-us/blog/microsoft-build-2026-building-agentic-apps-with-microsoft-fabric-and-microsoft-databases/",
+        "date": "Jun 02, 2026",
+        "tag": "Microsoft Fabric",
+        "summary": "At Microsoft Build 2026, Microsoft unveiled GPU-accelerated query processing natively in the Fabric Data Warehouse (built on NVIDIA accelerated computing), introduced Azure HorizonDB — a new PostgreSQL service optimized for AI applications featuring vector search and integrated AI model management — and launched Rayfin, an SDK and CLI to make Fabric a production-ready application backend.",
+        "relevance": "GPU-accelerated warehousing and a unified AI-application backend directly close the gap between Fabric and Databricks' Lakebase, making this announcement highly relevant for clients evaluating Microsoft's data platform for AI-intensive workloads.",
+        "isNew": true
+      },
+      {
+        "title": "Microsoft Build 2026: Forbes Analyst Commentary — Fabric, GPU Warehousing, and the Interoperability Imperative",
+        "source": "Forbes",
+        "url": "https://www.forbes.com/sites/robertkramer/2026/06/02/microsoft-build-2026-reveals-the-foundation-for-ai-data-and-erp/",
+        "date": "Jun 02, 2026",
+        "tag": "Analyst Commentary",
+        "summary": "Forbes analyst commentary on Microsoft Build 2026 highlights that Fabric's GPU-accelerated Data Warehouse architecture, which won the ACM SIGMOD 2026 Industry Track Best Paper Award, signals Microsoft's repositioning of the data warehouse as an execution layer for AI agents and applications. The commentary cautions that broader customer validation is still needed before drawing firm performance conclusions.",
+        "relevance": "Third-party analyst framing of Microsoft Fabric's AI positioning relative to competitors is essential context for consulting leaders advising boards and C-suites on enterprise data platform strategy and investment sequencing.",
+        "isNew": true
+      },
+      {
+        "title": "Snowflake Q1 FY2027 Earnings: 34% Revenue Growth, $6B AWS Deal, Natoma Acquisition for AI Agents",
+        "source": "Taurigo / Snowflake",
+        "url": "https://taurigo.com/stocks/SNOW/articles/snowflake-q1-2027-results-ai-growth",
+        "date": "May 27, 2026",
+        "tag": "Snowflake Earnings",
+        "summary": "Snowflake reported 34% revenue growth in Q1 FY2027, raised its full-year growth target to 31%, and signed a $6B multi-year agreement with AWS to accelerate enterprise AI adoption. The company also signed a definitive agreement to acquire Natoma, an enterprise Model Context Protocol platform for AI agents.",
+        "relevance": "The AWS mega-deal and Natoma acquisition signal Snowflake's aggressive move to own the agentic AI infrastructure layer, a strategic shift that will reshape enterprise data platform decisions for consulting clients.",
+        "isNew": true
+      },
+      {
+        "title": "Snowflake Q4 FY2026 Results: 30% Product Revenue Growth, 430+ New AI Capabilities, Acquisitions of Observe and TensorStax",
+        "source": "Snowflake Newsroom",
+        "url": "https://www.snowflake.com/en/news/press-releases/snowflake-reports-financial-results-for-the-fourth-quarter-and-full-year-of-fiscal-2026/",
+        "date": "Mar 02, 2026",
+        "tag": "Snowflake Earnings",
+        "summary": "Snowflake reported Q4 FY2026 product revenue of $1.23B, up 30% year-over-year, with remaining performance obligations of $9.77B, up 42% YoY. The company shipped 430+ new capabilities, acquired Observe to enter the IT observability market, and acquired TensorStax to strengthen AI-driven data engineering within Cortex Code.",
+        "relevance": "Snowflake's entry into observability and agentic AI coding via acquisitions broadens its platform attack surface, directly relevant to enterprise platform consolidation conversations that consulting leaders drive with clients.",
+        "isNew": true
+      }
+    ],
+    "planning": [
+      {
+        "title": "SAP Completes Acquisition of Prior Labs, Pioneer of Tabular Foundation Models",
+        "source": "SAP Newsroom",
+        "url": "https://news.sap.com/2026/07/sap-completes-prior-labs-acquisition/",
+        "date": "Jul 17, 2026",
+        "tag": "SAP M&A",
+        "summary": "SAP completed the acquisition of Prior Labs, a pioneer of Tabular Foundation Models for structured data. This acquisition enhances SAP's AI capabilities for enterprise planning and analytics use cases.",
+        "relevance": "SAP's acquisition of AI/ML infrastructure (Prior Labs, Dremio) signals commitment to embedding advanced AI into planning and analytics; relevant for leaders evaluating SAP's AI-first strategy versus competitors.",
+        "isNew": false
+      },
+      {
+        "title": "CFOs Shift to Structural Finance Transformation as Traditional Incremental Automation Stalls",
+        "source": "Deloitte / Gartner / Forbes",
+        "url": "https://www.forbes.com/sites/anders-liu-lindberg/2026/07/09/why-finance-transformation-topped-the-cfo-agenda-in-2026/",
+        "date": "Jul 09, 2026",
+        "tag": "Finance Transformation",
+        "summary": "Deloitte CFO Signals survey found 50% of CFOs ranked digital transformation of finance as their top 2026 priority, with 87% believing AI will be extremely important and 54% prioritizing AI agents in workflows. Gartner research shows traditional incremental changes no longer suffice.",
+        "relevance": "CFO agenda shift from point solutions to structural transformation underscores why modern EPM platforms with integrated AI are gaining traction over legacy systems; critical context for platform selection decisions.",
+        "isNew": true
+      },
+      {
+        "title": "SAP Completes Acquisition of Dremio, High-Performance Data Lakehouse Platform",
+        "source": "SAP Newsroom",
+        "url": "https://news.sap.com/2026/07/sap-completes-dremio-acquisition/",
+        "date": "Jul 06, 2026",
+        "tag": "SAP M&A",
+        "summary": "SAP completed the acquisition of Dremio, an open, high-performance data lakehouse platform. This acquisition strengthens SAP's data and analytics capabilities, complementing its Datasphere and Analytics Cloud portfolio.",
+        "relevance": "SAP's Dremio acquisition indicates strategic focus on modern data architecture for analytics and planning; critical for organizations evaluating SAP's competitive position against cloud-native analytics platforms.",
+        "isNew": false
+      },
+      {
+        "title": "Finance Transformation Remains Top CFO Priority; AI and Automation Surge to Second Place",
+        "source": "Gartner",
+        "url": "https://www.gartner.com/reviews/market/finance-transformation-implementation-consulting/vendor/mckinsey/product/mckinsey-strategy-and-corporate-finance",
+        "date": "Jun 15, 2026",
+        "tag": "CFO Priorities",
+        "summary": "Gartner's 2026 CFO Agenda research shows finance transformation as the top priority for the third consecutive year. AI and automation surged to second place, reflecting a shift from exploration to execution as CFOs move beyond testing to deployment.",
+        "relevance": "Validates that finance transformation and AI-planning integration are now table-stakes for CFOs; essential context for understanding competitive urgency and investment justification in modern EPM platforms.",
+        "isNew": true
+      },
+      {
+        "title": "BCG: AI in Finance Requires People, Process, and Data—Not Just Models",
+        "source": "Boston Consulting Group",
+        "url": "https://www.bcg.com/publications/2026/the-cfos-ai-agenda-from-automation-to-advantage",
+        "date": "May 12, 2026",
+        "tag": "AI Readiness",
+        "summary": "BCG research shows only 10% of AI success in finance traces to models; 20% to technology platforms; and 70% to people, process, and governance. Finance leaders need clear deployment roadmaps distinguishing what is production-ready today versus 12-18 months out.",
+        "relevance": "Emphasizes that EPM platform value depends heavily on implementation discipline and data quality, not AI hype alone; essential for leaders validating AI-planning vendor claims and readiness assessments.",
+        "isNew": false
+      },
+      {
+        "title": "BCG: Corporate Functions of the Future Will Integrate Agentic AI, Data, and Workflows",
+        "source": "Boston Consulting Group",
+        "url": "https://www.bcg.com/publications/2026/what-corporate-functions-of-the-future-will-look-like",
+        "date": "May 11, 2026",
+        "tag": "Agentic Automation",
+        "summary": "BCG's Functions of the Future framework shows how agentic systems extend end-to-end finance workflows, with coordinating and execution agents handling routine work while humans focus on judgment and exceptions. Payback achieved in 12-30 months.",
+        "relevance": "Describes practical, proven model for how AI agents integrate into planning and finance workflows; directly informs EPM platform selection and implementation strategy decisions.",
+        "isNew": true
+      },
+      {
+        "title": "Pigment Announces $145 Million Series D Funding Round, Approaching $100M ARR",
+        "source": "PRNewswire",
+        "url": "https://www.pigment.com/blog/series-d-announcement",
+        "date": "Apr 27, 2026",
+        "tag": "Pigment Funding",
+        "summary": "Paris-based Pigment closed a $145 million Series D round led by ICONIQ Growth, bringing total funding to $397 million. The company is approaching $100 million in annual recurring revenue, having doubled ARR for three consecutive years, with 56% of new customers migrating from legacy vendors in 2025.",
+        "relevance": "Pigment's growth and funding trajectory signal strong enterprise adoption of AI-first planning platforms, directly challenging traditional EPM incumbents and validating market demand for modern, speed-optimized planning solutions.",
+        "isNew": true
+      },
+      {
+        "title": "Anaplan Announces CoModeler, Custom Analyst, and 12 Purpose-Built Applications for Enterprise Planning",
+        "source": "Anaplan Newsroom / Globe Newswire",
+        "url": "https://www.anaplan.com/news/anaplan-announces-latest-ai-driven-innovations-applications-to-advance-enterprise-decision-making/",
+        "date": "Mar 25, 2026",
+        "tag": "Anaplan Applications",
+        "summary": "Anaplan released CoModeler, Custom Analyst, Agent Studio, and 12 new out-of-the-box applications for finance, supply chain, and workforce planning. These innovations embed domain expertise and AI into key enterprise planning workflows.",
+        "relevance": "Anaplan's application suite and AI capabilities show how connected planning (xP&A) is evolving to be more prescriptive; critical for leaders evaluating comprehensive versus best-of-breed EPM strategies.",
+        "isNew": true
+      },
+      {
+        "title": "Pigment Launches AI Intent Modeling and Expands Analyst Agent Availability",
+        "source": "Yahoo Finance / PRNewswire",
+        "url": "https://finance.yahoo.com/news/path-100m-pigment-launches-ai-140000105.html",
+        "date": "Mar 04, 2026",
+        "tag": "Pigment AI",
+        "summary": "Pigment announced AI Intent Modeling capabilities and expanded the Analyst Agent to all customers, combining cutting-edge AI with foundational finance capabilities. The company also launched Financial Consolidation, positioning itself for autonomous planning where AI agents proactively surface insights.",
+        "relevance": "Pigment's move into agentic AI and consolidation marks competitive encroachment on legacy EPM vendors; demonstrates how mid-market planning is shifting toward AI-native, autonomous workflows.",
+        "isNew": true
+      },
+      {
+        "title": "Anaplan Introduces Role-Based AI Agents and Agent Studio with Custom Analyst Capabilities",
+        "source": "Anaplan Newsroom",
+        "url": "https://www.anaplan.com/news/anaplan-introduces-new-suite-role-based-ai-agents/",
+        "date": "Dec 05, 2025",
+        "tag": "Anaplan AI Agents",
+        "summary": "Anaplan announced Custom Agent, Agent Studio, and role-based AI agents (Forecaster, CoModeler) supporting autonomous planning workflows. General availability of Custom Agent is expected Q1 2026, with autonomous agents to debut in H1 2026.",
+        "relevance": "Anaplan's $500M multi-year AI roadmap and agentic capabilities position it as enterprise scenario-planning leader; demonstrates how established EPM vendors are embedding AI directly into cross-functional workflows.",
+        "isNew": true
+      }
+    ],
+    "research": [
+      {
+        "title": "McKinsey Layoffs 2026: 10% Job Cuts Affecting Thousands Because of AI",
+        "source": "Final Round AI / Consulting Trade Press",
+        "url": "https://www.finalroundai.com/blog/mckinsey-layoffs-few-thousand-jobs",
+        "date": "Jul 21, 2026",
+        "tag": "Consulting Disruption",
+        "summary": "McKinsey is cutting approximately 3,000–4,000 positions (~10% of global workforce) due to AI-driven productivity gains, concentrated in junior research, back-office, and practice areas where AI has reduced billable hours.",
+        "relevance": "Most critical for strategy: consulting industry itself is being restructured by AI, signaling pricing model pressure, margin compression, and accelerated shift from headcount-based to outcome-based delivery models.",
+        "isNew": false
+      },
+      {
+        "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
+        "source": "VentureBeat",
+        "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs",
+        "date": "Jul 16, 2026",
+        "tag": "AI Infrastructure",
+        "summary": "VentureBeat analysis of 107 enterprises finds AI infrastructure spending accelerating well ahead of the ability to measure or steer its economics, with most organizations shifting to specialized compute.",
+        "relevance": "Identifies a critical advisory gap: enterprise CFOs and CIOs lack cost visibility and governance frameworks as AI infrastructure spending scales, creating urgent demand for cost analytics consulting.",
+        "isNew": false
+      },
+      {
+        "title": "BCG AI Radar 2026: As AI Investments Surge, CEOs Take the Lead",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead",
+        "date": "Jun 19, 2026",
+        "tag": "AI Investment",
+        "summary": "BCG survey finds nearly three-quarters of CEOs are their company's chief decision maker on AI, with most remaining bullish on the technology and increasing investment levels.",
+        "relevance": "Reveals executive ownership patterns for AI strategy and signals continued confidence despite value-realization challenges noted in consulting engagement models.",
+        "isNew": false
+      },
+      {
+        "title": "The State of AI in the Enterprise - 2026 AI report",
+        "source": "Deloitte",
+        "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html",
+        "date": "Jun 17, 2026",
+        "tag": "Enterprise AI",
+        "summary": "Deloitte's 2026 report finds worker access to AI rose 50% in 2025, with expectations to double companies with 40%+ projects in production; however, only 34% are truly reimagining the business.",
+        "relevance": "Maps the gap between AI deployment scale and transformative impact, essential for advising clients on operating model redesign, not just technology implementation.",
+        "isNew": false
+      },
+      {
+        "title": "Gartner Identifies the Top Trends for Data and Analytics",
+        "source": "Gartner",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-06-16-gartner-identifies-the-top-trends-for-data-and-analytics",
+        "date": "Jun 16, 2026",
+        "tag": "D&A Trends",
+        "summary": "Gartner identifies AI agents, semantics advancement, and D&A platform convergence as the three leading 2026 trends, with predictions that 60% of enterprises will adopt data streaming for agentic AI by 2028.",
+        "relevance": "Directional roadmap for analytics consulting: real-time data and semantic layers are becoming competitive essentials as agentic AI scales from pilots to production.",
+        "isNew": true
+      },
+      {
+        "title": "AI Is Turning M&A into a High-Impact Learning Machine",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/ai-is-turning-m-and-a-into-a-high-impact-learning-machine",
+        "date": "Jun 10, 2026",
+        "tag": "M&A Analytics",
+        "summary": "BCG research shows AI adoption in M&A more than doubled in 2025, with 45% of executives now relying on AI tools for everything from sourcing through integration, compressing diligence timelines.",
+        "relevance": "High-value consulting use case: AI reshapes M&A economics and engagement models by accelerating analytics while moving competitive advantage to continuous learning systems.",
+        "isNew": true
+      },
+      {
+        "title": "Gartner Says Organizations with Successful AI Initiatives Invest Up to Four Times More in Data and Analytics Foundations",
+        "source": "Gartner",
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2026-04-16-gartner-says-organizations-with-successful-ai-initiatives-invest-up-to-four-times-more-in-data-and-analytics-foundations",
+        "date": "Apr 16, 2026",
+        "tag": "Data Foundations",
+        "summary": "Gartner survey of 353 D&A leaders finds successful AI initiatives require four times more investment in foundational areas like data quality, governance, and change management, yet only 39% of tech leaders are confident in positive ROI.",
+        "relevance": "Quantifies the execution gap between AI ambition and results, directly informing consulting ROI conversations and data strategy advisory services.",
+        "isNew": true
+      },
+      {
+        "title": "Scaling agentic AI with data transformations",
+        "source": "McKinsey",
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale",
+        "date": "Apr 02, 2026",
+        "tag": "Agentic AI",
+        "summary": "McKinsey analysis shows nearly two-thirds of enterprises have experimented with AI agents, but fewer than 10 percent have scaled them to deliver value. Eight in ten companies cite data limitations as a roadblock to scaling agentic AI.",
+        "relevance": "Critical for leaders planning AI agent deployments: data architecture is the foundational constraint determining success at scale, not technology adoption.",
+        "isNew": false
+      },
+      {
+        "title": "AI Will Reshape More Jobs Than It Replaces",
+        "source": "BCG",
+        "url": "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
+        "date": "Mar 31, 2026",
+        "tag": "Workforce",
+        "summary": "BCG's microeconomic framework shows that while AI automates tasks, most roles will remain but change substantially, with legal and software engineering as examples of amplified rather than replaced roles.",
+        "relevance": "Essential for consulting strategy: understanding job transformation dynamics shapes client value propositions and hiring models for consulting firms advising on organizational restructuring.",
+        "isNew": true
+      },
+      {
+        "title": "Bain & Company announces expansion of partnership with Palantir",
+        "source": "Bain",
+        "url": "https://www.bain.com/about/media-center/press-releases/2026/bain--company-announces-expansion-of-lead-global-management-consulting-partnership-with-palantir-to-bring-world-industry-leading-ai-transformation-capabilities-to-clients/",
+        "date": "Mar 26, 2026",
+        "tag": "Bain",
+        "summary": "Bain expanded its strategic partnership with Palantir, combining Palantir's AI and automation capabilities with Bain's industry expertise to accelerate data-driven decision-making and productivity for clients.",
+        "relevance": "Signals consulting industry shift toward platform-based delivery models and specialized vendor partnerships as core value differentiators versus pure advisory.",
+        "isNew": true
       }
     ]
   }
